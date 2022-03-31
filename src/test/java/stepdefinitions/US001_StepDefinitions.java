@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -10,5 +11,9 @@ public class US001_StepDefinitions {
         Driver.getDriver().get(ConfigReader.getProperty("MedunnaURL"));
 
     }
+
+    @And("mf kullanici register butonuna tıklar")
+    public void mfKullaniciRegisterButonunaTıklar() {
     }
+}
 
