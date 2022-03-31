@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -14,6 +15,10 @@ public class US001_StepDefinitions {
 
     @And("mf kullanici register butonuna tıklar")
     public void mfKullaniciRegisterButonunaTıklar() {
+    }
+
+    @Then("mf kullanıcı ssn girer")
+    public void mfKullanıcıSsnGirer() {
     }
 }
 
