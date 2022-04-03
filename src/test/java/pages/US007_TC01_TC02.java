@@ -24,10 +24,17 @@ public class US007_TC01_TC02 extends BasePage {
  public WebElement phone;
 
  @FindBy(xpath = "//input[@name='appoDate']")
- public WebElement appnmtDate;
+ public WebElement randevuTarihi;
 
- @FindBy(xpath = "//span[text()='Send an Appointment Request']")
+ @FindBy(xpath = "//button[@type='submit']")
  public WebElement sendAppnmtButton;
+
+ @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+ public WebElement toastifyBasarili;
+
+ @FindBy(xpath = "//span[text()='Appointment date can not be past date!']")
+ public WebElement pastDateText;
+
 
 
 }
