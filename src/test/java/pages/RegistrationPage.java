@@ -10,6 +10,14 @@ public class RegistrationPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(xpath = "//li[@id='account-menu']")
+    public WebElement accountMenu;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item active'])[1]")
+    public WebElement registerButton;
+
+    @FindBy(xpath = "//input[@id='ssn']")
+    public WebElement ssnBox;
 
 
 }
