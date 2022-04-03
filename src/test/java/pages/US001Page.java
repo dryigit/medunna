@@ -13,7 +13,7 @@ public class US001Page {
     @FindBy(xpath = "//li[@id='account-menu']")
     public WebElement accountMenu;
 
-    @FindBy(xpath = "(//a[@class='dropdown-item active'])[1]")
+    @FindBy(xpath = "(//span[contains(text(),'Register')])[1]")
     public WebElement registerButton;
 
     @FindBy(xpath = "//input[@id='ssn']")
