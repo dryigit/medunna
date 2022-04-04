@@ -19,5 +19,19 @@ public class US001Page {
     @FindBy(xpath = "//input[@id='ssn']")
     public WebElement ssnBox;
 
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement ssnAllert;
+
+    @FindBy(xpath = "//input[@id='firstName']")
+    public WebElement firstNameBox;
+
+    @FindBy(xpath = "//div[normalize-space()='Your FirstName is required.']")
+    public WebElement firstNameAllertText;
+
+    @FindBy (xpath = "//input[@id='lastName']")
+    public WebElement lastNameBox;
+
+    @FindBy(xpath = "//div[normalize-space()='Your FirstName is required.']")
+    public WebElement lastNameAllertText;
 
 }
