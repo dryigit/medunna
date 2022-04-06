@@ -28,7 +28,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243">
-      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select ssn from jhi_user]]></console>
+      <console name="MedunnaDB" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
