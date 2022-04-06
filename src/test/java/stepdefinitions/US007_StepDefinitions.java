@@ -4,19 +4,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import pages.US007_TC01_TC02;
+import pages.US007Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import java.io.File;
-
-import static utilities.ReusableMethods.getScreenshot;
-
 public class US007_StepDefinitions {
 
-    US007_TC01_TC02 us007_tc01_tc02 = new US007_TC01_TC02();
+    US007Page us007_tc01_tc02 = new US007Page();
 
     @Given("Hydr hasta medunna anasayfasına gider")
     public void hydr_hasta_medunna_anasayfasına_gider() {
