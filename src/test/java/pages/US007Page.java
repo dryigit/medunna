@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class US007_TC01_TC02 extends BasePage {
+public class US007Page extends BasePage {
 
  //tagName[@attributeIsmi=‘attributeValue']
 
