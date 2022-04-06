@@ -15,4 +15,22 @@ public class US011Page extends BasePage{
     public WebElement appFirstname;
 @FindBy(id = "register-submit")
     public WebElement appReqSubButton;
+@FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement toasttify;
+@FindBy(css = "a[aria-expanded='false']")
+   public WebElement popup;
+@FindBy(id = "login-item")
+    public WebElement signin;
+@FindBy(id="username")
+    public WebElement signinUsername;
+@FindBy(id = "password")
+    public WebElement signinPasword;
+@FindBy(css = "button[type='submit']")
+public WebElement submit;
+@FindBy (css = "#account-menu")
+public WebElement doctoraccountbutton;
+@FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    public WebElement doctorMyappointments;
+
+
 }
