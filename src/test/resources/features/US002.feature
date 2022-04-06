@@ -19,6 +19,7 @@ Feature: US002_Email ve Username
     Then kullanici password girilebilmelidir
     Then kullanici password ikinci defa girilebilmelidir
     Then kullanici register butonuna tıklar
+    And
 
 
 
