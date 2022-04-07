@@ -181,6 +181,7 @@ Assert.assertTrue(us9Page.doctorLastName.isDisplayed());
 
     @And("kullanici hastalari SSN kimlik numaralarina göre arama yapamadigini test eder")
     public void kullaniciHastalariSSNKimlikNumaralarinaGöreAramaYapamadiginiTestEder() {
+Assert.assertTrue(!us9Page.ssnStaff.isDisplayed());
 
     }
 

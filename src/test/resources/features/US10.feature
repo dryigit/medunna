@@ -14,4 +14,4 @@ Scenario:TC02 Doktor olarak  "patient id, start date, end date, status" bilgiler
   Then kullanici gecerli bilgileri girerek basarili giris yapar
   And kullanici My Appointments sekmesine tıklar
   And kullanici cikan listede en üst sırada olani secer
-src/test/resources/features/US10.feature  And kullanici edit butonuna tıklayip patient id, start date, end date, status bilgilerinin görüldügünü test eder
+ And kullanici edit butonuna tıklayip patient id, start date, end date, status bilgilerinin görüldügünü test eder
