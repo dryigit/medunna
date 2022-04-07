@@ -31,6 +31,35 @@ public WebElement submit;
 public WebElement doctoraccountbutton;
 @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
     public WebElement doctorMyappointments;
+@FindBy(css = "#entity-menu")
+    public WebElement mypages;
+@FindBy(css = "#fromDate")
+    public WebElement appFromDate;
+    @FindBy(css = "#toDate")
+    public WebElement apptoDate;
 
+    // for doctor
+@FindBy(css = "input[name='id']")
+    public WebElement apppatientId;
+    @FindBy(css = "input[name='startDate']")
+    public WebElement appstartdate;
+    @FindBy(css = "input[name='endDate']")
+    public WebElement appenddate;
+@FindBy(css = "#appointment-status")
+    public WebElement appstatus;
+    @FindBy(css = "#appointment-physician")
+    public WebElement apppyschn;
+@FindBy(name = "anamnesis")
+    public WebElement anemsis;
+    @FindBy(name = "treatment")
+    public WebElement treatmnt;
+    @FindBy(name = "treatment")
+    public WebElement diagnos;
+@FindBy(css = "#appointment-prescription")
+    public WebElement prescrip;
+@FindBy(css = "#appointment-description")
+    public WebElement descript;
+@FindBy(css = "#save-entity")
+    public WebElement appsave;
 
 }
