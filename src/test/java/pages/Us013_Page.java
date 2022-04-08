@@ -87,6 +87,12 @@ public class Us013_Page {
     @FindBy(xpath = "//div[@class='Toastify']")
     public WebElement toastify;
 
+//    @FindBy (xpath = "(//div[@role='alert'])/span/strong")
+//    public WebElement toastify;
+
+    @FindBy(xpath = "//span[text()='My Inpatients']")
+    public WebElement yatılıHastaButonu;
+
 
 
 

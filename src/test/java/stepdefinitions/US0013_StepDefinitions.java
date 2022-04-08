@@ -126,7 +126,10 @@ public class US0013_StepDefinitions {
         ReusableMethods.waitFor(3);
         Assert.assertTrue(us013_page.toastify.isDisplayed());
 
+        //getAttribute("innerText"));
+
 
     }
+
 
 }

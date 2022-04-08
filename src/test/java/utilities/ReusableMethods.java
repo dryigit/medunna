@@ -132,4 +132,9 @@ public class ReusableMethods {
         });
         return element;
     }
+
+    public static void scrollToWebEementVisivle(WebElement webElement){
+        JavascriptExecutor jss=(JavascriptExecutor) Driver.getDriver();
+        jss.executeScript("arguments[0].scrollIntoView(true);",webElement);
+    }
 }
