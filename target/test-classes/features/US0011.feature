@@ -7,6 +7,12 @@ Feature: US11
     Then yep send an appointment request
     Then yep verify tostify text "Appointment registration saved!"
 
+Scenario: US11 updating appoinment
+  Given yep goes to "MedunnaURL" website
+  And yep click to popup
+  Then yep click to logIn
+  And yep give username and pasword to sign in as a staff
+Then yep staff can see updating message
 
     Scenario: US11 TC02,03,04,05
       Given yep goes to "MedunnaURL" website

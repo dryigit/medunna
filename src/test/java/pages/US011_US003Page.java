@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class US011Page extends BasePage{
+public class US011_US003Page extends BasePage{
 
 
 
@@ -61,5 +61,37 @@ public WebElement doctoraccountbutton;
     public WebElement descript;
 @FindBy(css = "#save-entity")
     public WebElement appsave;
+@FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    public WebElement register;
+@FindBy(name = "ssn")
+    public WebElement ssn;
+@FindBy(css = "#firstPassword")
+    public WebElement password;
+@FindBy(xpath = "(//div[@class='invalid-feedback'])")
+    public WebElement passwordReqText;
+@FindBy(xpath = "(//a[@href='/search-patient'])[1]")
+    public WebElement searchpat;
+@FindBy(xpath = "(//div[@class='table-responsive'])[2]")
+public  WebElement tableresp;
+@FindBy(xpath = "//a[@href='/patient-appointments/46766']")
+public WebElement showapp;
+//  //a[@href='/appointment-update/5198 "1" ']    edit buttonu 51981,51982..
+
+    @FindBy(xpath = "(//span[text()='Edit'])[1]")
+    public WebElement appedit;
+    @FindBy(xpath = "#appointment-physician")
+public WebElement appPhysician;
+
+    @FindBy(css = "li[style='background-color: rgb(255, 0, 0);']")
+    public WebElement passwordFirstCond;
+
+    @FindBy(css = "li[style='background-color: rgb(255, 153, 0);']")
+    public WebElement passwordSecondCond;
+    @FindBy(css = "li[style='background-color: rgb(153, 255, 0);']")
+    public WebElement passwordThirdCond;
+    @FindBy(css = "li[style='background-color: rgb(153, 255, 0);']")
+    public WebElement passwordForthCond;
+    @FindBy(css = "li[style='background-color: rgb(0, 255, 0);']")
+    public WebElement passwordFifthCond;
 
 }
