@@ -43,11 +43,13 @@ public class US007_StepDefinitions {
         us007_tc01_tc02.phone.sendKeys(PhoneNumber);
     }
 
-    @And("randevu tarihi {string} girer")
-    public void randevuTarihiGirer(String RandevuTarihi) {
-        us007_tc01_tc02.randevuTarihi.sendKeys(RandevuTarihi);
-    }
 
+
+    @And("gecerli randevu tarihi {string} girer")
+    public void gecerliRandevuTarihiGirer(String RandevuTarihi) {
+        us007_tc01_tc02.randevuTarihi.sendKeys(RandevuTarihi);
+
+    }
 
     @And("Send an Appointment Request butonuna tıklar")
     public void sendAnAppointmentRequestButonunaTıklar() {
@@ -70,4 +72,10 @@ public class US007_StepDefinitions {
 
     }
 
+
+    @And("randevu tarihi {string} girer")
+    public void randevuTarihiGirer(String RandevuTarihi) {
+        us007_tc01_tc02.randevuTarihi.sendKeys(RandevuTarihi);
+
+    }
 }
