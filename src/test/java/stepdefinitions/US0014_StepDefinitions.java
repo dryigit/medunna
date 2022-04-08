@@ -119,13 +119,24 @@ public class US0014_StepDefinitions {
      //  ReusableMethods.scrollToWebEementVisivle(us014_page.statusAlanı);
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
 
-        Select select=new Select(us014_page.statusAlanı);
-        select.selectByIndex(1);
+        Select select2=new Select(us014_page.statusAlanı);
+        select2.selectByIndex(1);
 
     }
 
 
+
+
     //tc003*************************
+
+    @Given("oda güncelleme")
+    public void odaGüncelleme() {
+
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+        Select select3=new Select(us014_page.roomidAlanı);
+        select3.selectByIndex(4);
+    }
 
 
 

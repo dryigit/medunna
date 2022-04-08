@@ -10,14 +10,14 @@ Feature: US014--Yatılı tedavi işlemleri
     And Yatılı Hasta bilgileri için edit tıklanır
 
 
-  Scenario: TC001---Doktor yatılı hasta bilgilerini görebilmeli ve güncelleyebilmeli
-
-    Then doktor yatılı hatasta bilgilerini görebilmeli
-
-
-  Scenario: TC001--bilgileri güncelleme
-
-    And doktor yatılı hasta bilgilerini günceller
+#  Scenario: TC001---Doktor yatılı hasta bilgilerini görebilmeli ve güncelleyebilmeli
+#
+#    Then doktor yatılı hatasta bilgilerini görebilmeli
+#
+#
+#  Scenario: TC001--bilgileri güncelleme
+#
+#    And doktor yatılı hasta bilgilerini günceller
 
 
   Scenario: TC002---Status bilgilerini güncelleme
