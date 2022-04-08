@@ -87,5 +87,63 @@ public class US008_StepDefinitions {
 
     }
 
+    @Given("staffHakan medunna anasayfasına gider")
+    public void staffhakanMedunnaAnasayfasınaGider() {
+        Driver.getDriver().get(ConfigReader.getProperty("MedunnaURL"));
+
+    }
+
+    @Given("kullanıcı yeni sifresini girer {string}")
+    public void kullanıcıYeniSifresiniGirer(String newPassword) {
+
+        us008Page.newPassword.sendKeys(newPassword);
+    }
+
+
+    @Given("kullanıcı en az yedi karakterli yeni sifre{string} girer")
+    public void kullanıcıEnAzYediKarakterliYeniSifreGirer(String arg0) {
+    }
+
+    @Then("sifre zorluk seviyesinin {string} oldugunu dogrular")
+    public void sifreZorlukSeviyesininOldugunuDogrular(String level) throws InterruptedException {
+
+        sifreZorlukSeviyesi(level);
+
+    }
+
+    public void sifreZorlukSeviyesi(String level) throws InterruptedException {
+            // switch case ile yapılabilir
+
+
+        if (1==Integer.parseInt(level)) {
+            Assert.assertTrue(us008Page.passwordStrengthFirst.isDisplayed());
+            Thread.sleep(2);
+        }
+
+         else if (2==Integer.parseInt(level)) {
+            Assert.assertTrue(us008Page.passwordStrengthSecond.isDisplayed());
+            Thread.sleep(2);
+        }
+
+        else if (3==Integer.parseInt(level)) {
+            Assert.assertTrue(us008Page.passwordStrengthThird.isDisplayed());
+            Thread.sleep(2);
+        }
+
+        else if (4==Integer.parseInt(level)) {
+            Assert.assertTrue(us008Page.passwordStrengthFourth.isDisplayed());
+            Thread.sleep(2);
+        }
+
+        else if (5==Integer.parseInt(level)) {
+            Assert.assertTrue(us008Page.passwordStrengthFifth.isDisplayed());
+        }
+    }
+
+    @Given("kullanıcı yeni şifre kutusunu temizler")
+    public void kullanıcıYeniŞifreKutusunuTemizler() {
+
+        us008Page.newPassword.clear();
+    }
 }
 

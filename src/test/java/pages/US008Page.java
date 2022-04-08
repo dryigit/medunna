@@ -7,7 +7,7 @@ public class US008Page extends BasePage{
 
     //tagName[@attributeIsmi=‘attributeValue']
 
-    //
+
     @FindBy(xpath = "//a[@aria-haspopup='true']")
     public WebElement ikon;
 
@@ -50,6 +50,21 @@ public class US008Page extends BasePage{
     @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
     public WebElement hataliSignIn;
 
+    @FindBy(xpath = "//ul[@id='strengthBar']/li[1]")
+    public WebElement passwordStrengthFirst;
 
+    //*[@id='strengthBar']/li[contains(@style,'rgb(255, 0, 0)')][1]
+    @FindBy(xpath = "//ul[@id='strengthBar']/li[2]")
+    public WebElement passwordStrengthSecond;
+
+    @FindBy(xpath = "//ul[@id='strengthBar']/li[3]")
+    public WebElement passwordStrengthThird;
+
+    @FindBy(xpath = "//ul[@id='strengthBar']/li[4]")
+    public WebElement passwordStrengthFourth;
+
+    @FindBy(xpath = "//ul[@id='strengthBar']/li[5]")
+    public WebElement passwordStrengthFifth;
+    //li[@style='background-color: rgb(221, 221, 221);'][4]
 
 }

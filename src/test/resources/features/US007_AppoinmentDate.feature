@@ -9,7 +9,7 @@ Feature: US_007_Randevu olusturma
   And  SSN "<SSN>" girer
   And  email "<Email>" girer
   And  telNo "<PhoneNumber>" girer
-  And  randevu tarihi "<RandevuTarihi>" girer
+  And  gecerli randevu tarihi "<RandevuTarihi>" girer
   And Send an Appointment Request butonuna tıklar
   Then Randevu tarihi olusturuldugunu kontrol eder
 
@@ -17,7 +17,7 @@ Feature: US_007_Randevu olusturma
     Examples: Test Data
 
     |firstname | lastname   | SSN         | Email                 | PhoneNumber | RandevuTarihi |
-    | haydar   | aslan      | 854-12-2114 | haydari@medunna.com  | 147-542-7854 | 08/04/2022 |
+    | haydar   | aslan      | 854-12-2114 | haydari@medunna.com  | 147-542-7854 | 12/04/2022   |
 
 
   Scenario Outline: TC02_Hasta geçersiz randevu tarihi oluşturamamalı (negative senaryo)
