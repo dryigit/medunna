@@ -5,19 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class Enes {
+public class AppointmentPage {
 
-    public Enes() {
+    public AppointmentPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(className = "appointment-btn scrollto")
+    @FindBy(xpath = "//a[@href='#appointment']")
     public WebElement makeanappointment;
 
     @FindBy(id = "firstName")
     public WebElement firstname;
 
-    @FindBy(id = "lastname")
+    @FindBy(id = "lastName")
     public WebElement lastname;
 
     @FindBy(id = "ssn")
@@ -35,5 +35,10 @@ public class Enes {
     @FindBy(id = "register-submit")
     public WebElement requestButton;
 
+    @FindBy(className = "Toastify__toast-body")
+    public  WebElement toastify;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement invalidFeedback;
 
 }
