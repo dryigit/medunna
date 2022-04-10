@@ -2,8 +2,15 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
 
-public class AppointmentPage extends BasePage {
+public class Enes {
+
+    public Enes() {
+        PageFactory.initElements(Driver.getDriver(),this);
+    }
+
     @FindBy(className = "appointment-btn scrollto")
     public WebElement makeanappointment;
 
@@ -27,10 +34,6 @@ public class AppointmentPage extends BasePage {
 
     @FindBy(id = "register-submit")
     public WebElement requestButton;
-
-
-
-
 
 
 }
