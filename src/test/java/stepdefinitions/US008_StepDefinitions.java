@@ -101,7 +101,8 @@ public class US008_StepDefinitions {
 
 
     @Given("kullanıcı en az yedi karakterli yeni sifre{string} girer")
-    public void kullanıcıEnAzYediKarakterliYeniSifreGirer(String arg0) {
+    public void kullanıcıEnAzYediKarakterliYeniSifreGirer(String newPassword) {
+        us008Page.newPassword.sendKeys(newPassword);
     }
 
     @Then("sifre zorluk seviyesinin {string} oldugunu dogrular")
