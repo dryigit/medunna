@@ -9,7 +9,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.Us013_Page;
-import pages.Us014_Page;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -44,26 +43,27 @@ public class US0014_StepDefinitions {
     public void doktorYatılıHatastaBilgileriniGörebilmeli() {
 
         ReusableMethods.waitFor(2);
-        Assert.assertTrue(us014_page.idAlanı.isEnabled());
-        Assert.assertTrue(us014_page.startDateAlanı.isEnabled());
+        Assert.assertTrue(us014_page.idAlanı.isDisplayed());
+        Assert.assertTrue(us014_page.startDateAlanı.isDisplayed());
 
         ReusableMethods.waitFor(2);
-        Assert.assertTrue(us014_page.endDateAlanı.isEnabled());
-        Assert.assertTrue(us014_page.descriptionAlanı.isEnabled());
-        Assert.assertTrue(us014_page.createdDateAlanı.isEnabled());
+        Assert.assertTrue(us014_page.endDateAlanı.isDisplayed());
+        Assert.assertTrue(us014_page.descriptionAlanı.isDisplayed());
+        Assert.assertTrue(us014_page.createdDateAlanı.isDisplayed());
 
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
-        Assert.assertTrue(us014_page.appointmentidAlanı.isEnabled());
-        Assert.assertTrue(us014_page.statusAlanı.isEnabled());
+       Assert.assertTrue(us014_page.appointmentidAlanı.isDisplayed());
+        ReusableMethods.waitForVisibility(us014_page.statusAlanı,2);
+        Assert.assertTrue(us014_page.statusAlanı.isDisplayed());
         ReusableMethods.waitFor(2);
-        Assert.assertTrue(us014_page.roomidAlanı.isEnabled());
-        Assert.assertTrue(us014_page.patientidAlanı.isEnabled());
+        Assert.assertTrue(us014_page.roomidAlanı.isDisplayed());
+        Assert.assertTrue(us014_page.patientidAlanı.isDisplayed());
 
-       // ReusableMethods.waitForClickablility(us014_page.saveButonu,5);
+        ReusableMethods.waitForClickablility(us014_page.saveButonu,5);
 
-        JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
-        jsexecutor.executeScript("arguments[0].click();", us014_page.saveButonu);
+//        JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
+//        jsexecutor.executeScript("arguments[0].click();", us014_page.saveButonu);
 
 
 
@@ -88,7 +88,7 @@ public class US0014_StepDefinitions {
         actions.sendKeys(Keys.TAB).perform();
         us014_page.createdDateAlanı.sendKeys("12:25" );
         actions.sendKeys(Keys.TAB).perform();
-        us014_page.appointmentidAlanı.sendKeys("50000");
+        Assert.assertFalse(us014_page.appointmentidAlanı.isEnabled());
 
         Select select=new Select(us014_page.statusAlanı);
         select.selectByValue("STAYING");
@@ -98,7 +98,7 @@ public class US0014_StepDefinitions {
         Select select1=new Select(us014_page.roomidAlanı);
         select1.selectByVisibleText("122:TWIN free room");
 
-       // us014_page.patientidAlanı.sendKeys("doktor");
+        Assert.assertFalse(us014_page.patientidAlanı.isEnabled());
 
 
 

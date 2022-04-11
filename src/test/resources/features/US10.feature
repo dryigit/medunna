@@ -1,3 +1,4 @@
+@Tc
 Feature:US10 Doktor olarak giris yapildiginda hasta bilgileri düzenlenebilmeli
 
   Background:
