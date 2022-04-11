@@ -1,3 +1,4 @@
+@Tc
 Feature: US_007_Randevu olusturma
 
 

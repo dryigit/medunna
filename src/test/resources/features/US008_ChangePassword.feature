@@ -1,3 +1,4 @@
+@Tc
 Feature: US_008_Password change
 
 

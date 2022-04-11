@@ -30,16 +30,16 @@ public class Us014_Page {
     @FindBy(xpath = "//input[@name='createdDate']")
     public WebElement createdDateAlanı;
 
-   @FindBy(xpath = "//input[@name='appointment.id']")
+   @FindBy(xpath = "//select[@name='appointment.id']")
     public WebElement appointmentidAlanı;
 
-    @FindBy(xpath = "//input[@name='status']")
+    @FindBy(xpath = "//select[@name='status']")
     public WebElement statusAlanı;
 
-    @FindBy(xpath = "//input[@name='room.id']")
+    @FindBy(xpath = "//select[@name='room.id']")
     public WebElement roomidAlanı;
 
-    @FindBy(xpath = "//input[@name='patient.id']")
+    @FindBy(xpath = "//select[@name='patient.id']")
     public WebElement patientidAlanı;
 
     @FindBy(id ="save-entity")
