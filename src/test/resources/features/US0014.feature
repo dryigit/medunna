@@ -6,18 +6,18 @@ Feature: US014--Yatılı tedavi işlemleri
     Then Sing in Tiklar
     And Username ve Password ile giriş yapar
     Then My Pages Buttonunu Tiklar
-    Then My Inpatients butonuna tıklar
-    And Yatılı Hasta bilgileri için edit tıklanır
+    Then My Inpatients butonuna tiklar
+    And Yatili Hasta bilgileri için edit tiklanir
 
 
-  Scenario: TC001---Doktor yatılı hasta bilgilerini görebilmeli ve güncelleyebilmeli
+  Scenario: TC001---Doktor yatili hasta bilgilerini görebilmeli ve güncelleyebilmeli
 
-    Then doktor yatılı hatasta bilgilerini görebilmeli
+    Then doktor yatili hatasta bilgilerini görebilmeli
 
 
   Scenario: TC001--bilgileri güncelleme
 
-    And doktor yatılı hasta bilgilerini günceller
+    And doktor yatili hasta bilgilerini günceller
 
 
   Scenario: TC002---Status bilgilerini güncelleme
@@ -25,6 +25,6 @@ Feature: US014--Yatılı tedavi işlemleri
     Then status bilgilerini güncelleyebilmeli
 
 
-  Scenario:TC003----Doktor rezerve edilmiş odayı güncelleyebilmeli
+  Scenario:TC003----Doktor rezerve edilmiş odayi güncelleyebilmeli
 
     Given oda güncelleme
