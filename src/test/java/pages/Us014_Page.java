@@ -12,35 +12,35 @@ public class Us014_Page {
 
 
     @FindBy(xpath = "//a[@href='/in-patient/53354/edit']")
-    public WebElement yatılıHastaEdit;
+    public WebElement yatiliHastaEdit;
 
 
     @FindBy(xpath = "//input[@name='id']")
-    public WebElement idAlanı;
+    public WebElement idAlani;
 
     @FindBy(xpath = "//input[@name='startDate']")
-    public WebElement startDateAlanı;
+    public WebElement startDateAlani;
 
     @FindBy(xpath = "//input[@name='endDate']")
-    public WebElement endDateAlanı;
+    public WebElement endDateAlani;
 
    @FindBy(xpath = "//input[@name='description']")
-    public WebElement descriptionAlanı;
+    public WebElement descriptionAlani;
 
     @FindBy(xpath = "//input[@name='createdDate']")
-    public WebElement createdDateAlanı;
+    public WebElement createdDateAlani;
 
    @FindBy(xpath = "//select[@name='appointment.id']")
-    public WebElement appointmentidAlanı;
+    public WebElement appointmentidAlani;
 
     @FindBy(xpath = "//select[@name='status']")
-    public WebElement statusAlanı;
+    public WebElement statusAlani;
 
     @FindBy(xpath = "//select[@name='room.id']")
-    public WebElement roomidAlanı;
+    public WebElement roomidAlani;
 
     @FindBy(xpath = "//select[@name='patient.id']")
-    public WebElement patientidAlanı;
+    public WebElement patientidAlani;
 
     @FindBy(id ="save-entity")
    // @FindBy(xpath = "//button[@id='save-entity']")
