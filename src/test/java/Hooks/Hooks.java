@@ -1,4 +1,4 @@
-package stepdefinitions;
+package Hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,17 +22,17 @@ import utilities.Driver;
             spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         }
 
-        @Before(order = 1, value = "@UIRegistration")
-        public void navigateToRegistration(){
-            Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
-        }
+     @Before(order = 1, value = "@UIRegistration")
+     public void navigateToRegistration(){
+        Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
+     }
 
-        @After
-        public void tearDown(Scenario scenario){
-            final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-            if (scenario.isFailed()) {
-                scenario.attach(screenshot, "image/png","screenshots");
-            }
-            Driver.closeDriver();
-        }
+     @After
+     public void tearDown(Scenario scenario){
+         final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+         if (scenario.isFailed()) {
+             scenario.attach(screenshot, "image/png","screenshots");
+         }
+         Driver.closeDriver();
+      }
     }
