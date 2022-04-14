@@ -89,5 +89,28 @@ public WebElement appFromDate;
     public WebElement passwordForthCond;
     @FindBy(css = "li[style='background-color: rgb(0, 255, 0);']")
     public WebElement passwordFifthCond;
+    @FindBy(css = "#entity-menu")
+    public WebElement itemsTitles;
+    @FindBy(xpath = "//span[text()='Room']")
+    public WebElement rooms;
+    @FindBy(css = "#jh-create-entity")
+    public WebElement createAnewRoom;
+    @FindBy(css = "#room-roomNumber")
+    public WebElement roomNumber;
+@FindBy(css = "#room-roomType")
+public WebElement roomType;
+    @FindBy (xpath = "//div[@class='invalid-feedback']")
+    public WebElement roomRequiremntText;
+    @FindBy (css = "#room-status")
+public WebElement roomstatus;
+@FindBy(css = "#room-price")
+    public WebElement roomprice;
+@FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement roompricerequirement;
+@FindBy(css = "#room-description")
+    public WebElement roomDescription;
+@FindBy(css = "#room-createdDate")
+public WebElement roomDate;
+
 
 }

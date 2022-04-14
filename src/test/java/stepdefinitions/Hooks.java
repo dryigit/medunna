@@ -32,6 +32,7 @@ import utilities.Driver;
             final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             if (scenario.isFailed()) {
                 scenario.attach(screenshot, "image/png","screenshots");
+                //Driver.getDriver().get("https://www.medunna.com/logout");
             }
             Driver.closeDriver();
         }
