@@ -44,7 +44,7 @@ public class WriteToTxt {
     public static void saveRegistrantApiData(Registrant registrant){
 
         try {
-            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("registrantApiFile"), true);
+            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("api_registrant_data"), true);
 
 
             BufferedWriter writer = new BufferedWriter(fileWriter);
