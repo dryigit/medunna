@@ -1,3 +1,4 @@
+@Tc
 Feature: US001_sign_Up
 
   Scenario Outline: TC01_gecerli bir ssn girilir

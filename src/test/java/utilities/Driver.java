@@ -3,6 +3,7 @@ package utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -19,6 +20,11 @@ public class Driver {
             switch(ConfigReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
+
+                 //   ChromeOptions options=new ChromeOptions();
+                 //   options.addArguments("--headless");
+                   // options.setHeadless(true);
+                 //   driver = new ChromeDriver(options);
                     driver = new ChromeDriver();
                     break;
                 case "firefox":
@@ -46,7 +52,11 @@ public class Driver {
     }
     public static void closeDriver(){
         if(driver!=null){
+
+     //  driver.close();
+
           //  driver.close();
+
         }
         driver=null;
     }
