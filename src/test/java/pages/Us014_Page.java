@@ -24,13 +24,17 @@ public class Us014_Page {
     @FindBy(xpath = "//input[@name='endDate']")
     public WebElement endDateAlani;
 
+
    @FindBy(xpath = "//input[@name='description']")
+
     public WebElement descriptionAlani;
 
     @FindBy(xpath = "//input[@name='createdDate']")
     public WebElement createdDateAlani;
 
+
    @FindBy(xpath = "//select[@name='appointment.id']")
+
     public WebElement appointmentidAlani;
 
     @FindBy(xpath = "//select[@name='status']")
@@ -43,7 +47,7 @@ public class Us014_Page {
     public WebElement patientidAlani;
 
     @FindBy(id ="save-entity")
-   // @FindBy(xpath = "//button[@id='save-entity']")
+    // @FindBy(xpath = "//button[@id='save-entity']")
     public WebElement saveButonu;
 
 //    @FindBy(xpath = "//span[text()='Save']")
