@@ -111,6 +111,19 @@ public WebElement roomstatus;
     public WebElement roomDescription;
 @FindBy(css = "#room-createdDate")
 public WebElement roomDate;
-
+@FindBy(css = "#save-entity")
+    public WebElement roomSave;
+@FindBy(xpath = "(//a[@class='page-link'])[9]")
+    public WebElement lastRoomPage;
+    @FindBy(xpath = "(//a[@class='page-link'])[1]")
+    public WebElement firstRoomPage;
+    @FindBy(xpath = "(//th[@class='hand'])[3]")
+    public WebElement roomTypestatus;
+    @FindBy(xpath = "(//tbody//td//div//a)[2]")
+    public WebElement firstroomEditButton;
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement roomTostify;
+    @FindBy(css = "#save-entity")
+    public WebElement roomUpdateSave;
 
 }
