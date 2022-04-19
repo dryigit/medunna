@@ -26,6 +26,7 @@ public class US0011_US0003StepDefinitions {
 
     @Given("yep goes to {string} website")
     public void yepGoesToWebsite(String website) {
+
         Driver.getDriver().get(ConfigReader.getProperty(website));
     }
 
@@ -362,4 +363,6 @@ rgb(255, 0, 0);      kirmizi
 
         }
     }
+
+
 }

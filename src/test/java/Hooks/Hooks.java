@@ -17,7 +17,7 @@ import utilities.Driver;
         }
 
         public static RequestSpecification spec;
-        @Before(value = "@ApiRegistrant")
+        @Before(value = "@ApiTestItem")
         public void setup(){
             spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         }
@@ -35,4 +35,6 @@ import utilities.Driver;
          }
          Driver.closeDriver();
       }
+
+
     }

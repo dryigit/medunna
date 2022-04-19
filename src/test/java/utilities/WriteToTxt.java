@@ -1,6 +1,7 @@
 package utilities;
 
 import pojos.Registrant;
+import pojos.TestItem;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -52,6 +53,18 @@ public class WriteToTxt {
             writer.append(registrant.toString() + ", \n");
             writer.close();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveTestItemData(TestItem testItem) {
+        try {
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("api_test_itmes_data"), true);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            writer.append(testItem + "\n");
+            writer.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

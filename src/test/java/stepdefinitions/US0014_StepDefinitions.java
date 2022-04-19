@@ -28,7 +28,8 @@ public class US0014_StepDefinitions {
 
     @Then("My Inpatients butonuna tiklar")
     public void myInpatientsButonunaTiklar() {
-        us013_page .yatılıHastaButonu.click();
+       us013_page .yatılıHastaButonu.click();
+
     }
 
     @And("Yatili Hasta bilgileri için edit tiklanir")
@@ -54,7 +55,8 @@ public class US0014_StepDefinitions {
 
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
-        Assert.assertTrue(us014_page.appointmentidAlani.isDisplayed());
+
+       Assert.assertTrue(us014_page.appointmentidAlani.isDisplayed());
         ReusableMethods.waitForVisibility(us014_page.statusAlani,2);
         Assert.assertTrue(us014_page.statusAlani.isDisplayed());
         ReusableMethods.waitFor(2);
