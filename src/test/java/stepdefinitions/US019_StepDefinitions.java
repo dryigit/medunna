@@ -18,8 +18,7 @@ import utilities.ReusableMethods;
 
 
 import static utilities.Driver.driver;
-import static utilities.ReusableMethods.scrollToWebEementVisivle;
-import static utilities.ReusableMethods.waitForClickablility;
+import static utilities.ReusableMethods.*;
 
 public class US019_StepDefinitions {
 
@@ -158,6 +157,11 @@ public class US019_StepDefinitions {
 
     @And("AdminOkan verifies the search result")
     public void adminokanVerifiesTheSearchResult() {
+        String expectedFirstName = "Zeynep";
+        waitForClickablility(us019_page.createFirstName, 10);
+        String actualFirstName = us019_page.createFirstName.toString();
+        System.out.println(actualFirstName);
+
 
     }
 
@@ -198,7 +202,7 @@ public class US019_StepDefinitions {
     @And("AdminOkan verifies the visibility of selected user info")
     public void adminokanVerifiesTheVisibilityOfSelectedUserInfo() {
        // us019_page.userSystema.getText().contains("systema");
-
+        // bu kod çalışmadı
 
     }
 
