@@ -31,12 +31,18 @@ import utilities.Driver;
      @After
      public void tearDown(Scenario scenario){
 
-         final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+
          if (scenario.isFailed()) {
+             final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
              scenario.attach(screenshot, "image/png","screenshots");
          }
          Driver.closeDriver();
       }
+        @Before(order = 1, value = "@Appointment")
+        public void navigateToLandingPage(){
 
+            Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
+
+        }
 
     }
