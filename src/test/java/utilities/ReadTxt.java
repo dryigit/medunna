@@ -45,7 +45,37 @@ public class ReadTxt {
     }
 
 
+    public static List<String> getTestItemIDs(){
+        List <String > list = new ArrayList<>();
 
+
+        try{
+
+            //identify file location
+            FileReader fileReader = new FileReader(ConfigReader.getProperty("database_test_items_data"));
+
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();//856-45-6789,
+
+            while(line != null){
+
+                String id = line.split(",")[0];
+                list.add(id);
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+    }
 
 //    public static List<String> getAPISSNIDs(){
 //        List <String > list = new ArrayList<>();

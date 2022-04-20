@@ -1,0 +1,9 @@
+TestItem{defaultValMax='222', defaultValMin='39', description='Kadabra', name='Sue Yu', price=215}
+TestItem{defaultValMax='207', defaultValMin='17', description='Weezing', name='Bo D. Satva', price=112}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='Jc Hettinger', price=400}
+TestItem{defaultValMax='181', defaultValMin='23', description='Shellder', name='Liv Long', price=135}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='Jc Hettinger', price=400}
+TestItem{defaultValMax='187', defaultValMin='36', description='Gloom', name='Scott Shawn DeRocks', price=194}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='Jc Hettinger', price=400}
+TestItem{defaultValMax='231', defaultValMin='12', description='Gyarados', name='June Bugg', price=170}
+TestItem{defaultValMax='171', defaultValMin='91', description='Vaporeon', name='Herbie Voor', price=167}
