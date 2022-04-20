@@ -19,10 +19,10 @@ Feature: US013--Test Results Islemleri
     Then İlgli alanlar kontrol edilir
 
 
-    Scenario: TC002---Doktor "Request Impatient yapabilmeli
+  Scenario: TC002---Doktor "Request Impatient yapabilmeli
 
-      Then Yatılı hasta için ilgili alanlar doldurulur
-      And Request Impatient tıklanır
+    Then Yatılı hasta için ilgili alanlar doldurulur
+    And Request Impatient tıklanır
 Feature: US013--Test Results Islemleri
 
   Background:
@@ -42,7 +42,7 @@ Feature: US013--Test Results Islemleri
     Then İlgli alanlar kontrol edilir
 
 
-    Scenario: TC002---Doktor "Request Impatient yapabilmeli
+  Scenario: TC002---Doktor "Request Impatient yapabilmeli
 
-      Then Yatılı hasta için ilgili alanlar doldurulur
-      And Request Impatient tıklanır
+    Then Yatılı hasta için ilgili alanlar doldurulur
+    And Request Impatient tıklanır
