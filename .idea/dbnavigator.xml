@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1252" />
+      <charset value="windows-1254" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -28,7 +28,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243">
-      <console name="MedunnaDB" type="STANDARD" schema="" session="Main" />
+      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from patient
+
+select * from physician where id=42999]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
