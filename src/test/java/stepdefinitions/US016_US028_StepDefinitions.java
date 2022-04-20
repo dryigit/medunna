@@ -187,4 +187,63 @@ ReusableMethods.waitForVisibility(page.roomTostify,5);
     }
 
 
+    @Then("yep clicks to Country")
+    public void yepClicksToCountry() {
+        page.countryItem.click();
+    }
+
+    @And("yep clicks to create a new country")
+    public void yepClicksToCreateANewCountry() {
+        page.createCountry.click();
+    }
+
+    @Then("yep gives country name {string} to create")
+    public void yepGivesCountryNameToCreate(String countryname) throws InterruptedException {
+       int randomsayi= faker.random().nextInt(10,20)+faker.random().nextInt(1,9);
+        countryname=countryname+randomsayi;
+        page.countrynametocreate.sendKeys(countryname);
+        page.saveCountry.click();
+       // String toast1=page.countryToastMassage.getText().toString();
+       // String toast2=page.countryToastMassage2.getText().toString();
+        String toast3=page.countryToastMassage3.getText().toString();
+        System.out.println("ucuncu :"+toast3+toast3.length());
+        Assert.assertTrue(toast3.contains("A new Country is created"));
+        String newCountryId=toast3.substring(41,46);
+        System.out.println("new ıd :"+newCountryId);
+        WebElement newCountry=Driver.getDriver().findElement(By.xpath("(//a[@href='/country/"+newCountryId+"'])[1]"));
+JSUtils.scrollIntoVIewJS(newCountry);
+Assert.assertTrue(newCountry.isDisplayed());
+        WebElement newCountryEdit=Driver.getDriver().findElement(By.xpath("//a[@href='/country/"+newCountryId+"/edit']"));
+
+  JSUtils.scrollIntoVIewJS(newCountryEdit);
+  Thread.sleep(1000);
+  JSUtils.clickElementByJS(newCountryEdit);
+    //newCountryEdit.click();
+    page.countrynametocreate.sendKeys("edited");
+    page.saveCountry.click();
+   String tostosEdited= page.countryToastMassage3.getText().toString();
+  ReusableMethods.waitForVisibility(page.countryToastMassage3,5);
+        String tostosEdited2= page.countryToastMassage.getText().toString();
+        String tostosEdited3= page.countryToastMassage2.getText().toString();
+        System.out.println("tostos edited :"+tostosEdited);
+        System.out.println("tostos edited :"+tostosEdited2);
+        System.out.println("tostos edited :"+tostosEdited3);
+    //    Thread.sleep(3000);
+      //  System.out.println("second toast :"+page.countryToastMassage4.getText().toString()+"|--");
+ // Assert.assertTrue(tostosEdited.contains("updated"));
+        WebElement newCountrydelete=Driver.getDriver().findElement(By.xpath("//a[@href='/country/"+newCountryId+"/delete']"));
+        JSUtils.scrollIntoVIewJS(newCountrydelete);
+        Thread.sleep(2000);
+        ReusableMethods.waitForVisibility(newCountrydelete,5);
+       JSUtils.clickElementByJS(newCountrydelete);
+        //newCountrydelete.click();
+ReusableMethods.waitForVisibility(page.deletionVerifiying,5);
+      JSUtils.clickElementByJS(page.deletionVerifiying);
+       // page.deletionVerifiying.click();
+        String tostosdeleted= page.countryToastMassage3.getText().toString();
+    //Assert.assertTrue(tostosdeleted.contains("delete"));
+
+    }
+
+
 }
