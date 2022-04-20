@@ -29,6 +29,7 @@ public class US0014_StepDefinitions {
     @Then("My Inpatients butonuna tiklar")
     public void myInpatientsButonunaTiklar() {
        us013_page .yatılıHastaButonu.click();
+
     }
 
     @And("Yatili Hasta bilgileri için edit tiklanir")
@@ -53,6 +54,7 @@ public class US0014_StepDefinitions {
         Assert.assertTrue(us014_page.createdDateAlani.isDisplayed());
 
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+
 
        Assert.assertTrue(us014_page.appointmentidAlani.isDisplayed());
         ReusableMethods.waitForVisibility(us014_page.statusAlani,2);
@@ -103,7 +105,7 @@ public class US0014_StepDefinitions {
 
 
 
-       // ReusableMethods.waitForClickablility(us014_page.saveButonu,5);
+        // ReusableMethods.waitForClickablility(us014_page.saveButonu,5);
 
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
         jsexecutor.executeScript("arguments[0].click();", us014_page.saveButonu);
@@ -117,7 +119,7 @@ public class US0014_StepDefinitions {
     public void statusBilgileriniGüncelleyebilmeli() {
 
 
-     //  ReusableMethods.scrollToWebEementVisivle(us014_page.statusAlanı);
+        //  ReusableMethods.scrollToWebEementVisivle(us014_page.statusAlanı);
         actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
 
         Select select2=new Select(us014_page.statusAlani);
