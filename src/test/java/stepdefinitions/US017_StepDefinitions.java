@@ -14,15 +14,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.US017_Page;
 import pojos.TestItem;
-import utilities.ConfigReader;
-import utilities.DBUtils;
-import utilities.Driver;
-import utilities.ReusableMethods;
+import utilities.*;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static Hooks.Hooks.spec;
@@ -32,14 +27,17 @@ import static org.junit.Assert.assertEquals;
 import static utilities.ApiUtils.deleteRequest;
 import static utilities.ApiUtils.getRequest;
 import static utilities.Authentication.generateToken;
-import static utilities.DBUtils.createConnection;
+import static utilities.ReadTxt.getSSNIDs;
+import static utilities.ReadTxt.getTestItemIDs;
 import static utilities.WriteToTxt.saveTestItemData;
+import static utilities.WriteToTxt.saveTestItemsData;
 
 public class US017_StepDefinitions {
 US017_Page page=new US017_Page();
 Response response;
 TestItem testItem=new TestItem();
 String endpointToDelete;
+    List< Object> allDBItemIds;
 
     @When("Kullanici medunna anasayfasina gider")
     public void kullaniciMedunnaAnasayfasinaGider() {
@@ -101,6 +99,45 @@ String endpointToDelete;
         Assert.assertTrue(page.testItemsText.isDisplayed());
     }
 
+    @Then("Created Date sekmesine tiklar")
+    public void createdDateSekmesineTiklar() {
+        ReusableMethods.waitFor(1);
+        page.createdDateButton.click();
+    }
+
+    @And("Edit butonuna tiklar")
+    public void editButonunaTiklar() {
+        ReusableMethods.waitFor(1);
+        page.editButtonList.get(0).click();
+    }
+
+    @And("Name, Description, price Default min value, Default max value bilgilerini gunceller")
+    public void nameDescriptionPriceDefaultMinValueDefaultMaxValueBilgileriniGunceller() {
+        Actions actions=new Actions(Driver.getDriver());
+        page.nameTextBox.clear();
+        actions.click(page.nameTextBox).sendKeys(Keys.ENTER).sendKeys(Faker.instance().funnyName().name())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().pokemon().name())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(100,500).toString())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(10,100).toString())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(200,300).toString())
+                .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB)
+                .sendKeys(Keys.ENTER).perform();
+    }
+
+
+
+
+
+
+    @Then("{string} basarili guncelleme yazisini dogrular")
+    public void basariliGuncellemeYazisiniDogrular(String metin) throws IOException {
+        ReusableMethods.getScreenshot("tostify");
+    //        String toasttext = page.toasttify.getText().toString();
+      //      System.out.println("writen text " + toasttext);
+        //    Assert.assertTrue(toasttext.contains(metin));
+        Assert.assertTrue(page.basariliEditText.isDisplayed());
+    }
+
 
 
     @Then("Delete Butonunu tiklar")
@@ -136,11 +173,11 @@ String endpointToDelete;
 
     @Then("kullanici test items icin expected datalari olusturur {string}, {string}, {string}, {string}, {int}")
     public void kullanici_test_items_icin_expected_datalari_olusturur(String defMaxVal, String defMinVal, String description, String name, int price) {
-        defMaxVal=Faker.instance().random().nextInt(150,250).toString();
-        defMinVal=Faker.instance().random().nextInt(10,100).toString();
-        description=Faker.instance().pokemon().name();
-        name=Faker.instance().funnyName().name();
-        price=Faker.instance().random().nextInt(100,250).intValue();
+    //    defMaxVal=Faker.instance().random().nextInt(150,250).toString();
+    //    defMinVal=Faker.instance().random().nextInt(10,100).toString();
+    //    description=Faker.instance().pokemon().name();
+    //    name=Faker.instance().funnyName().name();
+    //    price=Faker.instance().random().nextInt(100,250).intValue();
 
         testItem.setDefaultValMax(defMaxVal);
         testItem.setDefaultValMin(defMinVal);
@@ -150,7 +187,20 @@ String endpointToDelete;
 
     }
 
+    @Then("kullanici test items olusturmak icin expected datalari olusturur {string}, {string}, {string}, {string}, {int}")
+    public void kullaniciTestItemsOlusturmakIcinExpectedDatalariOlusturur(String defMaxVal, String defMinVal, String description, String name, int price) {
+            defMaxVal=Faker.instance().random().nextInt(150,250).toString();
+            defMinVal=Faker.instance().random().nextInt(10,100).toString();
+            description=Faker.instance().pokemon().name();
+            name=Faker.instance().funnyName().name();
+            price=Faker.instance().random().nextInt(100,250).intValue();
 
+        testItem.setDefaultValMax(defMaxVal);
+        testItem.setDefaultValMin(defMinVal);
+        testItem.setDescription(description);
+        testItem.setName(name);
+        testItem.setPrice(price);
+    }
 
     @Then("kullanici items icin request gonderir ve response alir")
     public void kullaniciItemsIcinRequestGonderirVeResponseAlir() {
@@ -210,81 +260,53 @@ String endpointToDelete;
 
     @Then("user validates that the item {string} has been deleted")
     public void userValidatesThatTheItemHasBeenDeleted(String id) {
-        response = getRequest(generateToken(),ConfigReader.getProperty("api_test_items_endpoint"));
-        HashMap<String,Object> idData=response.as(HashMap.class);
+       response = getRequest(generateToken(),ConfigReader.getProperty("api_test_items_endpoint"));
+   /*      HashMap<String,Object> idData=response.as(HashMap.class);
     //    List<String> idData=response.as(List.class);
         System.out.println("idData.= " + idData);
         int size= idData.size();
         for (int i = 0; i < size; i++) {
             Assert.assertNotEquals("id ye ait item silinemedi",idData.get("id"),id);
         }
+*/
 
-
-      //  response.then().assertThat().body("id", hasItem(id));
+      response.then().assertThat().body("id", hasItem(id));
     }
     //Test item DB
-    @Given("user connects to the Database")
-    public void userConnectsToTheDatabase() {
-        createConnection();
+    @Given("user creates a connection with DB using {string} and {string} , {string}")
+    public void userCreatesAConnectionWithDBUsingAnd(String url, String username, String password) {
+        DatabaseUtility.createConnection(url,username,password);
     }
 
 
-    @Given("user gets the {string} of registrant {string} from {string} table")
-    public void userGetsTheOfRegistrantFromTable(String column, String name, String table) {
-        String myDynamicQuery = "Select * from " + table + " where " + column + " = '" + name + "'";
-        DBUtils.executeQuery(myDynamicQuery);
+
+
+
+    @Given("user sends the query to DB and gets the column data {string} and {string}")
+    public void userSendsTheQueryToDBAndGetsTheColumnDataAnd(String query, String columnName) {
+        allDBItemIds =DatabaseUtility.getColumnData(query,columnName);
+        System.out.println("allDBItemNames = " + allDBItemIds);
     }
 
-    @Then("user validates {string} from {string} column")
-    public void userValidatesFromColumn(String data, String column) throws SQLException {
-        DBUtils.getResultset().next();
-        Object columnData = DBUtils.getResultset().getObject(column);
-        String actualData = (String) columnData;
-        assertEquals(data, actualData);
-        System.out.println(columnData);
-
+    @Then("user saves the DB records to correspondent files")
+    public void userSavesTheDBRecordsToCorrespondentFiles() {
+        saveTestItemsData(allDBItemIds);
     }
 
+    @And("user validates DB test item data")
+    public void userValidatesDBTestItemData() {
+        List<String> expectedTestItemIDs = new ArrayList<>();
+        expectedTestItemIDs.add("30198");
+        expectedTestItemIDs.add("1402");
+        expectedTestItemIDs.add("1403");
+        expectedTestItemIDs.add("1404");
+
+        List<String> actualData = getTestItemIDs();//All records
+
+        Assert.assertTrue(actualData.containsAll(expectedTestItemIDs));
+    }
     @Then("user close the database connection")
     public void userCloseTheDatabaseConnection() {
         DBUtils.closeConnection();
-    }
-
-    @Then("Created Date sekmesine tiklar")
-    public void createdDateSekmesineTiklar() {
-        ReusableMethods.waitFor(1);
-        page.createdDateButton.click();
-    }
-
-    @And("Edit butonuna tiklar")
-    public void editButonunaTiklar() {
-        ReusableMethods.waitFor(1);
-        page.editButtonList.get(0).click();
-    }
-
-    @And("Name, Description, price Default min value, Default max value bilgilerini gunceller")
-    public void nameDescriptionPriceDefaultMinValueDefaultMaxValueBilgileriniGunceller() {
-        Actions actions=new Actions(Driver.getDriver());
-        actions.click(page.nameTextBox).sendKeys(Keys.ENTER).sendKeys(Faker.instance().funnyName().name())
-                .sendKeys(Keys.TAB).sendKeys(Faker.instance().pokemon().name())
-                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(100,500).toString())
-                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(10,100).toString())
-                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(200,300).toString())
-                .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB)
-                .sendKeys(Keys.ENTER).perform();
-    }
-
-
-
-
-
-
-    @Then("{string} basarili guncelleme yazisini dogrular")
-    public void basariliGuncellemeYazisiniDogrular(String metin) throws IOException {
-        ReusableMethods.getScreenshot("tostify");
-    //    String toasttext = page.toasttify.getText().toString();
-    //    System.out.println("writen text " + toasttext);
-    //    Assert.assertTrue(toasttext.contains(metin));
-        Assert.assertTrue(page.basariliEditText.isDisplayed());
     }
 }
