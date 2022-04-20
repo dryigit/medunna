@@ -35,4 +35,24 @@ public class US004_StepDefinitions {
 
 
     }
+
+    @Then("kullanici giris ekraninda beni hatirla bolumunu gorur")
+    public void kullaniciGirisEkranindaBeniHatirlaBolumunuGorur() {
+        Assert.assertTrue(us004page.us04rememberMe.isEnabled());
+    }
+
+    @Then("kullanici giris ekraninda sifremi unuttum bolumunu gorur")
+    public void kullaniciGirisEkranindaSifremiUnuttumBolumunuGorur() {
+        Assert.assertTrue(us004page.us04forgetPassword.isEnabled());
+    }
+
+    @Then("kullanici giris ekraninda register a new account bolumunu gorur")
+    public void kullaniciGirisEkranindaRegisterANewAccountBolumunuGorur() {
+        Assert.assertTrue(us004page.us04registerNewAccount.isEnabled());
+    }
+
+    @Then("kullanici giris ekraninda cancel secenegini gorur")
+    public void kullaniciGirisEkranindaCancelSeceneginiGorur() {
+        Assert.assertTrue(us004page.us04cancel.isEnabled());
+    }
 }

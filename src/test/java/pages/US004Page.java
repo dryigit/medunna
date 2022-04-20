@@ -16,13 +16,13 @@ public class US004Page extends BasePage{
     @FindBy (xpath = "//input[@id='password']")
     public WebElement us04password;
 
-    @FindBy (xpath = "//input[@id='rememberMe']")
+    @FindBy (xpath = "//input[@value='false']")
     public WebElement us04rememberMe;
 
-    @FindBy (xpath = "//span[normalize-space()='Did you forget your password?']")
+    @FindBy (xpath = "//a[@href='/account/reset/request']")
     public WebElement us04forgetPassword;
 
-    @FindBy (xpath = "//span[normalize-space()='Register a new account']")
+    @FindBy (xpath = "//a[@href='/account/register']")
     public WebElement us04registerNewAccount;
 
     @FindBy (xpath = "//button[@type='submit']")
@@ -30,5 +30,8 @@ public class US004Page extends BasePage{
 
     @FindBy (xpath = "//span[normalize-space()='MY PAGES']")
     public WebElement us04myPages;
+
+    @FindBy (xpath = "//span[normalize-space()='Cancel']")
+    public WebElement us04cancel;
 
 }
