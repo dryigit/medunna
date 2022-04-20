@@ -19,6 +19,7 @@ import utilities.DBUtils;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -247,5 +248,43 @@ String endpointToDelete;
     @Then("user close the database connection")
     public void userCloseTheDatabaseConnection() {
         DBUtils.closeConnection();
+    }
+
+    @Then("Created Date sekmesine tiklar")
+    public void createdDateSekmesineTiklar() {
+        ReusableMethods.waitFor(1);
+        page.createdDateButton.click();
+    }
+
+    @And("Edit butonuna tiklar")
+    public void editButonunaTiklar() {
+        ReusableMethods.waitFor(1);
+        page.editButtonList.get(0).click();
+    }
+
+    @And("Name, Description, price Default min value, Default max value bilgilerini gunceller")
+    public void nameDescriptionPriceDefaultMinValueDefaultMaxValueBilgileriniGunceller() {
+        Actions actions=new Actions(Driver.getDriver());
+        actions.click(page.nameTextBox).sendKeys(Keys.ENTER).sendKeys(Faker.instance().funnyName().name())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().pokemon().name())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(100,500).toString())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(10,100).toString())
+                .sendKeys(Keys.TAB).sendKeys(Faker.instance().random().nextInt(200,300).toString())
+                .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB) .sendKeys(Keys.TAB)
+                .sendKeys(Keys.ENTER).perform();
+    }
+
+
+
+
+
+
+    @Then("{string} basarili guncelleme yazisini dogrular")
+    public void basariliGuncellemeYazisiniDogrular(String metin) throws IOException {
+        ReusableMethods.getScreenshot("tostify");
+    //    String toasttext = page.toasttify.getText().toString();
+    //    System.out.println("writen text " + toasttext);
+    //    Assert.assertTrue(toasttext.contains(metin));
+        Assert.assertTrue(page.basariliEditText.isDisplayed());
     }
 }

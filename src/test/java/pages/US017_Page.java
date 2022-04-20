@@ -73,4 +73,13 @@ public class US017_Page extends BasePage{
 
     @FindBy(xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
     public  WebElement itemDeletedText;
+
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']") //span[.='Edit']
+    public List<WebElement>  editButtonList;
+
+    @FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement toasttify;
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    public WebElement basariliEditText;
 }
