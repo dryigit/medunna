@@ -29,7 +29,7 @@ Feature: US_019_Admin create a new staff, edit and delete
     Examples:
 
       | username | password | SSN            |phone         | address     | description |
-      | Okanok | Ozi888.    | 777-88-9999   |147-542-7854 | high street | technician |
+      | Okanok | Ozi888.    | 777-88-9999   |147-542-7854  | 801 street | doctor |
 
     @E2E
     Scenario Outline: US019_TC_03_Admin can edit staff information
