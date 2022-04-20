@@ -218,7 +218,7 @@ String endpointToDelete;
     }
 
     @And("kullanici API kayitlarini onaylar")
-    public void kullaniciAPIKayitlariniOnaylar() throws JsonProcessingException {
+    public void kullaniciAPIKayitlariniOnaylar() throws IOException {
         response.prettyPrint();
         ObjectMapper obj = new ObjectMapper();
         TestItem actualTestItem= obj.readValue(response.asString(),TestItem.class);
