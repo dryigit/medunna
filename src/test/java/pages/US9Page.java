@@ -27,9 +27,8 @@ public class US9Page {
     @FindBy(xpath="//button[@type='submit']")
     public WebElement singInButton2;
 
-    @FindBy(xpath="(//a[@class='d-flex align-items-center dropdown-toggle nav-link'])[2]")
+    @FindBy(xpath="(//span[text()='MY PAGES'])")
     public WebElement MyPagesButtonStaff;
-
 
     @FindBy(xpath="//span[text()='In Patient']")
     public WebElement InpatientButton;
@@ -55,8 +54,7 @@ public class US9Page {
     @FindBy(xpath= "//*[@id=\"save-entity\"]")
     public WebElement saveButton;
 
-
-    @FindBy(xpath="(//a[@class='dropdown-item'])[4]")
+    @FindBy(xpath="(//a[@class='dropdown-item'])[1]")
     public WebElement searchPatientButton;
 
     @FindBy(xpath="//input[@name='ssn']")
@@ -67,7 +65,6 @@ public class US9Page {
 
     @FindBy (tagName="h2")
     public WebElement InPatientsText;
-
 
     @FindBy(xpath="//input[@name='firstName']")
     public WebElement firstNameButton2;
