@@ -16,8 +16,11 @@ Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
     Then Sayfayi kapatir
 
     Scenario: TC02 -there should be following items for creating/ updating test items; Name, Description, price Default min value, Default max value and created date as MM/DAY/YEAR
-      Then Create a new test item butonunu tiklar
+      Then Created Date sekmesine tiklar
+      And Edit butonuna tiklar
       Then Name, Description, price Default min value, Default max value and created date as MM DAY YEAR kutularinin goruntulendigini dogrular"
+      And Name, Description, price Default min value, Default max value bilgilerini gunceller
+      Then "A Test Item is updated with identifier" basarili guncelleme yazisini dogrular
       Then Sayfayi kapatir
 
   Scenario: TC04 - Admin can view test items
