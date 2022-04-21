@@ -35,7 +35,7 @@ import utilities.Driver;
          if (scenario.isFailed()) {
              scenario.attach(screenshot, "image/png","screenshots");
          }
-         Driver.closeDriver();
+         //Driver.closeDriver();
       }
 
 
