@@ -19,7 +19,7 @@ public class US23_Page extends BasePage{
     @FindBy(xpath = "//*[text()='Show Appointments']")
     public WebElement showAppointmentsButton;
 
-    @FindBy(xpath = "(//span[text()='Payment / Invoice Process'])[2]")
+    @FindBy(xpath = "(//span[text()='Payment / Invoice Process'])[1]")
     public WebElement paymentInvoiceProcessButton;
 
     @FindBy(xpath = "//a[@class='btn btn-danger btn-sm']")
