@@ -12,6 +12,7 @@ import pages.US23_Page;
 import pages.US24_Page;
 import pages.US9Page;
 import utilities.Driver;
+import utilities.JSUtils;
 import utilities.ReusableMethods;
 
 import java.awt.*;
@@ -101,7 +102,8 @@ public class US023_StepDefinitions {
         us24_page.showInvoiceButton.click();
     }
     @Given("Kullanici acilan sayfada INVOICE yazisinin oldugunu dogrular.")
-    public void kullanici_acilan_sayfada_invoice_yazisinin_oldugunu_dogrular() {
+    public void kullanici_acilan_sayfada_invoice_yazisinin_oldugunu_dogrular() throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertTrue("Fatura gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
     }
 
@@ -123,6 +125,9 @@ public class US023_StepDefinitions {
 
     @And("Kullanici A Bill is updated with identifier mesajini aldigini dogrular.")
     public void kullaniciABillIsUpdatedWithIdentifierMesajiniAldiginiDogrular() {
+      //  JSUtils.clickElementByJS(us23_page.toastify);
+        Assert.assertTrue("Fatura olusturulamadi.",us23_page.toastify.isDisplayed());
+
     }
 
     @And("Kullanici Patient Detail sayfasinda Show Invoice yazisina tiklar.")

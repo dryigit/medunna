@@ -36,7 +36,7 @@ import utilities.Driver;
              final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
              scenario.attach(screenshot, "image/png","screenshots");
          }
-         Driver.closeDriver();
+         //Driver.closeDriver();
       }
         @Before(order = 1, value = "@Appointment")
         public void navigateToLandingPage(){
