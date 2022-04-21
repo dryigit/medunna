@@ -26,7 +26,7 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
 
     Then kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
+    Then  Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
     And kullanici SSN kutusuna gecerli bir SSN numarası girer
     Then kullanici gelen bilgilerden ilk sirada olan hastayi secer
     And acilan sayfada edit butonuna tiklanir
@@ -36,8 +36,8 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
 
     Given kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
-    And kullanici SSN kutusuna gecerli bir SSN numarası girer
+    Then  Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
+    And Kullanici SSN kutusuna gecerli bir SSN numarası girer
     Then kullanici gelen bilgilerden ilk sirada olan hastayi secer
     And acilan sayfada edit butonuna tiklanir
     Then kullanici firstname textini siler ve silindigini test eder
