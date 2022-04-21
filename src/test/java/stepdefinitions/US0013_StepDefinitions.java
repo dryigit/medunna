@@ -33,7 +33,7 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("Username ve Password ile giriş yapar")
+    @Then("Username ve Password ile giris yapar")
     public void username_ve_password_ile_giriş_yapar() {
         us013_page.username.sendKeys(ConfigReader.getProperty("TC_drUsername"));
         us013_page.password.sendKeys(ConfigReader.getProperty("TC_drpassword"));
@@ -52,7 +52,7 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("My Appointments tıklar")
+    @Then("My Appointments tiklar")
     public void my_appointments_tıklar() {
 
         us013_page.myAppoinButonu.click();
@@ -67,7 +67,7 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("Güncellenen test sonuçları için Show Test Results tıklanır")
+    @Then("Güncellenen test sonuclari icin Show Test Results tiklanir")
     public void güncellenen_test_sonuçları_için_show_test_results_tıklanır() {
 
         ReusableMethods.waitFor(3);
@@ -76,7 +76,7 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("Gelen sonuç için View Results tıklanır")
+    @Then("Gelen sonuc icin View Results tiklanir")
     public void gelen_sonuç_için_view_results_tıklanır() {
 
         ReusableMethods.waitFor(3);
@@ -98,7 +98,7 @@ public class US0013_StepDefinitions {
 
     }
 
-    @Then("Yatılı hasta için ilgili alanlar doldurulur")
+    @Then("Yatili hasta icin ilgili alanlar doldurulur")
     public void yatılı_hasta_için_ilgili_alanlar_doldurulur() {
 
         us013_page.anamnesisAlanı.sendKeys("bla");
@@ -115,7 +115,7 @@ public class US0013_StepDefinitions {
 
 
     }
-    @Then("Request Impatient tıklanır")
+    @Then("Request Impatient tiklanir")
     public void request_impatient_tıklanır() {
 
         actions.sendKeys(Keys.PAGE_UP).perform();
