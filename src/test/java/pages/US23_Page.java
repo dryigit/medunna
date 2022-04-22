@@ -49,7 +49,8 @@ public class US23_Page extends BasePage{
     @FindBy(xpath = "//a[@class='btn btn-success btn-sm']")
     public WebElement showInvoicePaymentButton;
 
-
+    @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    public WebElement toastify;
 
 
 }
