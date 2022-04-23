@@ -32,8 +32,11 @@ public class US019_StepDefinitions {
     public void adminokanSignsInFromHomePageByOwnAdminAnd(String username, String password) {
         Driver.getDriver().get(ConfigReader.getProperty("MedunnaURL"));
 
+        waitForClickablility(us008Page.ikon, 10);
         us008Page.ikon.click();
+
         us008Page.ikonSignIn.click();
+
         us008Page.username.sendKeys(username);
         us008Page.password.sendKeys(password);
         us008Page.signInSignInButton.click();
@@ -72,7 +75,7 @@ public class US019_StepDefinitions {
 
         // sonraki test case'lere ait steplerde kullanmak icin SSN'i bir variable atıyoruz
         SSN = faker.idNumber().ssnValid();
-        System.out.println(SSN);
+        System.out.println("fake ssn : " + SSN);
         us019_page.createSSN.sendKeys(SSN);
         actions.sendKeys(Keys.TAB);
 
@@ -91,13 +94,14 @@ public class US019_StepDefinitions {
 
         Assert.assertTrue(us019_page.toastifyBasariliSave.isDisplayed());
         System.out.println(us019_page.toastifyBasariliSave.getText()); // ya toastify i yakalayamıyor ya da text yok
-        System.out.println(SSN);
+
     }
 
     @Then("AdminOkan sign out yapar")
     public void adminokanSignOutYapar() {
-
+        waitForClickablility(us019_page.userMenuDropdown, 10);
         us019_page.userMenuDropdown.click();
+        waitForClickablility(us019_page.signOutDropdown, 10);
         us019_page.signOutDropdown.click();
     }
 
@@ -152,16 +156,20 @@ public class US019_StepDefinitions {
 
         scrollToWebEementVisivle(us019_page.saveButtonCreateStaff);
         us019_page.saveButtonCreateStaff.isEnabled();
+        // us019_page.saveButtonCreateStaff.click();
         // manuel ve otomasyonda save yapmıyor; internal server error hatası veriyor
     }
 
     @And("AdminOkan verifies the search result")
     public void adminokanVerifiesTheSearchResult() {
         String expectedFirstName = "Zeynep";
-        waitForClickablility(us019_page.createFirstName, 10);
-        String actualFirstName = us019_page.createFirstName.toString();
+        waitForVisibility(us019_page.searchStaffFirstname, 10);
+        us019_page.searchStaffFirstname.click();
+        String actualFirstName = us019_page.searchStaffFirstname.getText();
         System.out.println(actualFirstName);
 
+
+        System.out.println("TC_02_sonu" );
 
     }
 
@@ -169,13 +177,14 @@ public class US019_StepDefinitions {
 
     @And("AdminOkan finds the record to edit")
     public void adminokanFindsTheRecordToEdit() {
-
+        waitForClickablility(us019_page.idButton, 10);
         us019_page.idButton.click();
+        waitForClickablility(us019_page.editButton, 10);
         us019_page.editButton.click();
     }
     @And("AdminOkan edits some info {string} and save")
     public void adminokanEditsSomeInfoAndSave(String email) {
-
+        waitForVisibility(us019_page.editEmail, 10);
         us019_page.editEmail.clear();
         us019_page.editEmail.sendKeys(email);
 
@@ -195,14 +204,27 @@ public class US019_StepDefinitions {
     // US019_TC_04_Admin can select a user from the existing users
     @And("AdminOkan can select a user from the existing users")
     public void adminokanCanSelectAUserFromTheExistingUsers() {
-        us019_page.viewButton.click();
+        waitForClickablility(us019_page.idButton, 10);
+        JSUtils.clickElementByJS(us019_page.idButton);
+        //us019_page.idButton.click();
+
+        waitForClickablility(us019_page.viewButton, 10);
+        JSUtils.clickElementByJS(us019_page.viewButton);
+        //us019_page.viewButton.click();
 
     }
 
     @And("AdminOkan verifies the visibility of selected user info")
     public void adminokanVerifiesTheVisibilityOfSelectedUserInfo() {
-       // us019_page.userSystema.getText().contains("systema");
-        // bu kod çalışmadı
+        waitForVisibility(us019_page.selectUserEmail, 10);
+
+        System.out.println("Actual email : " + us019_page.selectUserEmail.getText());
+
+        String actualEmail = us019_page.selectUserEmail.getText();
+        String expectedEmail = "nursefatma@yahoo.com";
+
+        Assert.assertEquals(expectedEmail, actualEmail);
+
 
     }
 
@@ -210,6 +232,7 @@ public class US019_StepDefinitions {
     @And("AdminOkan finds the record of newly staff")
     public void adminokanFindsTheRecordOfNewlyStaff() {
 
+       waitForClickablility(us019_page.idButton, 10);
        us019_page.idButton.click();
 
     }
@@ -236,11 +259,14 @@ public class US019_StepDefinitions {
     @Then("AdminOkan verifies the successful delete process")
     public void adminokanVerifiesTheSuccessfulDeleteProcess() {
 
+        Assert.assertTrue(us019_page.toastifyDeleteConfirm.isDisplayed());
 
+        System.out.println("TC_05 basarili");
+/*
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
 
         javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", us019_page.toastifyDeleteConfirm);
-
+*/
     }
 
 }
