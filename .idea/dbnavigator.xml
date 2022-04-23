@@ -28,7 +28,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243">
-      <console name="MedunnaDB" type="STANDARD" schema="" session="Main" />
+      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from patient
+
+select * from physician where id=42999]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -36,6 +38,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" dataset="public.c_test_item" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

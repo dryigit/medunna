@@ -111,6 +111,36 @@ public WebElement roomstatus;
     public WebElement roomDescription;
 @FindBy(css = "#room-createdDate")
 public WebElement roomDate;
-
-
+@FindBy(css = "#save-entity")
+    public WebElement roomSave;
+@FindBy(xpath = "(//a[@class='page-link'])[9]")
+    public WebElement lastRoomPage;
+    @FindBy(xpath = "(//a[@class='page-link'])[1]")
+    public WebElement firstRoomPage;
+    @FindBy(xpath = "(//th[@class='hand'])[3]")
+    public WebElement roomTypestatus;
+    @FindBy(xpath = "(//tbody//td//div//a)[2]")
+    public WebElement firstroomEditButton;
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement roomTostify;
+    @FindBy(css = "#save-entity")
+    public WebElement roomUpdateSave;
+    @FindBy(xpath = "(//a[@href='/country'])[1]")
+    public WebElement countryItem;
+    @FindBy(css = "#jh-create-entity")
+    public WebElement createCountry;
+    @FindBy(css = "#country-name")
+    public WebElement countrynametocreate;
+    @FindBy(css = "#save-entity")
+    public WebElement saveCountry;
+    @FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement countryToastMassage;
+@FindBy(xpath = "//div[@class='Toastify']//div")
+    public WebElement countryToastMassage2;
+@FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement countryToastMassage3;
+    @FindBy(xpath = "(//div[@class='Toastify__toast-body'])[2]")
+    public WebElement countryToastMassage4;
+@FindBy(css = "#jhi-confirm-delete-country")
+    public WebElement deletionVerifiying;
 }

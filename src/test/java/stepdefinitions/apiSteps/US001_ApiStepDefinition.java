@@ -16,6 +16,8 @@ import org.junit.Assert;
 import pojos.Registrant;
 import utilities.ConfigReader;
 
+import java.io.IOException;
+
 import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 import static utilities.WriteToTxt.saveRegistrantApiData;
@@ -68,7 +70,7 @@ public class US001_ApiStepDefinition {
     }
 
     @Then("kulllanici api kayitlarini dogrular")
-    public void kulllaniciApiKayitlariniDogrular() throws JsonProcessingException {
+    public void kulllaniciApiKayitlariniDogrular() throws IOException {
         response.then().statusCode(201);
         response.prettyPrint();
 

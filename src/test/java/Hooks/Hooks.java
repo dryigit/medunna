@@ -12,12 +12,13 @@ import utilities.Driver;
 
     public class Hooks {
 
+
         @Before
         public void setUp(){
         }
 
         public static RequestSpecification spec;
-        @Before(value = "@ApiRegistrant")
+        @Before(value = "@ApiTestItem")
         public void setup(){
             spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         }
@@ -29,10 +30,19 @@ import utilities.Driver;
 
      @After
      public void tearDown(Scenario scenario){
-         final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+
+
          if (scenario.isFailed()) {
+             final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
              scenario.attach(screenshot, "image/png","screenshots");
          }
-         Driver.closeDriver();
+         //Driver.closeDriver();
       }
+        @Before(order = 1, value = "@Appointment")
+        public void navigateToLandingPage(){
+
+            Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
+
+        }
+
     }

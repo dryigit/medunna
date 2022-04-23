@@ -29,10 +29,16 @@ public class US25_Page extends BasePage {
 @FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div/div/div[1]/span")
     public WebElement toastify;
 
+    @FindBy(xpath = "//div[@class='Toastify']")
+    public WebElement toasttify;
+
+    @FindBy(xpath="//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
+    public WebElement toastMessage;
+
 @FindBy(xpath="//*[@id=\"register-submit\"]")
     public WebElement sendAppnmtButton;
 
-@FindBy(xpath="//*[text()='CONTACT']")
+@FindBy(xpath="(//a[@class='d-flex align-items-center nav-link'])[6]")
 
     public WebElement contactButton;
 
