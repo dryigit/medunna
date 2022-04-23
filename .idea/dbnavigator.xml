@@ -28,25 +28,50 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243">
+
       <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from jhi_user where ssn = '777-88-9999'
+select * from jhi_user where ssn = '372-35-4693'
 select * from jhi_user where created_by = 'okanok'
-select * from staff where created_by = 'okanok'
-select * from staff where "id" = 72577]]></console>
+select * from staff where created_by = 'okanok']]></console>
+
+
+      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from jhi_user where id=51911
+
+select * from appointment
+
+
+select * from in_patient where id=51911
+
+select * from patient where id=51911
+select * from patient
+select * from country]]></console>
+
+      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from c_test_item
+
+select * from physician]]></console>
+
+
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" object-ref="consoles/MedunnaDB" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+
     <filter-actions connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" dataset="public.staff" active-filter-id="dfbd7b8e-7cbd-41e9-943d-173b9d930b91">
       <filter id="dfbd7b8e-7cbd-41e9-943d-173b9d930b91" name="777-88-9999" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="777-88-9999" active="true" />
       </filter>
     </filter-actions>
     <filter-actions connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" dataset="public.c_test_result" active-filter-id="" />
+
+    <filter-actions connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" dataset="public.c_test_item" active-filter-id="" />
+
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

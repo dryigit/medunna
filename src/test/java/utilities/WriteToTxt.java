@@ -1,7 +1,6 @@
 package utilities;
 
 import pojos.Registrant;
-import pojos.StaffApi;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -55,25 +54,7 @@ public class WriteToTxt {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
-    public static void saveStaffApiData(StaffApi staffApi) {
 
-        try {
-            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("api_staff_data"), true);
-
-
-            BufferedWriter writer = new BufferedWriter(fileWriter);
-
-            writer.append(staffApi.toString() + ", \n");
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 }
-
-
