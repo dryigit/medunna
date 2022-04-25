@@ -59,12 +59,7 @@ Feature:US 23
     Then Kullanici acilan sayfada INVOICE yazisinin oldugunu dogrular.
 
 
-Scenario: Tarih sırası gün/ay/yıl (ay/gün/yıl) şeklinde olmalıdır.
 
-  Given Kullanici url'ye gider.
-  * make an appointmnet bas
-  * date gir
-  * verify
 
 
 
