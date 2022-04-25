@@ -12,16 +12,22 @@ import pages.US23_Page;
 import pages.US24_Page;
 import pages.US9Page;
 import utilities.Driver;
+import utilities.JSUtils;
 import utilities.ReusableMethods;
 
 import java.awt.*;
 import java.security.Key;
+import java.time.LocalDate;
 
 
 import static utilities.ReusableMethods.getScreenshot;
 import static utilities.ReusableMethods.waitForClickablility;
 
 public class US023_StepDefinitions {
+    public static void main(String[] args) {
+        LocalDate localDate=LocalDate.now();
+        System.out.println(localDate);
+    }
 
     US23_Page us23_page = new US23_Page();
     US24_Page us24_page = new US24_Page();
@@ -101,7 +107,8 @@ public class US023_StepDefinitions {
         us24_page.showInvoiceButton.click();
     }
     @Given("Kullanici acilan sayfada INVOICE yazisinin oldugunu dogrular.")
-    public void kullanici_acilan_sayfada_invoice_yazisinin_oldugunu_dogrular() {
+    public void kullanici_acilan_sayfada_invoice_yazisinin_oldugunu_dogrular() throws InterruptedException {
+        Thread.sleep(2000);
         Assert.assertTrue("Fatura gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
     }
 
@@ -123,6 +130,9 @@ public class US023_StepDefinitions {
 
     @And("Kullanici A Bill is updated with identifier mesajini aldigini dogrular.")
     public void kullaniciABillIsUpdatedWithIdentifierMesajiniAldiginiDogrular() {
+      //  JSUtils.clickElementByJS(us23_page.toastify);
+        Assert.assertTrue("Fatura olusturulamadi.",us23_page.toastify.isDisplayed());
+
     }
 
     @And("Kullanici Patient Detail sayfasinda Show Invoice yazisina tiklar.")
@@ -131,4 +141,24 @@ public class US023_StepDefinitions {
         Thread.sleep(4000);
         us23_page.showInvoicePaymentButton.click();
     }
+
+
+    @Given("make an appointmnet bas")
+    public void make_an_appointmnet_bas() throws InterruptedException {
+        us23_page.appointmentButoon.click();
+        Thread.sleep(8000);
+    }
+    @Given("date gir")
+    public void date_gir() {
+        LocalDate localDate=LocalDate.now();
+        System.out.println(localDate);
+        us23_page.appoDATe.sendKeys("localDate");
+        String actual = us23_page.appoDATe.getText();
+        System.out.println(actual);
+    }
+    @Given("verify")
+    public void verify() {
+       // Assert.assertEquals(,us23_page.appoDATe);
+    }
+
 }

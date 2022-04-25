@@ -30,13 +30,27 @@
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243">
       <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from patient
 
+
 select * from physician where id=42999
 select * from country
 select * from c_state where id=43533]]></console>
+
+
+select * from physician where id=42999
+
+select * from appointment 
+select * from in_patient
+select * from bill]]></console>
+
+select * from physician where id=42999]]></console>
+
+
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" object-ref="consoles/MedunnaDB" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243" />

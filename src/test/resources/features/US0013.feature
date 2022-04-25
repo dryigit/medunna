@@ -1,4 +1,4 @@
-@Tc1
+@smoke
 Feature: US013--Test Results Islemleri
 
 
@@ -6,43 +6,22 @@ Feature: US013--Test Results Islemleri
 
     Given Doktor url gider
     Then Sing in Tiklar
-    And Username ve Password ile giriş yapar
+    And Username ve Password ile giris yapar
     Then My Pages Buttonunu Tiklar
-    Then My Appointments tıklar
+    Then My Appointments tiklar
     And Hasta bilgileri için edit tıklanır
 
 
   Scenario: TC001--Test Results ile ilgili alanların görülebilmesi
 
-    And Güncellenen test sonuçları için Show Test Results tıklanır
-    And Gelen sonuç için View Results tıklanır
+    And Güncellenen test sonuclari icin Show Test Results tiklanir
+    And Gelen sonuc icin View Results tiklanir
     Then İlgli alanlar kontrol edilir
 
 
   Scenario: TC002---Doktor "Request Impatient yapabilmeli
 
-    Then Yatılı hasta için ilgili alanlar doldurulur
-    And Request Impatient tıklanır
-Feature: US013--Test Results Islemleri
-
-  Background:
-
-    Given Doktor url gider
-    Then Sing in Tiklar
-    And Username ve Password ile giriş yapar
-    Then My Pages Buttonunu Tiklar
-    Then My Appointments tıklar
-    And Hasta bilgileri için edit tıklanır
+    Then Yatili hasta icin ilgili alanlar doldurulur
+    And Request Impatient tiklanir
 
 
-  Scenario: TC001--Test Results ile ilgili alanların görülebilmesi
-
-    And Güncellenen test sonuçları için Show Test Results tıklanır
-    And Gelen sonuç için View Results tıklanır
-    Then İlgli alanlar kontrol edilir
-
-
-  Scenario: TC002---Doktor "Request Impatient yapabilmeli
-
-    Then Yatılı hasta için ilgili alanlar doldurulur
-    And Request Impatient tıklanır

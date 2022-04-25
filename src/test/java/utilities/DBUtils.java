@@ -14,9 +14,9 @@ public class DBUtils {
 
 
 
-    /**
+   /*
      * DBUtils.createConnection(); -> to connect to teh database
-     */
+*/
     public static void createConnection() {
         String url = "jdbc:postgresql://medunna.com:5432/medunna_db";
         String username="medunnadb_user";
@@ -28,9 +28,9 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
-    /**
+/*
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
-     */
+*/
     public static void executeQuery(String query) {
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
