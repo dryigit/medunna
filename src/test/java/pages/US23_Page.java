@@ -53,4 +53,12 @@ public class US23_Page extends BasePage{
     public WebElement toastify;
 
 
+    @FindBy(xpath = "//span[@class='d-none d-md-inline']")
+    public WebElement appointmentButoon;
+
+    @FindBy(id = "appoDate")
+    public WebElement appoDATe;
+
+
+
 }

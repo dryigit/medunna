@@ -94,4 +94,7 @@ public class US024_StepDefinitions {
         Assert.assertTrue("Hasta faturasi gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
     }
 
+
+
+
 }
