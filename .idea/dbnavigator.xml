@@ -32,12 +32,18 @@
 
 
 select * from physician where id=42999
+select * from country
+select * from c_state where id=43533]]></console>
+
+
+select * from physician where id=42999
 
 select * from appointment 
 select * from in_patient
 select * from bill]]></console>
 
 select * from physician where id=42999]]></console>
+
 
     </connection>
   </component>
