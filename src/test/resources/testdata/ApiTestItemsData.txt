@@ -17,3 +17,11 @@ TestItem{defaultValMax='157', defaultValMin='29', description='Poliwag', name='B
 TestItem{defaultValMax='207', defaultValMin='28', description='Mew', name='Katy Litter', price=233}
 TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
 TestItem{defaultValMax='241', defaultValMin='67', description='Primeape', name='Barb Dwyer', price=139}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='154', defaultValMin='56', description='Rapidash', name='Ima B. Leever', price=191}
+TestItem{defaultValMax='184', defaultValMin='75', description='Mankey', name='Liv Long', price=137}
+TestItem{defaultValMax='170', defaultValMin='67', description='Tangela', name='Don Thatt', price=176}
+TestItem{defaultValMax='176', defaultValMin='61', description='Marowak', name='Dusty Carr', price=242}
+TestItem{defaultValMax='151', defaultValMin='22', description='Tauros', name='I. D. Clair', price=204}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='153', defaultValMin='15', description='Gengar', name='Sy Burnette', price=181}
