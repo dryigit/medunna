@@ -1,4 +1,5 @@
 #gecti sumcum
+@medunnaAllProject
 Feature:US 24
 
   Scenario:TC01 Hasta hesabına girdiğinde test sonuçlarını görebilmelidir.

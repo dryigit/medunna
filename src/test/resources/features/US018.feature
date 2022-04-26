@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US_018 Admin olarak; Yeni Physicians Olustur / Guncelle / Goruntule ve Sil
 
   Background:

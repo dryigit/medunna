@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US16 Admin Room Creation View Update Delete
 @US16
   Scenario: yep Admin can create new rooms

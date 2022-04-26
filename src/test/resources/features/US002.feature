@@ -1,4 +1,5 @@
 @Tc
+@medunnaAllProject
 Feature: US002_Email ve Username
   Scenario Outline: TC01_Kayıt olmak için girilebilmelidir
     Given mf kullanici "MedunnaURL" sayfasina gider

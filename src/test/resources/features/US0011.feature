@@ -1,4 +1,5 @@
 @Tc
+@medunnaAllProject
 Feature: US11
 
   Scenario: US11 TC 01

@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: Registration api testi
   @apiTesti
   Scenario Outline: registrant test

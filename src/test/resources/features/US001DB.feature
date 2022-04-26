@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: DB ile ssn dogrulama
 
    Scenario Outline: DB is ssn kimligi dogrulama

@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US008_Guclu password
 
 

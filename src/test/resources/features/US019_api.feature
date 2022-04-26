@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US_019_Admin create a new staff
 
   Scenario Outline: US019_TC_01_Admin validates newly created Staff info with API

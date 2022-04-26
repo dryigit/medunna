@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US021 Staff randevulari gorur
 
   Background:

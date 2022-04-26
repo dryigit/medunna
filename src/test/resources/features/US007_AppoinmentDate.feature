@@ -1,4 +1,5 @@
 @Tc
+@medunnaAllProject
 Feature: US_007_Randevu olusturma
 
 
