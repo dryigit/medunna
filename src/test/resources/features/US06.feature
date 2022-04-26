@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US006-Kullanıcı bilgisi sekmesi (Setting) Ana Sayfada düzenlenebilir olmalıdır.
 
     Background:

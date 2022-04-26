@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: Giris Sayfasi Testi
 
   Scenario Outline: TC01 giris sayfasi testi

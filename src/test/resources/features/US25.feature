@@ -1,4 +1,5 @@
 @qwe
+@medunnaAllProject
 Feature:US25 Hasta olarak kayit olusturulmali
 
  Background:

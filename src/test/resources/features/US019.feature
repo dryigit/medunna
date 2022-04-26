@@ -1,4 +1,4 @@
-
+@medunnaAllProject
 Feature: US_019_Admin create a new staff, edit and delete
 
   @E2E
