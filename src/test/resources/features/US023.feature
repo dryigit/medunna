@@ -28,7 +28,7 @@ Feature:US 23
     And Kullanici acilan sayfada Patient icin Show Appointments kismina tiklar.
     Then Kullanici Appointments sayfasinda Status kisminda Completed ya da Cancelled yazisinin goruldugunu dogrular.
 
-#gecti sumcum
+
   Scenario: TC03 Kullanıcı, Muayene ücreti, test ürün fiyatları gibi tüm faturaları görüntüleyebilir ve  hasta için yeni bir fatura oluşturabilir.
     Given Kullanici url'ye gider.
     And Kullanici insan ikonuna tiklar.
@@ -43,7 +43,7 @@ Feature:US 23
     And Kullanici Payment Detail sayfasindan test ve muayene ucretlerinin goruldugunu dogrular.
 
 
-    #gecti summ
+
   Scenario: TC04 Kullanıcı daha sonra hastaya gönderilen faturayı görebilir
     Given Kullanici url'ye gider.
     And Kullanici insan ikonuna tiklar.

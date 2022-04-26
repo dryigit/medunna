@@ -1,7 +1,7 @@
-#gecti sumcum
+
 Feature:US 24
 
-  Scenario:TC01 Hasta hesabına girdiğinde test sonuçlarını görebilmelidir.
+  Scenario:TC01 Hasta hesabına girdiginde test sonuclarini görebilmelidir.
     Given Kullanici url'ye gider.
     And Kullanici insan ikonuna tiklar.
     And Kullanici Sign In butonuna tiklar.
