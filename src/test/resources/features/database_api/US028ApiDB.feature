@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US28 admin create state and country with api
   @Yep
   Scenario: US28 verifiying state and country with DB
