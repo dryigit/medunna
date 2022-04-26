@@ -12,11 +12,11 @@ public class DatabaseUtility {
     private static ResultSet resultSet;
 
     public static void createConnection() {
-        String url = ConfigReader.getProperty("database_url");
-        String user = ConfigReader.getProperty("database_user");
-        String password = "Techpro_@126";
+        String url = "jdbc:postgresql://medunna.com:5432/medunna_db";
+        String username="medunnadb_user";
+        String password="Medunnadb_@129";
         try {
-            connection = DriverManager.getConnection(url, user, password);
+            connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

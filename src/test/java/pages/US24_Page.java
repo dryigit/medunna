@@ -39,7 +39,7 @@ public class US24_Page extends BasePage{
     @FindBy(xpath = "//a[@class='btn btn-info btn-sm']")
     public WebElement viewResultsButton;
 
-    @FindBy(xpath = "//*[text()='70690']")
+    @FindBy(xpath = "//*[text()='78655']")
     public WebElement ıdText;
 
     @FindBy(xpath = "//*[text()='Na111']")
@@ -51,16 +51,16 @@ public class US24_Page extends BasePage{
     @FindBy(xpath = "//*[text()='100']")
     public WebElement defaultMaxValueText;
 
-    @FindBy(xpath = "//*[text()='65692']")
+    @FindBy(xpath = "//*[text()='75227']")
     public WebElement testSonucText;
 
-    @FindBy(xpath = "//*[text()='15/04/22 22:58']")
+    @FindBy(xpath = "//*[text()='20/04/22 02:09']")
     public WebElement dateText;
 
    // @FindBy(xpath = "//*[text()='Na111']")
     //public WebElement nameText;
 
-    @FindBy(xpath = "(//*[text()='Show Invoice'])[1]")
+    @FindBy(xpath = "(//a[@class='btn btn-warning btn-sm'])[1]")
     public WebElement showInvoiceButton;
 
     @FindBy(xpath = "//*[text()='INVOICE']")

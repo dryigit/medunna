@@ -43,9 +43,11 @@ public class US0013_StepDefinitions {
 
 
     @Then("My Pages Buttonunu Tiklar")
-    public void my_pages_buttonunu_tiklar() {
+    public void my_pages_buttonunu_tiklar() throws InterruptedException {
 
         us013_page.myPagesButonu.click();
+        Thread.sleep(3000);
+
 
     }
 

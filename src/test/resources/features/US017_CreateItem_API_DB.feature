@@ -1,17 +1,20 @@
-
+@medunnaAllProject
 Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
+
+
+
   @ApiTestItem
   Scenario Outline: TC06 - Validate them with api
 
-  Given kullanici gerekli items icin path params ayarlamalarini yapar
-  Then kullanici test items icin expected datalari olusturur "<defMaxVal>", "<defMinVal>", "<description>", "<name>", 400
-  Then kullanici items icin request gonderir ve response alir
-  And kullanici API kayitlarini dosyaya kaydeder
-  And kullanici API kayitlarini onaylar
+    Given kullanici gerekli items icin path params ayarlamalarini yapar
+    Then kullanici test items icin expected datalari olusturur "<defMaxVal>", "<defMinVal>", "<description>", "<name>", 400
+    Then kullanici items icin request gonderir ve response alir
+    And kullanici API kayitlarini dosyaya kaydeder
+    And kullanici API kayitlarini onaylar
 
     Examples: test data
       |defMaxVal|defMinVal|description|name|
-      |57      |40      |Api versuch|Jc Hettinger|
+      |57      |40      |Api versuch|uhf|
 
   @ApiTestItem
   Scenario Outline: TC07 - Create test items using api
@@ -24,8 +27,7 @@ Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
 
     Examples: test data
       |defMaxVal|defMinVal|description|name|
-      |250      |40      |alkol|metil|
-
+      |250      |40      |seker|glikoz|
 
 
   @ApiTestItem
@@ -35,7 +37,9 @@ Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
     Then user validates that the item "<id>" has been deleted
     Examples: test data
       | id    |
-      |76586|
+      |79929|
+
+
 
   @DBTestItem
   Scenario Outline: TC08 - Validate them with DB
@@ -47,6 +51,17 @@ Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
     Examples:test data
       |query|columnName|
       |Select * from c_test_item|id|
+
+  @DBTestItem
+  Scenario: TC08 - read item information
+    Given user connects to the database
+    And user gets the "*" from "c_test_item" table
+      # Select * from jhi_user
+    And user read all of the "name" column data
+    And verify "c_test_item" table "name" column contains "Potassium"
+    Then user close the database connection
+
+
 
 
 

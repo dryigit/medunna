@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
@@ -25,12 +24,12 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertEquals;
 import static utilities.ApiUtils.deleteRequest;
-import static utilities.ApiUtils.getRequest;
 import static utilities.Authentication.generateToken;
-import static utilities.ReadTxt.getSSNIDs;
 import static utilities.ReadTxt.getTestItemIDs;
-import static utilities.WriteToTxt.saveTestItemData;
-import static utilities.WriteToTxt.saveTestItemsData;
+
+//import static utilities.WriteToTxt.saveTestItemData;
+//import static utilities.WriteToTxt.saveTestItemsData;
+
 
 public class US017_StepDefinitions {
 US017_Page page=new US017_Page();
@@ -213,12 +212,14 @@ String endpointToDelete;
 
     @And("kullanici API kayitlarini dosyaya kaydeder")
     public void kullaniciAPIKayitlariniDosyayaKaydeder() {
-        saveTestItemData(testItem);
+
+       // saveTestItemData(testItem);
+
 
     }
 
     @And("kullanici API kayitlarini onaylar")
-    public void kullaniciAPIKayitlariniOnaylar() throws JsonProcessingException {
+    public void kullaniciAPIKayitlariniOnaylar() throws IOException {
         response.prettyPrint();
         ObjectMapper obj = new ObjectMapper();
         TestItem actualTestItem= obj.readValue(response.asString(),TestItem.class);
@@ -260,7 +261,8 @@ String endpointToDelete;
 
     @Then("user validates that the item {string} has been deleted")
     public void userValidatesThatTheItemHasBeenDeleted(String id) {
-       response = getRequest(generateToken(),ConfigReader.getProperty("api_test_items_endpoint"));
+   response.then().assertThat().statusCode(204);
+        //    response = getRequest(generateToken(),ConfigReader.getProperty("api_test_items_endpoint"));
    /*      HashMap<String,Object> idData=response.as(HashMap.class);
     //    List<String> idData=response.as(List.class);
         System.out.println("idData.= " + idData);
@@ -270,7 +272,7 @@ String endpointToDelete;
         }
 */
 
-      response.then().assertThat().body("id", hasItem(id));
+     // response.then().assertThat().body("id", hasItem(id));
     }
     //Test item DB
     @Given("user creates a connection with DB using {string} and {string} , {string}")
@@ -290,7 +292,7 @@ String endpointToDelete;
 
     @Then("user saves the DB records to correspondent files")
     public void userSavesTheDBRecordsToCorrespondentFiles() {
-        saveTestItemsData(allDBItemIds);
+        //saveTestItemsData(allDBItemIds);
     }
 
     @And("user validates DB test item data")
@@ -307,6 +309,51 @@ String endpointToDelete;
     }
     @Then("user close the database connection")
     public void userCloseTheDatabaseConnection() {
-        DBUtils.closeConnection();
+        DatabaseUtility.closeConnection();
     }
+
+    @Given("user connects to the database")
+    public void userConnectsToTheDatabase() {
+        DatabaseUtility.createConnection();
+    }
+
+    @And("user gets the {string} from {string} table")
+    public void userGetsTheFromTable(String column, String table) {
+        String myDynamicQuery = "select " + column + " from " + table;
+        DatabaseUtility.executeQuery(myDynamicQuery);
+    }
+
+    @And("user read all of the {string} column data")
+    public void userReadAllOfTheColumnData(String column) {
+        //        DBUtils.getResultset().next();
+//
+//        Object columnData = DBUtils.getResultset().getObject(column);
+//        System.out.println(columnData); //anonymoususer tablodaki 1. kullanici
+//
+//        DBUtils.getResultset().next();
+//        Object columnData2 = DBUtils.getResultset().getObject(column);
+//        System.out.println(columnData2); //bakalim tablodaki 2. kullanici
+//
+//        DBUtils.getResultset().next();
+//        Object columnData3 = DBUtils.getResultset().getObject(column);
+//        System.out.println(columnData3); //systema tablodaki 3. kullanici
+
+//        while (DBUtils.getResultset().next()){
+//            Object eachColumnData = DBUtils.getResultset().getObject(column);
+//            System.out.println(eachColumnData);
+//        }
+    }
+
+    @And("verify {string} table {string} column contains {string}")
+    public void verifyTableColumnContains(String table, String column, String data) {
+        List<Object> allColumnData = DatabaseUtility.getColumnData("Select * from c_test_item", "name");
+        System.out.println(allColumnData);
+
+        List<Object> expectedDta = new ArrayList<>();
+        expectedDta.add(data);
+
+        Assert.assertTrue(allColumnData.containsAll(expectedDta));
+    }
+
+
 }

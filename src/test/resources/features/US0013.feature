@@ -1,4 +1,5 @@
 @smoke
+@medunnaAllProject
 Feature: US013--Test Results Islemleri
 
 

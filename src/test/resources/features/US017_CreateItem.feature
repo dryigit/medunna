@@ -1,4 +1,5 @@
 @US017
+@medunnaAllProject
 Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
 
   Background: Kullanici Admin olarak giris yapar

@@ -84,13 +84,14 @@ ReusableMethods.waitForClickablility(us9Page.saveButton,5);
 
 
     //tc3
-    @Then("kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer")
-    public void kullanici_my_pages_butonuna_tiklar_açılan_sekmeden_search_patient_secer() {
+    @Then("Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer")
+    public void kullanici_my_pages_butonuna_tiklar_açılan_sekmeden_search_patient_secer() throws InterruptedException {
 
         us9Page.MyPagesButtonStaff.click();
         us9Page.searchPatientButton.click();
+        Thread.sleep(3000);
     }
-    @Then("kullanici SSN kutusuna gecerli bir SSN numarası girer")
+    @Then("Kullanici SSN kutusuna gecerli bir SSN numarası girer")
     public void kullanici_ssn_kutusuna_gecerli_bir_ssn_numarası_girer() {
 us9Page.searchSSNbutton.sendKeys("111-11-1111");
 

@@ -4,6 +4,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import pages.US24_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -11,6 +13,7 @@ import utilities.Driver;
 public class US024_StepDefinitions {
 
     US24_Page us24_page = new US24_Page();
+    Actions actions = new Actions(Driver.getDriver());
 
     @Given("Kullanici url'ye gider.")
     public void kullanici_url_ye_gider() throws InterruptedException {
@@ -48,13 +51,15 @@ public class US024_StepDefinitions {
     @Given("Kullanici tarihleri olusturulan appointmente gore degistirir.")
     public void kullanici_tarihleri_olusturulan_appointmente_gore_degistirir() throws InterruptedException {
 
-        us24_page.fromDateButton.sendKeys("04/25/2022");
+        us24_page.fromDateButton.sendKeys("05/08/2022");
         Thread.sleep(3000);
-        us24_page.toDateButton.sendKeys("05/05/2022");
+        us24_page.toDateButton.sendKeys("05/22/2022");
         Thread.sleep(3000);
     }
     @Given("Kullanici acilan sayfada Show Tests butonuna tiklar.")
     public void kullanici_acilan_sayfada_show_tests_butonuna_tiklar() throws InterruptedException {
+
+        Thread.sleep(3000);
         us24_page.showTestsButton.click();
         Thread.sleep(3000);
     }
@@ -76,6 +81,9 @@ public class US024_StepDefinitions {
 
     @And("Kullanici Show Invoice yazisina tiklar.")
     public void kullaniciShowInvoiceYazisinaTiklar() throws InterruptedException {
+
+        //actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(5000);
         us24_page.showInvoiceButton.click();
         Thread.sleep(5000);
 
@@ -85,5 +93,8 @@ public class US024_StepDefinitions {
     public void kullaniciFaturasininGozuktugunuDogrular() {
         Assert.assertTrue("Hasta faturasi gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
     }
+
+
+
 
 }
