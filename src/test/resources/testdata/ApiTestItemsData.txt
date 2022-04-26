@@ -25,3 +25,9 @@ TestItem{defaultValMax='176', defaultValMin='61', description='Marowak', name='D
 TestItem{defaultValMax='151', defaultValMin='22', description='Tauros', name='I. D. Clair', price=204}
 TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
 TestItem{defaultValMax='153', defaultValMin='15', description='Gengar', name='Sy Burnette', price=181}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='222', defaultValMin='95', description='Drowzee', name='Dusty Carr', price=109}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='163', defaultValMin='67', description='Raticate', name='Ben Dover', price=216}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='232', defaultValMin='41', description='Dugtrio', name='Allen Rench', price=149}
