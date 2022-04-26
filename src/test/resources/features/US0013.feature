@@ -10,14 +10,14 @@ Feature: US013--Test Results Islemleri
     And Username ve Password ile giris yapar
     Then My Pages Buttonunu Tiklar
     Then My Appointments tiklar
-    And Hasta bilgileri için edit tıklanır
+    And Hasta bilgileri icin edit tiklanir
 
 
-  Scenario: TC001--Test Results ile ilgili alanların görülebilmesi
+  Scenario: TC001--Test Results ile ilgili alanlarin gorulebilmesi
 
-    And Güncellenen test sonuclari icin Show Test Results tiklanir
+    And Guncellenen test sonuclari icin Show Test Results tiklanir
     And Gelen sonuc icin View Results tiklanir
-    Then İlgli alanlar kontrol edilir
+    Then Ilgli alanlar kontrol edilir
 
 
   Scenario: TC002---Doktor "Request Impatient yapabilmeli
