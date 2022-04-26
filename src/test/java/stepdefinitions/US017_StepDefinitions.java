@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
@@ -25,12 +24,12 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertEquals;
 import static utilities.ApiUtils.deleteRequest;
-import static utilities.ApiUtils.getRequest;
 import static utilities.Authentication.generateToken;
-import static utilities.ReadTxt.getSSNIDs;
 import static utilities.ReadTxt.getTestItemIDs;
+
 //import static utilities.WriteToTxt.saveTestItemData;
 //import static utilities.WriteToTxt.saveTestItemsData;
+
 
 public class US017_StepDefinitions {
 US017_Page page=new US017_Page();
@@ -213,7 +212,9 @@ String endpointToDelete;
 
     @And("kullanici API kayitlarini dosyaya kaydeder")
     public void kullaniciAPIKayitlariniDosyayaKaydeder() {
+
        // saveTestItemData(testItem);
+
 
     }
 
