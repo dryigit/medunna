@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US16 Patient Verifiying
   @Yep
   Scenario: verifiying
