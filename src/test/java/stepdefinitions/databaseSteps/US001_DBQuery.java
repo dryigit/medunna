@@ -39,8 +39,8 @@ public class US001_DBQuery {
 
     }
 
-    @And("kullanici gerekli parametreleri girer {string}, {string} {string} {string} {string} {string} ve {string}")
-    public void kullaniciGerekliParametreleriGirerVe(String firstname, String lastname, String SSN, String email, String username, String password, String lan) {
+    @And("mfdbkullanici gerekli parametreleri girer {string}, {string} {string} {string} {string} {string} ve {string}")
+    public void mfdbkullaniciGerekliParametreleriGirerVe(String firstname, String lastname, String SSN, String email, String username, String password, String lan) {
         firstname=faker.name().firstName();
         lastname=faker.name().lastName();
         SSN=faker.idNumber().ssnValid();

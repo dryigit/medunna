@@ -28,15 +28,15 @@ public class US001_ApiStepDefinition {
     Response response;
 
 
-    @Given("kullanici gerekli path params ayarlamalarini yapar")
-    public void kullaniciGerekliPathParamsAyarlamalariniYapar() {
+    @Given("mfapikullanici gerekli path params ayarlamalarini yapar")
+    public void mfapikullaniciGerekliPathParamsAyarlamalariniYapar() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         spec.pathParams("bir","api","iki","register");
 
     }
 
-    @And("kullanici gerekli parametreleri girer {string}, {string} {string} {string} {string} {string} ve {string}")
-    public void kullaniciGerekliParametreleriGirerVe(String firstname, String lastname, String SSN, String email, String username, String password, String lan) {
+    @And("mfapikullanici gerekli parametreleri girer {string}, {string} {string} {string} {string} {string} ve {string}")
+    public void mfapikullaniciGerekliParametreleriGirerVe(String firstname, String lastname, String SSN, String email, String username, String password, String lan) {
         firstname=faker.name().firstName();
         lastname=faker.name().lastName();
         SSN=faker.idNumber().ssnValid();
@@ -52,8 +52,8 @@ public class US001_ApiStepDefinition {
         registrant.setPassword(password);
     }
 
-    @And("kullanici request gonderir ve response alir")
-    public void kullaniciRequestGonderirVeResponseAlir() {
+    @And("mfapikullanici request gonderir ve response alir")
+    public void mfapikullaniciRequestGonderirVeResponseAlir() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         spec.pathParams("bir","api","iki","register");
 
@@ -63,14 +63,14 @@ public class US001_ApiStepDefinition {
                 .post("/{bir}/{iki}");
     }
 
-    @When("kullanici api kayitlarili ilgili dosyaya kaydeder")
-    public void kullaniciApiKayitlariliIlgiliDosyayaKaydeder() {
+    @When("mfapikullanici api kayitlarili ilgili dosyaya kaydeder")
+    public void mfapikullaniciApiKayitlariliIlgiliDosyayaKaydeder() {
         saveRegistrantApiData(registrant);
 
     }
 
-    @Then("kulllanici api kayitlarini dogrular")
-    public void kulllaniciApiKayitlariniDogrular() throws IOException {
+    @Then("mfapikulllanici api kayitlarini dogrular")
+    public void mfapikulllaniciApiKayitlariniDogrular() throws IOException {
         response.then().statusCode(201);
         response.prettyPrint();
 

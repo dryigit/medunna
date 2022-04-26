@@ -12,10 +12,12 @@ import org.junit.Assert;
 import pojos.StaffApi;
 import utilities.ConfigReader;
 
+import java.io.IOException;
+
 import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 import static utilities.Authentication.generateToken;
-import static utilities.WriteToTxt.saveStaffApiData;
+//import static utilities.WriteToTxt.saveStaffApiData;
 
 public class US019_Api_StepDefinitions {
 
@@ -52,13 +54,13 @@ public class US019_Api_StepDefinitions {
 
         @And("AdminOkan saves the response to file")
         public void adminokanSavesTheResponseToFile() {
-            saveStaffApiData(staffApi);
+           // saveStaffApiData(staffApi);
 
 
         }
 
         @And("AdminOkan verifies the expected and actual data")
-        public void adminokanVerifiesTheExpectedAndActualData() throws JsonProcessingException {
+        public void adminokanVerifiesTheExpectedAndActualData() throws IOException {
 
             response.prettyPrint();
             ObjectMapper obj = new ObjectMapper();
