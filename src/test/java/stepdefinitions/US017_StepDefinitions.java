@@ -26,8 +26,10 @@ import static org.junit.Assert.assertEquals;
 import static utilities.ApiUtils.deleteRequest;
 import static utilities.Authentication.generateToken;
 import static utilities.ReadTxt.getTestItemIDs;
-import static utilities.WriteToTxt.saveTestItemApiData;
-import static utilities.WriteToTxt.saveTestItemsData;
+
+//import static utilities.WriteToTxt.saveTestItemData;
+//import static utilities.WriteToTxt.saveTestItemsData;
+
 
 public class US017_StepDefinitions {
 US017_Page page=new US017_Page();
@@ -210,7 +212,9 @@ String endpointToDelete;
 
     @And("kullanici API kayitlarini dosyaya kaydeder")
     public void kullaniciAPIKayitlariniDosyayaKaydeder() {
-        saveTestItemApiData(testItem);
+
+       // saveTestItemData(testItem);
+
 
     }
 
@@ -288,7 +292,7 @@ String endpointToDelete;
 
     @Then("user saves the DB records to correspondent files")
     public void userSavesTheDBRecordsToCorrespondentFiles() {
-        saveTestItemsData(allDBItemIds);
+        //saveTestItemsData(allDBItemIds);
     }
 
     @And("user validates DB test item data")
