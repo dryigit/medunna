@@ -8,8 +8,13 @@ import io.cucumber.java.en.Then;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+
+import pojos.PopulateStaffinfo;
+import pojos.PopulateStaffinfo;
+
 import org.junit.Assert;
 import pojos.StaffApi;
+
 import utilities.ConfigReader;
 
 import java.io.IOException;

@@ -39,22 +39,22 @@ public class US24_Page extends BasePage{
     @FindBy(xpath = "//a[@class='btn btn-info btn-sm']")
     public WebElement viewResultsButton;
 
-    @FindBy(xpath = "//*[text()='78655']")
+    @FindBy(xpath = "//*[text()='78680']")
     public WebElement ıdText;
 
-    @FindBy(xpath = "//*[text()='Na111']")
+    @FindBy(xpath = "//*[text()='Urea']")
     public WebElement nameText;
 
-    @FindBy(xpath = "//*[text()='66']")
+    @FindBy(xpath = "//*[text()='17']")
     public WebElement defaultMinValueText;
 
-    @FindBy(xpath = "//*[text()='100']")
+    @FindBy(xpath = "//*[text()='49']")
     public WebElement defaultMaxValueText;
 
-    @FindBy(xpath = "//*[text()='75227']")
+    @FindBy(xpath = "//*[text()='75235']")
     public WebElement testSonucText;
 
-    @FindBy(xpath = "//*[text()='20/04/22 02:09']")
+    @FindBy(xpath = "//*[text()='21/04/22 02:13']")
     public WebElement dateText;
 
    // @FindBy(xpath = "//*[text()='Na111']")

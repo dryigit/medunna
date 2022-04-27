@@ -116,9 +116,9 @@ public class US023_StepDefinitions {
     @And("Kullanici Payment Detail sayfasindan test ve muayene ucretlerinin goruldugunu dogrular.")
     public void kullaniciPaymentDetailSayfasindanTestVeMuayeneUcretlerininGoruldugunuDogrular() {
         Assert.assertTrue("Exam Fee gorunmuyor",us23_page.examFeeText.isDisplayed());
-        Assert.assertTrue("Na111 item fee gorunmuyor.",us23_page.na111FeeText.isDisplayed());
         Assert.assertTrue("Urea item fee gorunmuyor.",us23_page.ureaFeeText.isDisplayed());
-        Assert.assertTrue("Creatinine item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
+        Assert.assertTrue("Creatine item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
+       // Assert.assertTrue("Soidum item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
 
     }
 
