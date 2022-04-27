@@ -58,7 +58,8 @@ public class WriteToTxt {
         }
     }
 
-    public static void saveTestItemData(TestItem testItem) {
+
+    public static void saveTestItemApiData(TestItem testItem) {
         try {
             //src/resources/testdata/Registrantdata.txt
             FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("api_test_items_data"), true);

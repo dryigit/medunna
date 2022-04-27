@@ -28,12 +28,12 @@ public class US0014_StepDefinitions {
 
     @Then("My Inpatients butonuna tiklar")
     public void myInpatientsButonunaTiklar() {
-       us013_page .yatılıHastaButonu.click();
+       us013_page .yatiliHastaButonu.click();
 
     }
 
-    @And("Yatili Hasta bilgileri için edit tiklanir")
-    public void yatiliHastaBilgileriIçinEditTiklanir() {
+    @And("Yatili Hasta bilgileri icin edit tiklanir")
+    public void yatiliHastaBilgileriIcinEditTiklanir() {
 
         us014_page.yatiliHastaEdit.click();
 
@@ -41,8 +41,8 @@ public class US0014_StepDefinitions {
 
 
 
-    @Then("doktor yatili hatasta bilgilerini görebilmeli")
-    public void doktorYatiliHatastaBilgileriniGörebilmeli() {
+    @Then("doktor yatili hatasta bilgilerini gorebilmeli")
+    public void doktorYatiliHatastaBilgileriniGorebilmeli() {
 
         ReusableMethods.waitFor(2);
         Assert.assertTrue(us014_page.idAlani.isDisplayed());
@@ -74,8 +74,8 @@ public class US0014_StepDefinitions {
 
     }
 
-    @And("doktor yatili hasta bilgilerini günceller")
-    public void doktorYatiliHastaBilgileriniGünceller() {
+    @And("doktor yatili hasta bilgilerini gunceller")
+    public void doktorYatiliHastaBilgileriniGunceller() {
 
 
 
@@ -115,8 +115,8 @@ public class US0014_StepDefinitions {
 
     //********************tc002
 
-    @Given("status bilgilerini güncelleyebilmeli")
-    public void statusBilgileriniGüncelleyebilmeli() {
+    @Given("status bilgilerini guncelleyebilmeli")
+    public void statusBilgileriniGuncelleyebilmeli() {
 
 
         //  ReusableMethods.scrollToWebEementVisivle(us014_page.statusAlanı);
@@ -132,8 +132,8 @@ public class US0014_StepDefinitions {
 
     //tc003*************************
 
-    @Given("oda güncelleme")
-    public void odaGüncelleme() {
+    @Given("oda guncelleme")
+    public void odaGuncelleme() {
 
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 

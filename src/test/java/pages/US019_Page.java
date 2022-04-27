@@ -105,8 +105,10 @@ public class US019_Page extends BasePage {
     @FindBy(xpath = "//span[text()='Sign out']")
     public WebElement signOutDropdown;
 
-    @FindBy(xpath = "//*[contains(text(),'A User is deleted']")
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div/div/div[1]")
     public WebElement toastifyDeleteConfirm;
+    //*[@id="root"]/div/div/div[1]/div
+    //html/body/div/div/div/div[1]/div/div/div[1]
 
     @FindBy(xpath = "//input[@name='email']")
     public WebElement editEmail;
@@ -116,6 +118,19 @@ public class US019_Page extends BasePage {
 
     @FindBy(xpath = "//span[text()='Save']")
     public WebElement editSaveButton;
+
+
+    @FindBy (xpath = "//div[@class='Toastify__toast Toastify__toast--success toastify-toast']")
+    public WebElement validateFoundUser;
+
+    @FindBy(xpath = "//*[@id=\"staff-firstName\"]")
+    public WebElement searchStaffFirstname;
+
+    @FindBy(xpath = "//*[@id=\"staff-user\"]")
+    public WebElement searchStaffUserName;
+
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div/dl/dd[4]")
+    public WebElement selectUserEmail;
 
 
 

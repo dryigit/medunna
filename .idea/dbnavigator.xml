@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1254" />
+      <charset value="windows-1252" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -28,13 +28,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243">
-      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main"><![CDATA[select * from patient
+      <console name="MedunnaDB" type="STANDARD" schema="public" session="Main">select * from patient
 
 select * from physician where id=42999
-
-select * from appointment 
-select * from in_patient
-select * from bill]]></console>
+select * from country
+select * from c_state where id=43533</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -42,6 +40,9 @@ select * from bill]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="dcf31d7a-52e0-4ce6-907a-604416656243" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="dcf31d7a-52e0-4ce6-907a-604416656243" dataset="public.c_test_item" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

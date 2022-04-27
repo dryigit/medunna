@@ -33,8 +33,8 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("Username ve Password ile giriş yapar")
-    public void username_ve_password_ile_giriş_yapar() {
+    @Then("Username ve Password ile giris yapar")
+    public void username_ve_password_ile_giris_yapar() {
         us013_page.username.sendKeys(ConfigReader.getProperty("TC_drUsername"));
         us013_page.password.sendKeys(ConfigReader.getProperty("TC_drpassword"));
         us013_page.singInEnter.click();
@@ -52,32 +52,32 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("My Appointments tıklar")
-    public void my_appointments_tıklar() {
+    @Then("My Appointments tiklar")
+    public void my_appointments_tiklar() {
 
         us013_page.myAppoinButonu.click();
 
     }
 
 
-    @Then("Hasta bilgileri için edit tıklanır")
-    public void hasta_bilgileri_için_edit_tıklanır() {
+    @Then("Hasta bilgileri icin edit tiklanir")
+    public void hasta_bilgileri_icin_edit_tiklanir() {
         us013_page.editButonu.click();
 
     }
 
 
-    @Then("Güncellenen test sonuçları için Show Test Results tıklanır")
-    public void güncellenen_test_sonuçları_için_show_test_results_tıklanır() {
+    @Then("Guncellenen test sonuclari icin Show Test Results tiklanir")
+    public void guncellenen_test_sonuclari_icin_show_test_Results_tiklanir() {
 
         ReusableMethods.waitFor(3);
-        us013_page.testSonuçlarınıGöster.click();
+        us013_page.testSonuclariniGoster.click();
 
     }
 
 
-    @Then("Gelen sonuç için View Results tıklanır")
-    public void gelen_sonuç_için_view_results_tıklanır() {
+    @Then("Gelen sonuc icin View Results tiklanir")
+    public void gelen_sonuc_icin_view_results_tiklanir() {
 
         ReusableMethods.waitFor(3);
         us013_page.viewResults.click();
@@ -85,38 +85,38 @@ public class US0013_StepDefinitions {
     }
 
 
-    @Then("İlgli alanlar kontrol edilir")
-    public void i̇lgli_alanlar_kontrol_edilir() {
+    @Then("Ilgli alanlar kontrol edilir")
+    public void Ilgli_alanlar_kontrol_edilir() {
 
-        Assert.assertTrue(us013_page.ıdBaslık.isEnabled());
-        Assert.assertTrue(us013_page.nameBaslık.isEnabled());
-        Assert.assertTrue(us013_page.defaultMinBaslık.isEnabled());
-        Assert.assertTrue(us013_page.defaultMaxBaslık.isEnabled());
-        Assert.assertTrue(us013_page.testBaslık.isEnabled());
-        Assert.assertTrue(us013_page.tarihBaslık.isEnabled());
+        Assert.assertTrue(us013_page.idBaslik.isEnabled());
+        Assert.assertTrue(us013_page.nameBaslik.isEnabled());
+        Assert.assertTrue(us013_page.defaultMinBaslik.isEnabled());
+        Assert.assertTrue(us013_page.defaultMaxBaslik.isEnabled());
+        Assert.assertTrue(us013_page.testBaslik.isEnabled());
+        Assert.assertTrue(us013_page.tarihBaslik.isEnabled());
 
 
     }
 
-    @Then("Yatılı hasta için ilgili alanlar doldurulur")
-    public void yatılı_hasta_için_ilgili_alanlar_doldurulur() {
+    @Then("Yatili hasta icin ilgili alanlar doldurulur")
+    public void Yatili_hasta_icin_ilgili_alanlar_doldurulur() {
 
-        us013_page.anamnesisAlanı.sendKeys("bla");
-        us013_page.tedaviAlanı.sendKeys("bla");
-        us013_page.teşhisAlanı.sendKeys("bla");
+        us013_page.anamnesisAlani.sendKeys("bla");
+        us013_page.tedaviAlani.sendKeys("bla");
+        us013_page.teshisAlani.sendKeys("bla");
 
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
-        us013_page.receteAlanı.sendKeys("bla");
-        us013_page.tanıAlanı.sendKeys("bla");
+        us013_page.receteAlani.sendKeys("bla");
+        us013_page.taniAlani.sendKeys("bla");
 
 
 
 
 
     }
-    @Then("Request Impatient tıklanır")
-    public void request_impatient_tıklanır() {
+    @Then("Request Impatient tiklanir")
+    public void request_impatient_tiklanir() {
 
         actions.sendKeys(Keys.PAGE_UP).perform();
         actions.sendKeys(Keys.PAGE_UP).perform();

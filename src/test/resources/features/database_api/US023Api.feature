@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature:
   Scenario: Olusturulan faturalari verify etme.
 

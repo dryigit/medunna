@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US012 Physician (Doktor) test isteyebilmel
 
 Scenario: TC001 Doctor test icin giris yababilmeli

@@ -5,10 +5,17 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class Driver {
@@ -22,10 +29,10 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
 
-                 //   ChromeOptions options=new ChromeOptions();
-                 //   options.addArguments("--headless");
-                   // options.setHeadless(true);
-                 //   driver = new ChromeDriver(options);
+                    //   ChromeOptions options=new ChromeOptions();
+                    //   options.addArguments("--headless");
+                    // options.setHeadless(true);
+                    //   driver = new ChromeDriver(options);
                     driver = new ChromeDriver();
                     break;
                 case "firefox":
@@ -40,9 +47,9 @@ public class Driver {
                     WebDriverManager.operadriver().setup();
                     driver=new OperaDriver();
                     break;
-                    default:
-                        WebDriverManager.chromedriver().setup();
-                        driver=new ChromeDriver();
+                default:
+                    WebDriverManager.chromedriver().setup();
+                    driver=new ChromeDriver();
 
             }
 
@@ -54,16 +61,13 @@ public class Driver {
     public static void closeDriver(){
         if(driver!=null){
 
-       driver.close();
+            driver.close();
 
-          //  driver.close();
+
 
         }
         driver=null;
     }
-
-
-
     }
 
 
