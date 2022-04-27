@@ -85,9 +85,12 @@ public class US001_ApiStepDefinition {
         Assert.assertEquals(registrant.getSsn(),actualRegistrant.getSsn());
         Assert.assertEquals(registrant.getLogin(),actualRegistrant.getLogin());
 
-
-
-
-
             }
-        }
+
+    @Then("kulllanici adi api ile dogrulanir")
+    public void kulllaniciAdiApiIleDogrulanir() throws IOException {
+        ObjectMapper obj = new ObjectMapper();
+        Registrant actualRegistrant=obj.readValue(response.asString(), Registrant.class);
+        Assert.assertEquals(registrant.getLogin(),actualRegistrant.getLogin());
+    }
+}
