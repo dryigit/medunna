@@ -26,6 +26,7 @@ import static org.junit.Assert.assertEquals;
 import static utilities.ApiUtils.deleteRequest;
 import static utilities.Authentication.generateToken;
 import static utilities.ReadTxt.getTestItemIDs;
+import static utilities.WriteToTxt.saveTestItemApiData;
 
 //import static utilities.WriteToTxt.saveTestItemData;
 //import static utilities.WriteToTxt.saveTestItemsData;
@@ -214,7 +215,7 @@ String endpointToDelete;
     @And("kullanici API kayitlarini dosyaya kaydeder")
     public void kullaniciAPIKayitlariniDosyayaKaydeder() {
 
-       // saveTestItemData(testItem);
+        saveTestItemApiData(testItem);
 
 
     }
