@@ -37,46 +37,46 @@ public class Us013_Page {
     public WebElement editButonu;
 
     @FindBy(xpath = "//a[@class='btn btn-danger btn-sm']")
-    public WebElement testSonuçlarınıGöster;
+    public WebElement testSonuclariniGoster;
 
     @FindBy(xpath = "//a[@href='/testresult/test/49089']")
     public WebElement viewResults;
 
     @FindBy(xpath = "//span[text()='ID']")
-    public WebElement ıdBaslık;
+    public WebElement idBaslik;
 
     @FindBy(xpath = "//span[text()='Name']")
-    public WebElement nameBaslık;
+    public WebElement nameBaslik;
 
     @FindBy(xpath = "//span[text()='Default Min. Value']")
-    public WebElement defaultMinBaslık;
+    public WebElement defaultMinBaslik;
 
     @FindBy(xpath = "//span[text()='Default Max. Value']")
-    public WebElement defaultMaxBaslık;
+    public WebElement defaultMaxBaslik;
 
     @FindBy(xpath = "//span[text()='Test']")
-    public WebElement testBaslık;
+    public WebElement testBaslik;
 
     @FindBy(xpath = "//span[text()='Date']")
-    public WebElement tarihBaslık;
+    public WebElement tarihBaslik;
 
 
     //*********************************US13--TC002
 
     @FindBy(xpath = "//textarea[@name='anamnesis']")
-    public WebElement anamnesisAlanı;
+    public WebElement anamnesisAlani;
 
     @FindBy(xpath = "//textarea[@name='treatment']")
-    public WebElement tedaviAlanı;
+    public WebElement tedaviAlani;
 
     @FindBy(xpath = "//textarea[@name='diagnosis']")
-    public WebElement teşhisAlanı;
+    public WebElement teshisAlani;
 
     @FindBy(xpath = "//textarea[@name='prescription']")
-    public WebElement receteAlanı;
+    public WebElement receteAlani;
 
     @FindBy(xpath = "//textarea[@name='description']")
-    public WebElement tanıAlanı;
+    public WebElement taniAlani;
 
     @FindBy(xpath = "//button[@class='btn btn-warning btn-sm']")
     public WebElement requestImpatientButonu;
@@ -91,7 +91,7 @@ public class Us013_Page {
 //    public WebElement toastify;
 
     @FindBy(xpath = "//span[text()='My Inpatients']")
-    public WebElement yatılıHastaButonu;
+    public WebElement yatiliHastaButonu;
 
 
 

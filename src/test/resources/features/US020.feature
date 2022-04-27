@@ -1,4 +1,5 @@
 @tc
+@medunnaAllProject
 Feature: US020_Admin Kullanici islemleri
 
   Background:

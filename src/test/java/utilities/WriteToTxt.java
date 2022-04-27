@@ -58,6 +58,7 @@ public class WriteToTxt {
         }
     }
 
+
     public static void saveTestItemApiData(TestItem testItem) {
         try {
             //src/resources/testdata/Registrantdata.txt

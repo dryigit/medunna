@@ -1,6 +1,5 @@
-package stepdefinitions.apiSteps;
+package stepdefinitions.databaseSteps;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
@@ -9,34 +8,39 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
-import io.restassured.mapper.ObjectMapperDeserializationContext;
-import io.restassured.mapper.ObjectMapperSerializationContext;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
+import pages.US001Page;
 import pojos.Registrant;
 import utilities.ConfigReader;
+import utilities.DBUtils;
+import utilities.Driver;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
 
 import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 import static utilities.WriteToTxt.saveRegistrantApiData;
 
-public class US001_ApiStepDefinition {
+public class US001_DBQuery {
+    DBUtils db =new DBUtils();
     Faker faker = new Faker();
-    Registrant registrant= new Registrant();
+    Actions actions=new Actions(Driver.getDriver());
+    Registrant registrant = new Registrant();
     Response response;
 
-
-    @Given("mfapikullanici gerekli path params ayarlamalarini yapar")
-    public void mfapikullaniciGerekliPathParamsAyarlamalariniYapar() {
+    @Given("kullanici gerekli path params ayarlamalarini yapar")
+    public void kullaniciGerekliPathParamsAyarlamalariniYapar() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         spec.pathParams("bir","api","iki","register");
 
     }
 
-    @And("mfapikullanici gerekli parametreleri girer {string}, {string} {string} {string} {string} {string} ve {string}")
-    public void mfapikullaniciGerekliParametreleriGirerVe(String firstname, String lastname, String SSN, String email, String username, String password, String lan) {
+    @And("mfdbkullanici gerekli parametreleri girer {string}, {string} {string} {string} {string} {string} ve {string}")
+    public void mfdbkullaniciGerekliParametreleriGirerVe(String firstname, String lastname, String SSN, String email, String username, String password, String lan) {
         firstname=faker.name().firstName();
         lastname=faker.name().lastName();
         SSN=faker.idNumber().ssnValid();
@@ -52,8 +56,8 @@ public class US001_ApiStepDefinition {
         registrant.setPassword(password);
     }
 
-    @And("mfapikullanici request gonderir ve response alir")
-    public void mfapikullaniciRequestGonderirVeResponseAlir() {
+    @And("kullanici request gonderir ve response alir")
+    public void kullaniciRequestGonderirVeResponseAlir() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
         spec.pathParams("bir","api","iki","register");
 
@@ -63,14 +67,14 @@ public class US001_ApiStepDefinition {
                 .post("/{bir}/{iki}");
     }
 
-    @When("mfapikullanici api kayitlarili ilgili dosyaya kaydeder")
-    public void mfapikullaniciApiKayitlariliIlgiliDosyayaKaydeder() {
+    @When("kullanici api kayitlarili ilgili dosyaya kaydeder")
+    public void kullaniciApiKayitlariliIlgiliDosyayaKaydeder() {
         saveRegistrantApiData(registrant);
 
     }
 
-    @Then("mfapikulllanici api kayitlarini dogrular")
-    public void mfapikulllaniciApiKayitlariniDogrular() throws IOException {
+    @Then("kulllanici api kayitlarini dogrular")
+    public void kulllaniciApiKayitlariniDogrular() throws IOException {
         response.then().statusCode(201);
         response.prettyPrint();
 
@@ -89,5 +93,20 @@ public class US001_ApiStepDefinition {
 
 
 
-            }
-        }
+    }
+
+    @Given("mf kullanici database baglantisi kurar")
+    public void kullaniciDatabaseBaglantisiKurar() {
+        DBUtils.createConnection();
+    }
+
+
+    @Then("kullanici {string} verilerini dogrular")
+    public void kullaniciVerileriniDogrular(String SSN) {
+        String query="select * from jhi_user";
+        DBUtils.executeQuery(query);
+        List<Object> actualData= Collections.singletonList(DBUtils.getQueryResultList(query));
+        Assert.assertTrue(actualData.toString().contains(SSN));
+    }
+
+}

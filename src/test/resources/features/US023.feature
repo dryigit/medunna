@@ -1,4 +1,5 @@
-Feature:UC 23
+@medunnaAllProject
+Feature:US 23
 
   Scenario: TC01 Kullanici(Staff) fatura olusturabilmeli
     Given Kullanici url'ye gider.
@@ -57,4 +58,14 @@ Feature:UC 23
     And Kullanici acilan sayfada Payment Invoice Process butonuna tiklar.
     And Kullanici Patient Detail sayfasinda Show Invoice yazisina tiklar.
     Then Kullanici acilan sayfada INVOICE yazisinin oldugunu dogrular.
+
+
+Scenario: Tarih sırası gün/ay/yıl (ay/gün/yıl) şeklinde olmalıdır.
+
+  Given Kullanici url'ye gider.
+  * make an appointmnet bas
+  * date gir
+  * verify
+
+
 

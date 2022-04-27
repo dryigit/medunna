@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US28 Admin creates new country
   Scenario: US28 Admin creates new
     Given yepadmin goes to "MedunnaURL" website

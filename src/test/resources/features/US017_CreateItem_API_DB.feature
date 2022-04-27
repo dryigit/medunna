@@ -1,4 +1,4 @@
-
+@medunnaAllProject
 Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
 
 

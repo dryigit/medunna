@@ -1,4 +1,5 @@
 @Tc
+@medunnaAllProject
 Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmeli
 
   Background:
