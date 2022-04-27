@@ -1,3 +1,4 @@
+@sum
 Feature:US 23
 
   Scenario: TC01 Kullanici(Staff) fatura olusturabilmeli

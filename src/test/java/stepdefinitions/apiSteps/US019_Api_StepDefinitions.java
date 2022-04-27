@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import pojos.PopulateStaffinfo;
+import pojos.PopulateStaffinfo;
 import utilities.ConfigReader;
 
 import static Hooks.Hooks.spec;

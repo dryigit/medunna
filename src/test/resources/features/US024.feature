@@ -1,4 +1,4 @@
-
+@sum
 Feature:US 24
 
   Scenario:TC01 Hasta hesabına girdiginde test sonuclarini görebilmelidir.
