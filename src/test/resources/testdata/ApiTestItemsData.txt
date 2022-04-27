@@ -32,3 +32,4 @@ TestItem{defaultValMax='163', defaultValMin='67', description='Raticate', name='
 TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
 TestItem{defaultValMax='232', defaultValMin='41', description='Dugtrio', name='Allen Rench', price=149}
 TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='233', defaultValMin='54', description='Dugtrio', name='Bob Frapples', price=149}

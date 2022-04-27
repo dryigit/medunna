@@ -2,5 +2,6 @@
 Feature:
   Scenario: Olusturulan faturalari verify etme.
 
-    Given path params olustur
+    Given Path params olustur
+    Then Olusturulan fatura dogrulama
 
