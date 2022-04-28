@@ -109,7 +109,7 @@ public class US023_StepDefinitions {
     @Given("Kullanici acilan sayfada INVOICE yazisinin oldugunu dogrular.")
     public void kullanici_acilan_sayfada_invoice_yazisinin_oldugunu_dogrular() throws InterruptedException {
         Thread.sleep(2000);
-        Assert.assertTrue("Fatura gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
+        Assert.assertTrue("Fatura gozukmuyor.",us24_page.invoiceText.isDisplayed());
     }
 
 

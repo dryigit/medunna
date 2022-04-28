@@ -91,7 +91,7 @@ public class US024_StepDefinitions {
 
     @Then("Kullanici faturasinin gozuktugunu dogrular.")
     public void kullaniciFaturasininGozuktugunuDogrular() {
-        Assert.assertTrue("Hasta faturasi gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
+        Assert.assertTrue("Hasta faturasi gozukmuyor.",us24_page.invoiceText.isDisplayed());
     }
 
 

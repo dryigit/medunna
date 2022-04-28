@@ -64,6 +64,6 @@ public class US24_Page extends BasePage{
     public WebElement showInvoiceButton;
 
     @FindBy(xpath = "//*[text()='INVOICE']")
-    public WebElement ınvoiceText;
+    public WebElement invoiceText;
 
 }
