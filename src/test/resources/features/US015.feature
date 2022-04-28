@@ -1,5 +1,5 @@
 
-Feature: US015 Admin tarafindan hasta oluşturma ve düzenleme
+Feature: US015 Admin tarafindan hasta olusturma ve duzenleme
          US027 Yonetici Mesajlari Gorur ve Silebilir
 
   Background:
@@ -8,7 +8,7 @@ Feature: US015 Admin tarafindan hasta oluşturma ve düzenleme
   * Your Username Girer
   * Your Password Girer
   * Sing in Giris Yapar
-  * Items&Titles Tiklar
+    And haitems&Titles Tiklar
 
 
   Scenario: TC001 Yeni hastalar yalnizca yönetici tarafindan olusturulabilir
@@ -17,9 +17,9 @@ Feature: US015 Admin tarafindan hasta oluşturma ve düzenleme
   * Create or edit a Patient Tiklar Hasta icin Gerekli Bilgiler girer
   * Save Buttonuna Tiklar
 
-  Scenario: TC002 Yonetici asagıdaki gibi tüm hasta bilgilerini gorebilir
+  Scenario: TC002 Yonetici asagidaki gibi tüm hasta bilgilerini gorebilir
   * Patients Tiklar
-  * hasta bilgilerini görebilir
+  * hasta bilgilerini gorebilir
 
   Scenario: TC003 ID. Ayrıca sadece admin hastaya doktorunu atayabilir
   * Yonetici Medunna Sayfasina gider
@@ -27,7 +27,7 @@ Feature: US015 Admin tarafindan hasta oluşturma ve düzenleme
   *  iDYour Username Girer
   *  iDYour Password Girer
   *  Sing in Giris Yapar
-  *  ID  sadece admin hastaya doktorunu atayabilir
+  *  HaiD  sadece admin hastaya doktorunu atayabilir
 
   Scenario: TC004 Eyalet, ABD eyaleti olarak saglanmalı ve bos bırakılamaz
   * Patients Tiklar
@@ -40,7 +40,7 @@ Feature: US015 Admin tarafindan hasta oluşturma ve düzenleme
   * Delete Tiklar
   * Delete Onaylar
 
-  Scenario: TC006 Yonetici, mesaj portalına gidebilir ve tum mesajları, yazarlarını ve
+  Scenario: TC006 Yonetici, mesaj portalina gidebilir ve tum mesajları, yazarlarini ve
    e-postalarini goruntuleyebilir
   * Messages Tiklar
   * Yazarlarini ve e-postalarini goruntuler
