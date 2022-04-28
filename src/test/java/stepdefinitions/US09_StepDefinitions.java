@@ -32,36 +32,7 @@ us9Page.usernameButton.sendKeys("UserAG");
 us9Page.passwordButton.sendKeys("1203bakii1203");
 us9Page.singInButton2.click();
     }
-    @Then("kullanici My pages butonuna tiklar açılan sekmeden In Patient secer")
-    public void kullaniciMyPagesButonunaTiklarAçılanSekmedenInPatientSecer() {
 
-
-    }
-
-    @Then("acilan sayfa da görüntülenen hastalardan ilk sırada olan hasta secilir")
-    public void acilan_sayfa_da_görüntülenen_hastalardan_ilk_sırada_olan_hasta_secilir() {
-
-
-    }
-    @And("hasta bilgilerinin acildigi sayfa Patient yazısının görüldügü ile test edilir")
-    public void hastaBilgilerininAcildigiSayfaPatientYazısınınGörüldügüIleTestEdilir() {
-
-
-    }
-
-    //tc2
-
-    @Then("kullanici edit butonuna tıklar")
-    public void kullanici_edit_butonuna_tıklar() {
-
-
-
-    }
-    @Then("kullanici acilan sayfa da firstname,lastname,email.phone bilgilerini düzenler")
-    public void kullanici_acilan_sayfa_da_firstname_lastname_email_phone_bilgilerini_düzenler() {
-
-
-    }
     @Then("kullanici save butonuna basarak bilgilerin kaydedildigini test eder")
     public void kullanici_save_butonuna_basarak_bilgilerin_kaydedildigini_test_eder() throws InterruptedException {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
