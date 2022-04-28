@@ -1,9 +1,14 @@
-Feature: us002 api ve db testi
+Feature: us002 api ve database testi
 
-  Scenario: kullanici api testi
-    Given kullanici gerekli path params ayarlamalarini yapar
+  Scenario: email api testi
+    Given mf kullanici api icin gerekli path params ayarlamalarini yapar
     And kullanici gerekli parametreleri girer "<firstname>", "<lastname>" "<SSN>" "<email>" "<username>" "<password>" ve "<lan>"
-    And kullanici request gonderir ve response alir
-    When kullanici api kayitlarili ilgili dosyaya kaydeder
-    Then kulllanici adi api ile dogrulanir
+    And kullanici email testi icin request gonderir ve response alir
+    When kullanici email testi icin api kayitlarili ilgili dosyaya kaydeder
+    Then email api ile dogrulanir
+
+  Scenario: email db testi
+    Given mf kullanici email dogrulamasi icin db baglantisi kurar
+    Then kullanici db testi icin "email" dogrular
+
 

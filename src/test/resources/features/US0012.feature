@@ -14,5 +14,5 @@ When   Dk Medunna Sayfasina gider
   And  Ha Request A Test Tiklar
   And  Ha Test Seceneklerini Girer
   And  Ha Testleri Save Yapar
-  Then Ha Test Sonucunu Goster(Show Test Resuelt)
-  Then Ha Test Sonuclarına Bak
+  Then Ha Test Sonucunu Goster
+  Then Ha Test Sonuclarina Bak

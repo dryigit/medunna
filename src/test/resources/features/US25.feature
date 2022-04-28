@@ -16,7 +16,7 @@ Feature:US25 Hasta olarak kayit olusturulmali
 
         And PatientAG Contact sayfasina tiklar
         Then PatientAG name,email,subject,message kutularini doldurur
-        And PatientAG Send butonuna tiklayarak cikan mesajdan iletisim istegi gönderildigini dogrular
+        And PatientAG Send butonuna tiklayarak cikan mesajdan iletisim istegi gonderildigini dogrular
 
 
 

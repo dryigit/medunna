@@ -29,8 +29,8 @@ public class US005_StepDefinitions {
     public void lvnt_lastname_olarak_girer(String string) {
         appointmentPage.lastname.sendKeys(faker.name().lastName());
     }
-    @Given("lvnt SSN numarası olarak {string} girer")
-    public void lvnt_ssn_numarası_olarak_girer(String string) {
+    @Given("lvnt SSN numarasi olarak {string} girer")
+    public void lvnt_ssn_numarasi_olarak_girer(String string) {
         appointmentPage.ssn.sendKeys(faker.idNumber().ssnValid());
     }
     @Given("lvnt e-posta  {string} girer")

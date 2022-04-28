@@ -26,7 +26,7 @@ public class US0012_StepDefinitions {
     @When("Ha Sing in Tiklar")
     public void sing_in_tiklar() {
     us012Page.ButtonTikla.click();
-    us012Page.SingİnButton.click();
+    us012Page.SingInButton.click();
 
     }
 
@@ -43,7 +43,7 @@ public class US0012_StepDefinitions {
 
     @When("Ha Sing İn Giris Yapar")
     public void sing_in_giris_yapar() {
-    us012Page.SingİnGirisButton.click();
+    us012Page.SingInGirisButton.click();
     }
 
     @When("Ha My Pages Buttonunu Tiklar")
@@ -122,25 +122,22 @@ public class US0012_StepDefinitions {
 
     }
 
-    @Then("Ha Test Sonucunu Goster\\(Show Test Resuelt)")
-    public void testSonucunuGosterShowTestResuelt() {
 
+    @Then("Ha Test Sonucunu Goster")
+    public void haTestSonucunuGoster() {
         JavascriptExecutor jse2 = (JavascriptExecutor) Driver.getDriver();
         jse2.executeScript("arguments[0].click();",us012Page.ShowTestResults);
-        //us012Page.ShowTestResults.click();
-
-
     }
 
-    @Then("Ha Test Sonuclarına Bak")
-    public void testSonuclarınaBak() {
+    @Then("Ha Test Sonuclarina Bak")
+    public void testSonuclarinaBak() {
         ReusableMethods.waitForVisibility(us012Page.TestsonuclarGoster,8);
 
         JavascriptExecutor jse3 = (JavascriptExecutor) Driver.getDriver();
         jse3.executeScript("arguments[0].click();",us012Page.TestsonuclarGoster);
 
 
-        // us012Page.TestsonuclarGoster.click();
+
 
         us012Page.TestResultElement.click();
         System.out.println("Test Sonuclari==>"+us012Page.TestResultElement.getText());
@@ -148,4 +145,6 @@ public class US0012_StepDefinitions {
 
 
     }
+
+
 }

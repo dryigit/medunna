@@ -13,7 +13,7 @@ public class US012Page extends BasePage {
     public WebElement ButtonTikla;
 
     @FindBy(xpath = " //span[contains(text(),'Sign in')]")
-    public WebElement SingİnButton;
+    public WebElement SingInButton;
 
     @FindBy(xpath = "//input[@name='username']")
     public WebElement UsernameBox;
@@ -22,7 +22,7 @@ public class US012Page extends BasePage {
     public WebElement PasswordBox;
 
     @FindBy(xpath = " //body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[2]/span[1]")
-    public WebElement SingİnGirisButton;
+    public WebElement SingInGirisButton;
 
     @FindBy(xpath = "//span[text()='MY PAGES']")
     public WebElement MyPagesButton;
