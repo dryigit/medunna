@@ -23,7 +23,7 @@ Feature: US_008_Password change
     | Okanok   | Ozi654.  |   Ozi654.       |   Ozi555.   |
 
 
-  Scenario Outline: US008_TC02_kullanıcı eski passwordu ile sign in yapamamalı
+  Scenario Outline: US008_TC02_kullanici eski passwordu ile sign in yapamamali
 
     Given staffHakan medunna anasayfasına gider
     And adminOkan giris yapmak icin ikon altındaki signIn'e tiklar
