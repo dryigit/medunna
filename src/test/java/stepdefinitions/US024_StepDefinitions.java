@@ -23,7 +23,7 @@ public class US024_StepDefinitions {
     }
     @Given("Kullanici insan ikonuna tiklar.")
     public void kullanici_insan_ikonuna_tiklar() {
-        us24_page.insanİkonButton.click();
+        us24_page.insanIkonButton.click();
     }
     @Given("Kullanici Sign In butonuna tiklar.")
     public void kullanici_sign_in_butonuna_tiklar() {
@@ -70,7 +70,7 @@ public class US024_StepDefinitions {
     }
     @Then("Kullanici Test Results sayfasinda {string} bölümlerinin goruldugunu dogrular.")
     public void kullanici_test_results_sayfasinda_bölümlerinin_goruldugunu_dogrular(String string) {
-        Assert.assertTrue("id gozukmuyor",us24_page.ıdText.isDisplayed());
+        Assert.assertTrue("id gozukmuyor",us24_page.idText.isDisplayed());
         Assert.assertTrue("test ismi gozukmuyor.",us24_page.nameText.isDisplayed());
         Assert.assertTrue("Default Min. Value degeri gozukmuyor.",us24_page.defaultMinValueText.isDisplayed());
         Assert.assertTrue("Default Max. Value degeri gozukmuyor.",us24_page.defaultMaxValueText.isDisplayed());
