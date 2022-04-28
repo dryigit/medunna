@@ -3,18 +3,18 @@
 Feature: US_008_Password change
 
 
-  Scenario Outline: US008_TC01_kullanıcı sign in yaptıgında passwordunu duzenleyebilmeli
+  Scenario Outline: US008_TC01_kullanici sign in yaptiginda passwordunu duzenleyebilmeli
 
-    Given adminOkan medunna anasayfasına gider
-    And giris yapmak icin ikon altındaki signIn'e tıklar
-    Then kullanıcı adını "<username>" girer
+    Given adminOkan medunna anasayfasina gider
+    And giris yapmak icin ikon altındaki signIn'e tiklar
+    Then kullanici adini "<username>" girer
     And sifresini "<password>" girer
-    And signIn sayfasındaki signIn butonuna tıklar
-    And ikon altındaki password sekmesine tıklar
+    And signIn sayfasindaki signIn butonuna tiklar
+    And ikon altindaki password sekmesine tiklar
     And gecerli sifresini "<currentPassword>" girer
     And yeni sifresini "<newPassword>" girer
     And yeni sifresini "<newPassword>" confirme eder
-    And yeni sifreyi kaydetmek icin save butonuna tıklar
+    And yeni sifreyi kaydetmek icin save butonuna tiklar
     Then yeni sifresinin basarili olarak degistigini kontrol eder
 
     Examples: Test data
@@ -26,11 +26,11 @@ Feature: US_008_Password change
   Scenario Outline: US008_TC02_kullanıcı eski passwordu ile sign in yapamamalı
 
     Given staffHakan medunna anasayfasına gider
-    And giris yapmak icin ikon altındaki signIn'e tıklar
-    Then kullanıcı adını "<username>" girer
+    And giris yapmak icin ikon altındaki signIn'e tiklar
+    Then kullanici adini "<username>" girer
     And sifresini "<eskiPassword>" girer
-    And signIn sayfasındaki signIn butonuna tıklar
-    Then giris yapılamadıgını kontrol eder
+    And signIn sayfasindaki signIn butonuna tiklar
+    Then giris yapilamadigini kontrol eder
 
     Examples: Test data
 
