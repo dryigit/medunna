@@ -17,7 +17,7 @@ Feature:US 24
     And Kullanici tarihleri olusturulan appointmente gore degistirir.
     And Kullanici acilan sayfada Show Tests butonuna tiklar.
     And Kullanici acian Tests sayfasinda View Results yazisina tiklar.
-    Then Kullanici Test Results sayfasinda " id, name for test, default max ve min value, test date and description" bölümlerinin goruldugunu dogrular.
+    Then Kullanici Test Results sayfasinda " id, name for test, default max ve min value, test date and description" bolumlerinin goruldugunu dogrular.
 
 
   Scenario: TC02 Hasta faturasunuda görebilmelidir. (Show Invoice)
