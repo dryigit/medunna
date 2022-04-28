@@ -19,69 +19,69 @@ public class US008_StepDefinitions {
 
     }
 
-    @And("giris yapmak icin ikon altındaki signIn'e tiklar")
-    public void girisYapmakIcinIkonAltındakiSignInETiklar() {
+    @And("adminOkan giris yapmak icin ikon altındaki signIn'e tiklar")
+    public void adminOkangirisYapmakIcinIkonAltındakiSignInETiklar() {
 
         us008Page.ikon.click();
         us008Page.ikonSignIn.click();
 
     }
 
-    @Then("kullanici adini {string} girer")
-    public void kullanıciAdiniGirer(String username) {
+    @Then("adminOkan kullanici adini {string} girer")
+    public void adminOkankullanıciAdiniGirer(String username) {
         us008Page.username.sendKeys(username);
     }
 
-    @And("sifresini {string} girer")
-    public void sifresiniGirer(String password) {
+    @And("adminOkan sifresini {string} girer")
+    public void adminOkansifresiniGirer(String password) {
         us008Page.password.sendKeys(password);
 
     }
 
-    @And("signIn sayfasindaki signIn butonuna tiklar")
-    public void signinSayfasindakiSignInButonunaTiklar() {
+    @And("adminOkan signIn sayfasindaki signIn butonuna tiklar")
+    public void adminOkansigninSayfasindakiSignInButonunaTiklar() {
 
         us008Page.signInSignInButton.submit();
     }
 
-    @And("ikon altindaki password sekmesine tiklar")
-    public void ikonAltindakiPasswordSekmesineTiklar() {
+    @And("adminOkan ikon altindaki password sekmesine tiklar")
+    public void adminOkanikonAltindakiPasswordSekmesineTiklar() {
 
         us008Page.ikinciIkon.click();
         us008Page.passwordButton.click();
     }
 
-    @And("gecerli sifresini {string} girer")
-    public void gecerliSifresiniGirer(String currentPassword) {
+    @And("adminOkan gecerli sifresini {string} girer")
+    public void adminOkangecerliSifresiniGirer(String currentPassword) {
         us008Page.currentPassword.sendKeys(currentPassword);
 
     }
 
-    @And("yeni sifresini {string} girer")
-    public void yeniSifresiniGirer(String newPassword) {
+    @And("adminOkan yeni sifresini {string} girer")
+    public void adminOkanyeniSifresiniGirer(String newPassword) {
         us008Page.newPassword.sendKeys(newPassword);
     }
 
-    @And("yeni sifresini {string} confirme eder")
-    public void yeniSifresiniConfirmeEder(String newPassword) {
+    @And("adminOkan yeni sifresini {string} confirme eder")
+    public void adminOkanyeniSifresiniConfirmeEder(String newPassword) {
         us008Page.newPasswordConfr.sendKeys(newPassword);
     }
 
-    @And("yeni sifreyi kaydetmek icin save butonuna tiklar")
-    public void yeniSifreyiKaydetmekIcinSaveButonunaTiklar() {
+    @And("adminOkan yeni sifreyi kaydetmek icin save butonuna tiklar")
+    public void adminOkanyeniSifreyiKaydetmekIcinSaveButonunaTiklar() {
 
         us008Page.saveButton.click();
     }
 
-    @And("yeni sifresinin basarili olarak degistigini kontrol eder")
-    public void yeniSifresininBasariliOlarakDegistiginiKontrolEder() {
+    @And("adminOkan yeni sifresinin basarili olarak degistigini kontrol eder")
+    public void adminOkanyeniSifresininBasariliOlarakDegistiginiKontrolEder() {
        // Assert.assertFalse(us008Page.hataliSifreConfr.isDisplayed());
 
         Assert.assertTrue(us008Page.toastify.isEnabled());
     }
 
-    @Then("giris yapilamadigini kontrol eder")
-    public void girisYapilamadiginiKontrolEder() {
+    @Then("staffHakan giris yapilamadigini kontrol eder")
+    public void staffHakangirisYapilamadiginiKontrolEder() {
 
         Assert.assertTrue(us008Page.hataliSignIn.isDisplayed());
 
