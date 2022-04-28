@@ -23,26 +23,26 @@ public class US001_StepDefinitions {
     public void mfKullaniciSayfasinaGider(String website) {
         Driver.getDriver().get(ConfigReader.getProperty(website));
     }
-    @And("mf kullanici menüde bulunan account simgesine tıklar")
-    public void mfKullaniciMenüdeBulunanAccountSimgesineTıklar() {
+    @And("mfi kullanici menude bulunan account simgesine tiklar")
+    public void mfiKullaniciMenudeBulunanAccountSimgesineTiklar() {
         us001page.accountMenu.click();
     }
 
-    @And("mf kullanici register butonuna tıklar")
-    public void mfKullaniciRegisterButonunaTıklar() {
+    @And("mf kullanici register butonuna tiklar")
+    public void mfKullaniciRegisterButonunaTiklar() {
         us001page.registerButton.click();
     }
 
-    @Then("mf kullanıcı ssn girer")
-    public void mfKullanıcıSsnGirer() {
+    @Then("mf kullanici ssn girer")
+    public void mfKullaniciSsnGirer() {
         Faker faker=new Faker();
         Actions actions=new Actions(Driver.getDriver());
         actions.click(us001page.ssnBox)
                 .sendKeys(faker.idNumber().ssnValid()).perform();
 
     }
-    @Then("mf kullanıcı {string} girer")
-    public void mfKullanıcıGirer(String ssn) {
+    @Then("mf kullanici {string} girer")
+    public void mfKullaniciGirer(String ssn) {
         //ssn=faker.idNumber().ssnValid();
         actions.click(us001page.ssnBox).sendKeys(ssn).perform();
         registrant.setSsn(ssn);
@@ -50,8 +50,8 @@ public class US001_StepDefinitions {
     }
 
 
-    @And("mf kullanıcı ssn kutusunu bos birakirsa hata alir")
-    public void mfKullanıcıSsnKutusunuBosBirakirsaHataAlir() {
+    @And("mf kullanici ssn kutusunu bos birakirsa hata alir")
+    public void mfKullaniciSsnKutusunuBosBirakirsaHataAlir() {
         Actions action = new Actions(Driver.getDriver());
         action.click(us001page.ssnBox).sendKeys(Keys.TAB).perform();
         Assert.assertTrue("SSN Boş Bırakılamaz", us001page.ssnAllert.isDisplayed());
@@ -76,6 +76,8 @@ public class US001_StepDefinitions {
     public void mfKullaniciGecerliBirIsimGirer(String soyisim) {
         actions.click(us001page.lastNameBox).sendKeys(soyisim).perform();
     }
+
+
 
     //@And("mf kullanici gecerli bir soyisim isim girer")
     //public void mfKullaniciGecerliBirSoyisimIsimGirer() {
