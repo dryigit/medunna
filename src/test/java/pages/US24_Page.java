@@ -7,7 +7,7 @@ public class US24_Page extends BasePage{
 
 
     @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
-    public WebElement insanİkonButton;
+    public WebElement insanIkonButton;
 
     @FindBy(id = "login-item")
     public WebElement signInButton;
@@ -40,7 +40,7 @@ public class US24_Page extends BasePage{
     public WebElement viewResultsButton;
 
     @FindBy(xpath = "//*[text()='78680']")
-    public WebElement ıdText;
+    public WebElement idText;
 
     @FindBy(xpath = "//*[text()='Urea']")
     public WebElement nameText;

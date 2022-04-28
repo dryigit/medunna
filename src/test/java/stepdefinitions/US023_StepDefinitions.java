@@ -24,10 +24,6 @@ import static utilities.ReusableMethods.getScreenshot;
 import static utilities.ReusableMethods.waitForClickablility;
 
 public class US023_StepDefinitions {
-    public static void main(String[] args) {
-        LocalDate localDate=LocalDate.now();
-        System.out.println(localDate);
-    }
 
     US23_Page us23_page = new US23_Page();
     US24_Page us24_page = new US24_Page();
