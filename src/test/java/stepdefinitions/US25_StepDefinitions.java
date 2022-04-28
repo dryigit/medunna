@@ -91,10 +91,9 @@ public class US25_StepDefinitions {
      JSUtils.clickElementByJS( us25_page.contactSendButton);
     }
 
-    @And("PatientAG Send butonuna tiklayarak cikan mesajdan iletisim istegi gönderildigini dogrular")
-    public void patientagSendButonunaTiklayarakCikanMesajdanIletisimIstegiGönderildiginiDogrular() {
+
+    @And("PatientAG Send butonuna tiklayarak cikan mesajdan iletisim istegi gonderildigini dogrular")
+    public void patientagSendButonunaTiklayarakCikanMesajdanIletisimIstegiGonderildiginiDogrular() {
         Assert.assertTrue(us25_page.toastMessage.isDisplayed());
     }
-
-
 }

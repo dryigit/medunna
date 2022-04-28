@@ -9,9 +9,9 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
 
     Then kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  kullanici My pages butonuna tiklar açılan sekmeden In Patient secer
-    And   acilan sayfa da görüntülenen hastalardan ilk sırada olan hasta secilir
-    And hasta bilgilerinin acildigi sayfa Patient yazısının görüldügü ile test edilir
+    Then  kullanici My pages butonuna tiklar acilan sekmeden In Patient secer
+    And   acilan sayfa da goruntulenen hastalardan ilk sırada olan hasta secilir
+    And hasta bilgilerinin acildigi sayfa Patient yazisinin goruldugu ile test edilir
 
   Scenario:TC02 Hasta bilgilerinin düzenlenmesi
 
@@ -19,8 +19,8 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
     Given kullanici gecerli bilgileri girerek basarili giris yapar
     Then  kullanici My pages butonuna tiklar açılan sekmeden In Patient secer
     And   acilan sayfa da görüntülenen hastalardan ilk sırada olan hasta secilir
-    Then kullanici edit butonuna tıklar
-    And kullanici acilan sayfa da firstname,lastname,email.phone bilgilerini düzenler
+    Then kullanici edit butonuna tiklar
+    And kullanici acilan sayfa da firstname_lastname_email_phone bilgilerini duzenler
     Then kullanici save butonuna basarak bilgilerin kaydedildigini test eder
 
   Scenario:TC03 SSN numarasına göre hasta araması yapilmali
@@ -28,7 +28,7 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
     Then kullanici gecerli bilgileri girerek basarili giris yapar
     Then  Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
-    And kullanici SSN kutusuna gecerli bir SSN numarası girer
+    And kullanici SSN kutusuna gecerli bir SSN numarasi girer
     Then kullanici gelen bilgilerden ilk sirada olan hastayi secer
     And acilan sayfada edit butonuna tiklanir
     Then kullanici acilan sayfada firstname,lastname,email,phone boxlarinin bos olmadigini test eder
