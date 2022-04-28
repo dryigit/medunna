@@ -15,7 +15,7 @@ public class US018_StepDefinitions {
     US018Page page = new US018Page();
     Random random = new Random();
     Faker faker = new Faker();
-    Select select = new Select(page.speciality);
+
 
     @Given("lvntt kullanici {string} sayfasina gider")
     public void lvnttKullaniciSayfasinaGider(String arg1) {
@@ -77,13 +77,21 @@ public class US018_StepDefinitions {
     @And("lvnt physician'in telefon, speciality, image, exam fee bilgilerini girer")
     public void lvntPhysicianInTelefonSpecialityImageExamFeeBilgileriniGirer() {
         page.physicianPhone.sendKeys(faker.phoneNumber().cellPhone());
-        select.selectByIndex(random.nextInt());
+
+        Select select = new Select(page.speciality);
+        select.selectByIndex(random.nextInt(15));
+
+        page.profilePhoto.sendKeys("C:\\Users\\leven\\Downloads\\vegi.jpg");
+
     }
 
     @And("lvnt save butonuna basar ve bilgilerin kaydedildigini dogrular")
     public void lvntSaveButonunaBasarVeBilgilerinKaydedildiginiDogrular() {
+
         page.saveButton.click();
     }
 
-
 }
+
+
+
