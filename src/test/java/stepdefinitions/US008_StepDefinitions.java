@@ -13,22 +13,22 @@ public class US008_StepDefinitions {
 
     US008Page us008Page = new US008Page();
 
-    @Given("adminOkan medunna anasayfasına gider")
-    public void adminokanMedunnaAnasayfasınaGider() {
+    @Given("adminOkan medunna anasayfasina gider")
+    public void adminokanMedunnaAnasayfasinaGider() {
         Driver.getDriver().get(ConfigReader.getProperty("MedunnaURL"));
 
     }
 
-    @And("giris yapmak icin ikon altındaki signIn'e tıklar")
-    public void girisYapmakIcinIkonAltındakiSignInETıklar() {
+    @And("giris yapmak icin ikon altındaki signIn'e tiklar")
+    public void girisYapmakIcinIkonAltındakiSignInETiklar() {
 
         us008Page.ikon.click();
         us008Page.ikonSignIn.click();
 
     }
 
-    @Then("kullanıcı adını {string} girer")
-    public void kullanıcıAdınıGirer(String username) {
+    @Then("kullanici adini {string} girer")
+    public void kullanıciAdiniGirer(String username) {
         us008Page.username.sendKeys(username);
     }
 
@@ -38,14 +38,14 @@ public class US008_StepDefinitions {
 
     }
 
-    @And("signIn sayfasındaki signIn butonuna tıklar")
-    public void signınSayfasındakiSignInButonunaTıklar() {
+    @And("signIn sayfasindaki signIn butonuna tiklar")
+    public void signinSayfasindakiSignInButonunaTiklar() {
 
         us008Page.signInSignInButton.submit();
     }
 
-    @And("ikon altındaki password sekmesine tıklar")
-    public void ikonAltındakiPasswordSekmesineTıklar() {
+    @And("ikon altindaki password sekmesine tiklar")
+    public void ikonAltindakiPasswordSekmesineTiklar() {
 
         us008Page.ikinciIkon.click();
         us008Page.passwordButton.click();
@@ -67,8 +67,8 @@ public class US008_StepDefinitions {
         us008Page.newPasswordConfr.sendKeys(newPassword);
     }
 
-    @And("yeni sifreyi kaydetmek icin save butonuna tıklar")
-    public void yeniSifreyiKaydetmekIcinSaveButonunaTıklar() {
+    @And("yeni sifreyi kaydetmek icin save butonuna tiklar")
+    public void yeniSifreyiKaydetmekIcinSaveButonunaTiklar() {
 
         us008Page.saveButton.click();
     }
@@ -80,8 +80,8 @@ public class US008_StepDefinitions {
         Assert.assertTrue(us008Page.toastify.isEnabled());
     }
 
-    @Then("giris yapılamadıgını kontrol eder")
-    public void girisYapılamadıgınıKontrolEder() {
+    @Then("giris yapilamadigini kontrol eder")
+    public void girisYapilamadiginiKontrolEder() {
 
         Assert.assertTrue(us008Page.hataliSignIn.isDisplayed());
 
