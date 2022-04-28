@@ -68,8 +68,8 @@ public class US024_StepDefinitions {
         us24_page.viewResultsButton.click();
         Thread.sleep(3000);
     }
-    @Then("Kullanici Test Results sayfasinda {string} bölümlerinin goruldugunu dogrular.")
-    public void kullanici_test_results_sayfasinda_bölümlerinin_goruldugunu_dogrular(String string) {
+    @Then("Kullanici Test Results sayfasinda {string} bolumlerinin goruldugunu dogrular.")
+    public void kullanici_test_results_sayfasinda_bolumlerinin_goruldugunu_dogrular(String string) {
         Assert.assertTrue("id gozukmuyor",us24_page.idText.isDisplayed());
         Assert.assertTrue("test ismi gozukmuyor.",us24_page.nameText.isDisplayed());
         Assert.assertTrue("Default Min. Value degeri gozukmuyor.",us24_page.defaultMinValueText.isDisplayed());
