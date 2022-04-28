@@ -22,7 +22,7 @@ public class US18_DBSteps {
 
     @Given("lvnt verify {string} table {string} column contains {string}")
     public void lvnt_verify_table_column_contains(String table, String column, String data) {
-            List<Object> allColumnData = DBUtils.getColumnData("Select * from physician", "id");
+            List<Object> allColumnData = DBUtils.getColumnData("Select * from jhi_user", "ssn");
             System.out.println(allColumnData);
 
             List<Object> expectedDta = new ArrayList<>();

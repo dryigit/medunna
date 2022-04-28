@@ -96,10 +96,6 @@ public class US018_StepDefinitions {
         page.saveButton.click();
     }
 
-}
-
-        page.saveButton.click();
-    }
 
 
 }
