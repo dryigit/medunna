@@ -25,7 +25,7 @@ Feature: US002_Email ve Username
     And mf kullanici register butonuna tiklar
     Then kullanici "<ilkPassword>" girilebilmelidir
     Then kullanici "<ikinciPassword>" ikinci defa girilebilmelidir
-  Then kullanici register butonuna tıklar
+  Then kullanici register butonuna tiklar
     Examples: test data
       |ilkPassword|ikinciPassword|
       |Alicankara20!|Alicankara20!|

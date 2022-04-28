@@ -52,7 +52,7 @@ public class US002_StepDefinitions {
     }
 
     @Then("kullanici register butonuna tıklar")
-    public void kullaniciRegisterButonunaTıklar() {
+    public void kullaniciRegisterButonunaTiklar() {
         actions.click(us002page.registerButton2).perform();
     }
 
