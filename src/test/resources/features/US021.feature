@@ -17,7 +17,7 @@ Feature: US021 Staff randevulari gorur
     And Kullanici Patient SSN texboxina hastanin SSN nosunu girer
     And Kullanici Show Appointments butonuna tiklar
     And Kullanici Edit butonuna tiklar
-    And Kullanici Start DateTime texboxini günceller
+    And Kullanici Start DateTime texboxini gunceller
     Then Kullanici Save butonuna tiklar
 
 
