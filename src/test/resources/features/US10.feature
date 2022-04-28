@@ -9,7 +9,7 @@ Feature:US10 Doktor olarak giris yapildiginda hasta bilgileri düzenlenebilmeli
 
     Then kullanici gecerli bilgileri girerek basarili giris yapar
 And kullanici My Appointments sekmesine tıklar
-  And kullanici randevu listesini ve zaman dilimlerini bu sekmede görür
+  And kullanici randevu listesini ve zaman dilimlerini bu sekmede gorur
 
 Scenario:TC02 Doktor olarak  "patient id, start date, end date, status" bilgilerini görebilmeli
 

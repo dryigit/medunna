@@ -34,19 +34,18 @@ us9Page.singInButton2.click();
     }
     @Then("kullanici My pages butonuna tiklar açılan sekmeden In Patient secer")
     public void kullaniciMyPagesButonunaTiklarAçılanSekmedenInPatientSecer() {
-us9Page.MyPagesButtonStaff.click();
-us9Page.InpatientButton.click();
+
 
     }
 
     @Then("acilan sayfa da görüntülenen hastalardan ilk sırada olan hasta secilir")
     public void acilan_sayfa_da_görüntülenen_hastalardan_ilk_sırada_olan_hasta_secilir() {
-us9Page.InpatientInformation.click();
+
 
     }
     @And("hasta bilgilerinin acildigi sayfa Patient yazısının görüldügü ile test edilir")
     public void hastaBilgilerininAcildigiSayfaPatientYazısınınGörüldügüIleTestEdilir() {
-Assert.assertTrue(us9Page.InPatientsText.isDisplayed());
+
 
     }
 
@@ -55,18 +54,12 @@ Assert.assertTrue(us9Page.InPatientsText.isDisplayed());
     @Then("kullanici edit butonuna tıklar")
     public void kullanici_edit_butonuna_tıklar() {
 
-              JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
 
-               javascriptExecutor.executeScript("window.scrollBy(0,400)");
-        ReusableMethods.waitForVisibility(us9Page.patientEdit,5);
-        us9Page.patientEdit.click();
 
     }
     @Then("kullanici acilan sayfa da firstname,lastname,email.phone bilgilerini düzenler")
     public void kullanici_acilan_sayfa_da_firstname_lastname_email_phone_bilgilerini_düzenler() {
-us9Page.firstNameButton.sendKeys("AAA");
-us9Page.lastNameButton.sendKeys("BBB");
-us9Page.emailNameButton.sendKeys("CCC");
+
 
     }
     @Then("kullanici save butonuna basarak bilgilerin kaydedildigini test eder")
@@ -93,12 +86,13 @@ ReusableMethods.waitForClickablility(us9Page.saveButton,5);
     }
     @Then("Kullanici SSN kutusuna gecerli bir SSN numarası girer")
     public void kullanici_ssn_kutusuna_gecerli_bir_ssn_numarası_girer() {
-us9Page.searchSSNbutton.sendKeys("111-11-1111");
+
 
     }
     @Then("kullanici gelen bilgilerden ilk sirada olan hastayi secer")
     public void kullanici_gelen_bilgilerden_ilk_sirada_olan_hastayi_secer() {
-us9Page.viewButton.click();
+
+        us9Page.viewButton.click();
     }
     @Then("acilan sayfada edit butonuna tiklanir")
     public void acilan_sayfada_edit_butonuna_tiklanir() throws InterruptedException {
@@ -140,7 +134,7 @@ us9Page.myAppointments.click();
 
     @And("kullanici randevu listesini ve zaman dilimlerini bu sekmede görür")
     public void kullaniciRandevuListesiniVeZamanDilimleriniBuSekmedeGörür() {
-Assert.assertTrue(us9Page.appointmentsText.isDisplayed());
+
     }
 
 
@@ -187,6 +181,45 @@ Assert.assertTrue(!us9Page.ssnStaff.isDisplayed());
     }
 
 
+    @Then("kullanici My pages butonuna tiklar acilan sekmeden In Patient secer")
+    public void kullaniciMyPagesButonunaTiklarAcilanSekmedenInPatientSecer() {
+        us9Page.MyPagesButtonStaff.click();
+        us9Page.InpatientButton.click();
+    }
 
+    @And("acilan sayfa da goruntulenen hastalardan ilk sırada olan hasta secilir")
+    public void acilanSayfaDaGoruntulenenHastalardanIlkSıradaOlanHastaSecilir() {
+        us9Page.InpatientInformation.click();
+    }
 
+    @And("hasta bilgilerinin acildigi sayfa Patient yazisinin goruldugu ile test edilir")
+    public void hastaBilgilerininAcildigiSayfaPatientYazisininGorulduguIleTestEdilir() {
+        Assert.assertTrue(us9Page.InPatientsText.isDisplayed());
+    }
+
+    @Then("kullanici edit butonuna tiklar")
+    public void kullaniciEditButonunaTiklar() {
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
+
+        javascriptExecutor.executeScript("window.scrollBy(0,400)");
+        ReusableMethods.waitForVisibility(us9Page.patientEdit,5);
+        us9Page.patientEdit.click();
+    }
+
+    @And("kullanici acilan sayfa da firstname_lastname_email_phone bilgilerini duzenler")
+    public void kullaniciAcilanSayfaDaFirstname_lastname_email_phoneBilgileriniDuzenler() {
+        us9Page.firstNameButton.sendKeys("AAA");
+        us9Page.lastNameButton.sendKeys("BBB");
+        us9Page.emailNameButton.sendKeys("CCC");
+    }
+
+    @And("kullanici SSN kutusuna gecerli bir SSN numarasi girer")
+    public void kullaniciSSNKutusunaGecerliBirSSNNumarasiGirer() {
+        us9Page.searchSSNbutton.sendKeys("111-11-1111");
+    }
+
+    @And("kullanici randevu listesini ve zaman dilimlerini bu sekmede gorur")
+    public void kullaniciRandevuListesiniVeZamanDilimleriniBuSekmedeGorur() {
+        Assert.assertTrue(us9Page.appointmentsText.isDisplayed());
+    }
 }
