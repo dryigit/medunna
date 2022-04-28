@@ -166,8 +166,8 @@ public class US021_US022StepDefinitions {
         us021Page.viewresultsbutonu.click();
     }
 
-    @Then("Kullanici test sonuclarini görür")
-    public void kullaniciTestSonuclariniGörür() {
+    @Then("Kullanici test sonuclarini gorur")
+    public void kullaniciTestSonuclariniGorur() {
         Assert.assertTrue(us021Page.testID.isDisplayed());
         Assert.assertTrue(us021Page.testName.isDisplayed());
         Assert.assertTrue(us021Page.testResult.isDisplayed());
