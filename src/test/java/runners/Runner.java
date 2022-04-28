@@ -14,8 +14,10 @@ import org.junit.runner.RunWith;
                     "rerun:target/failedRerun.txt"},
             features="src/test/resources/features",
             glue={"stepdefinitions","Hooks"},
-            tags="@US017",
-            dryRun=true
+            tags="@medunnaAllProject",
+
+
+            dryRun=false
 
     )
 

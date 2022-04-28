@@ -17,12 +17,17 @@ import utilities.ReusableMethods;
 
 import java.awt.*;
 import java.security.Key;
+import java.time.LocalDate;
 
 
 import static utilities.ReusableMethods.getScreenshot;
 import static utilities.ReusableMethods.waitForClickablility;
 
 public class US023_StepDefinitions {
+    public static void main(String[] args) {
+        LocalDate localDate=LocalDate.now();
+        System.out.println(localDate);
+    }
 
     US23_Page us23_page = new US23_Page();
     US24_Page us24_page = new US24_Page();
@@ -111,9 +116,9 @@ public class US023_StepDefinitions {
     @And("Kullanici Payment Detail sayfasindan test ve muayene ucretlerinin goruldugunu dogrular.")
     public void kullaniciPaymentDetailSayfasindanTestVeMuayeneUcretlerininGoruldugunuDogrular() {
         Assert.assertTrue("Exam Fee gorunmuyor",us23_page.examFeeText.isDisplayed());
-        Assert.assertTrue("Na111 item fee gorunmuyor.",us23_page.na111FeeText.isDisplayed());
         Assert.assertTrue("Urea item fee gorunmuyor.",us23_page.ureaFeeText.isDisplayed());
-        Assert.assertTrue("Creatinine item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
+        Assert.assertTrue("Creatine item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
+       // Assert.assertTrue("Soidum item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
 
     }
 
@@ -136,4 +141,24 @@ public class US023_StepDefinitions {
         Thread.sleep(4000);
         us23_page.showInvoicePaymentButton.click();
     }
+
+
+    @Given("make an appointmnet bas")
+    public void make_an_appointmnet_bas() throws InterruptedException {
+        us23_page.appointmentButoon.click();
+        Thread.sleep(8000);
+    }
+    @Given("date gir")
+    public void date_gir() {
+        LocalDate localDate=LocalDate.now();
+        System.out.println(localDate);
+        us23_page.appoDATe.sendKeys("localDate");
+        String actual = us23_page.appoDATe.getText();
+        System.out.println(actual);
+    }
+    @Given("verify")
+    public void verify() {
+       // Assert.assertEquals(,us23_page.appoDATe);
+    }
+
 }

@@ -31,7 +31,7 @@ public class US23_Page extends BasePage{
     @FindBy(id = "save-entity")
     public WebElement saveButton;
 
-    @FindBy(xpath = "//*[text()='800']")
+    @FindBy(xpath = "//*[text()='500']")
     public WebElement examFeeText;
 
     @FindBy(xpath = "//*[text()='50']")
@@ -51,6 +51,14 @@ public class US23_Page extends BasePage{
 
     @FindBy(xpath = "//div[@class='Toastify__toast-container Toastify__toast-container--top-left toastify-container']")
     public WebElement toastify;
+
+
+    @FindBy(xpath = "//span[@class='d-none d-md-inline']")
+    public WebElement appointmentButoon;
+
+    @FindBy(id = "appoDate")
+    public WebElement appoDATe;
+
 
 
 }

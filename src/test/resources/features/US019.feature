@@ -1,4 +1,4 @@
-
+@medunnaAllProject
 Feature: US_019_Admin create a new staff, edit and delete
 
   @E2E
@@ -39,33 +39,37 @@ Feature: US_019_Admin create a new staff, edit and delete
       And AdminOkan finds the record to edit
       And AdminOkan edits some info "<email>" and save
       And AdminOkan verifies the successful edit process
+      Then AdminOkan sign out yapar
 
       Examples:
 
       | email            | username | password |
       | nursefatma@yahoo.com  | Okanok   | Ozi888. |
 
+  @E2E
   Scenario Outline: US019_TC_04_Admin can select a user from the existing users
 
     Given AdminOkan signs in from home page by own admin "<username>" and "<password>"
     And AdminOkan clicks the User Management from Administration title
     And AdminOkan can select a user from the existing users
     And AdminOkan verifies the visibility of selected user info
+    Then AdminOkan sign out yapar
 
     Examples:
 
     | username | password |
     | Okanok   | Ozi888. |
 
-
+  @E2E
   Scenario Outline: US019_TC_05_Admin can delete created Staff
-  Given AdminOkan signs in from home page by own admin "<username>" and "<password>"
-  And AdminOkan clicks the User Management from Administration title
-  And AdminOkan finds the record of newly staff
-  And AdminOkan deletes the new staff record
-  Then AdminOkan verifies the successful delete process
 
-  Examples:
+    Given AdminOkan signs in from home page by own admin "<username>" and "<password>"
+    Then AdminOkan clicks the User Management from Administration title
+    And AdminOkan finds the record of newly staff
+    And AdminOkan deletes the new staff record
+    Then AdminOkan verifies the successful delete process
+
+    Examples:
 
     | username | password |
     | Okanok   | Ozi888. |

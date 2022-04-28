@@ -1,3 +1,5 @@
+@medunnaAllProject
+
 Feature: Kullanıcılar (patients), hastahaneden randevu (Appointment) oluşturabilmelidir.
 
   Background:

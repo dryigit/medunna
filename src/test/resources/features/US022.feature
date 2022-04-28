@@ -1,3 +1,4 @@
+@medunnaAllProject
 Feature: US022 Staff test sonuclarini görür ve degisiklik yapabilir
 
   Background:

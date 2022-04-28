@@ -1,4 +1,5 @@
 @Tc
+@medunnaAllProject
 Feature: US_008_Password change
 
 

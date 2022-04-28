@@ -1,4 +1,5 @@
-
+@medunnaAllProject
+  @US017
 Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
 
 
@@ -37,7 +38,7 @@ Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
     Then user validates that the item "<id>" has been deleted
     Examples: test data
       | id    |
-      |79929|
+      |87349|
 
 
 
