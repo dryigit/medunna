@@ -2,7 +2,7 @@
 Feature: US_008_Password change
 
 
-  Scenario Outline: US008_TC01_kullanıcı sign in yaptıgında passwordunu duzenleyebilmeli
+  Scenario Outline: US008_TC01_kullanici sign in yaptiginda passwordunu duzenleyebilmeli
 
     Given adminOkan medunna anasayfasına gider
     And giris yapmak icin ikon altındaki signIn'e tıklar

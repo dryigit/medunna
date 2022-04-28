@@ -95,16 +95,17 @@ public class US019_StepDefinitions {
         Assert.assertTrue(us019_page.toastifyBasariliSave.isDisplayed());
         System.out.println(us019_page.toastifyBasariliSave.getText()); // ya toastify i yakalayamıyor ya da text yok
 
+        us019_page.createNewStaff.click();
     }
 
-    @Then("AdminOkan sign out yapar")
-    public void adminokanSignOutYapar() {
+
+    @Then("AdminOkan signs out")
+    public void adminokanSignsOut() {
         waitForClickablility(us019_page.userMenuDropdown, 10);
         us019_page.userMenuDropdown.click();
         waitForClickablility(us019_page.signOutDropdown, 10);
         us019_page.signOutDropdown.click();
     }
-
 
     // US019_TC_02_Admin can search new Staff among registered people using their SSN
 
@@ -268,5 +269,6 @@ public class US019_StepDefinitions {
         javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", us019_page.toastifyDeleteConfirm);
 */
     }
+
 
 }
