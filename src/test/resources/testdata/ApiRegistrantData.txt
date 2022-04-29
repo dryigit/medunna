@@ -14,3 +14,5 @@ Registrant{firstName='Rossie', lastName='Conroy', ssn='352-02-4674', login='jona
 Registrant{firstName='Hue', lastName='Schinner', ssn='476-88-6675', login='chasity.macejkovic', langKey='null', password='18n8%M$c7*lU', email='brant.koch@gmail.com'}, 
 Registrant{firstName='Shelba', lastName='Hoeger', ssn='873-74-5661', login='loma.bednar', langKey='null', password='wT$&3NB0W4fjg', email='donnell.block@gmail.com'}, 
 Registrant{firstName='Frieda', lastName='Schiller', ssn='700-54-8237', login='christina.ebert', langKey='null', password='m&k!y!f*zN', email='winfred.franecki@gmail.com'}, 
+Registrant{firstName='Lonnie', lastName='O'Kon', ssn='473-47-1412', login='werner.herzog', langKey='null', password='0lEsiALyT$XED%', email='jorge.funk@yahoo.com'}, 
+Registrant{firstName='Oren', lastName='Koch', ssn='028-09-4599', login='marylouise.mcclure', langKey='null', password='&mXzOmkXmh$8J', email='shanon.kling@hotmail.com'}, 

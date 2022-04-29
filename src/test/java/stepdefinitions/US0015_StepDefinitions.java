@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -45,9 +46,11 @@ public class US0015_StepDefinitions {
     @When("Sing in Giris Yapar")
     public void sing_in_giris_yapar() {us015Page.SinginGirisButton.click();
     }
-    @Given("Items&Titles Tiklar")
-    public void ıtems_titles_tiklar() {us015Page.ItemsTitlesElement.click();
 
+
+    @And("haitems&Titles Tiklar")
+    public void haitemsTitlesTiklar() {
+        us015Page.ItemsTitlesElement.click();
     }
     @Given("Patients Tiklar")
     public void patients_tiklar() {us015Page.PatientElement.click();
@@ -89,8 +92,8 @@ public class US0015_StepDefinitions {
     }
 //============================TC 002 ================================
 
-    @Given("hasta bilgilerini görebilir")
-    public void hasta_bilgilerini_görebilir() {
+    @Given("hasta bilgilerini gorebilir")
+    public void hasta_bilgilerini_gorebilir() {
         System.out.println("id==>"+us015Page.idElement.getText()+"\n"
                 +"SSN==>"+ us015Page.ssn1Element.getText()+"\n"
                 +"First Name==>"+us015Page.firstNameElement.getText()+"\n"
@@ -120,8 +123,9 @@ public class US0015_StepDefinitions {
 
         //==============================TC 003=============================
     }
-    @Given("ID  sadece admin hastaya doktorunu atayabilir")
-    public void ıd_sadece_admin_hastaya_doktorunu_atayabilir() {
+
+    @Given("HaiD  sadece admin hastaya doktorunu atayabilir")
+    public void haid_sadece_admin_hastaya_doktorunu_atayabilir() {
         us015Page.myPagesElement.click();
         us015Page.searchPatientElement.click();
         us015Page.patientsElement.isDisplayed();

@@ -1,4 +1,5 @@
 @medunnaAllProject
+@smoke
 Feature: US03
 
 

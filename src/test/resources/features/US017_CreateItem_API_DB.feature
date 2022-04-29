@@ -1,6 +1,6 @@
 @medunnaAllProject
   @US017
-Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
+Feature: US017-Test items(oge) Oluştur / Guncelle / Sil
 
 
 
