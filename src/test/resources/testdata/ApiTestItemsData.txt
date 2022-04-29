@@ -33,3 +33,7 @@ TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name
 TestItem{defaultValMax='232', defaultValMin='41', description='Dugtrio', name='Allen Rench', price=149}
 TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
 TestItem{defaultValMax='233', defaultValMin='54', description='Dugtrio', name='Bob Frapples', price=149}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='203', defaultValMin='58', description='Hypno', name='Tad Moore', price=224}
+TestItem{defaultValMax='57', defaultValMin='40', description='Api versuch', name='uhf', price=400}
+TestItem{defaultValMax='232', defaultValMin='82', description='Meowth', name='Iona Frisbee', price=242}

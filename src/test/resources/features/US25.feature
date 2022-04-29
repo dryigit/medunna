@@ -1,5 +1,6 @@
 @qwe
 @medunnaAllProject
+@smoke
 Feature:US25 Hasta olarak kayit olusturulmali
 
  Background:
