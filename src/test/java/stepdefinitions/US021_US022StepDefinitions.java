@@ -41,12 +41,12 @@ public class US021_US022StepDefinitions {
     }
 
     @Given("Kullanici seceneklerden In Patient secer")
-    public void kullanici_seceneklerden_ın_patient_secer() {
+    public void kullanici_seceneklerden_in_patient_secer() {
         us021Page.inpatientbutonu.click();
     }
 
-    @Given("Kullanici Start DateTime texboxini günceller")
-    public void kullanici_start_datetime_texboxini_günceller() {
+    @Given("Kullanici Start DateTime texboxini gunceller")
+    public void kullanici_start_datetime_texboxini_gunceller() {
         us021Page.startdatetexbox.click();
         actions.click(us021Page.startdatetexbox)
                 .sendKeys("02.04.2022")
@@ -166,15 +166,15 @@ public class US021_US022StepDefinitions {
         us021Page.viewresultsbutonu.click();
     }
 
-    @Then("Kullanici test sonuçlarini görür")
-    public void kullaniciTestSonuçlariniGörür() {
+    @Then("Kullanici test sonuclarini gorur")
+    public void kullaniciTestSonuclariniGorur() {
         Assert.assertTrue(us021Page.testID.isDisplayed());
         Assert.assertTrue(us021Page.testName.isDisplayed());
         Assert.assertTrue(us021Page.testResult.isDisplayed());
     }
 
-    @And("Kullanici bilgileri günceller")
-    public void kullaniciBilgileriGünceller() {
+    @And("Kullanici bilgileri gunceller")
+    public void kullaniciBilgileriGunceller() {
         us021Page.resultedit.click();
         us021Page.resultedit.sendKeys("14");
 

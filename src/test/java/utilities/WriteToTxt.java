@@ -1,5 +1,6 @@
 package utilities;
 
+import pojos.CreateNewUser;
 import pojos.Registrant;
 import pojos.TestItem;
 
@@ -91,6 +92,22 @@ public class WriteToTxt {
         }
 
 
+    }
+
+
+    public static void saveNewUserApiData(CreateNewUser createNewUser){
+
+        try {
+            FileWriter fileWriter = new FileWriter(ConfigReader.getProperty("api_user_data"), true);
+
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            writer.append(createNewUser.toString() + ", \n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

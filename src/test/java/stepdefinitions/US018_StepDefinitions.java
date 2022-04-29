@@ -77,13 +77,25 @@ public class US018_StepDefinitions {
     @And("lvnt physician'in telefon, speciality, image, exam fee bilgilerini girer")
     public void lvntPhysicianInTelefonSpecialityImageExamFeeBilgileriniGirer() {
         page.physicianPhone.sendKeys(faker.phoneNumber().cellPhone());
+
+
+        Select select = new Select(page.speciality);
+        select.selectByIndex(random.nextInt(15));
+
+        page.profilePhoto.sendKeys("C:\\Users\\leven\\Downloads\\vegi.jpg");
+
+
         select.selectByIndex(random.nextInt());
+
     }
 
     @And("lvnt save butonuna basar ve bilgilerin kaydedildigini dogrular")
     public void lvntSaveButonunaBasarVeBilgilerinKaydedildiginiDogrular() {
+
+
         page.saveButton.click();
     }
+
 
 
 }

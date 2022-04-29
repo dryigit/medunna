@@ -24,10 +24,6 @@ import static utilities.ReusableMethods.getScreenshot;
 import static utilities.ReusableMethods.waitForClickablility;
 
 public class US023_StepDefinitions {
-    public static void main(String[] args) {
-        LocalDate localDate=LocalDate.now();
-        System.out.println(localDate);
-    }
 
     US23_Page us23_page = new US23_Page();
     US24_Page us24_page = new US24_Page();
@@ -109,16 +105,16 @@ public class US023_StepDefinitions {
     @Given("Kullanici acilan sayfada INVOICE yazisinin oldugunu dogrular.")
     public void kullanici_acilan_sayfada_invoice_yazisinin_oldugunu_dogrular() throws InterruptedException {
         Thread.sleep(2000);
-        Assert.assertTrue("Fatura gozukmuyor.",us24_page.ınvoiceText.isDisplayed());
+        Assert.assertTrue("Fatura gozukmuyor.",us24_page.invoiceText.isDisplayed());
     }
 
 
     @And("Kullanici Payment Detail sayfasindan test ve muayene ucretlerinin goruldugunu dogrular.")
     public void kullaniciPaymentDetailSayfasindanTestVeMuayeneUcretlerininGoruldugunuDogrular() {
         Assert.assertTrue("Exam Fee gorunmuyor",us23_page.examFeeText.isDisplayed());
-        Assert.assertTrue("Na111 item fee gorunmuyor.",us23_page.na111FeeText.isDisplayed());
         Assert.assertTrue("Urea item fee gorunmuyor.",us23_page.ureaFeeText.isDisplayed());
-        Assert.assertTrue("Creatinine item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
+        Assert.assertTrue("Creatine item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
+       // Assert.assertTrue("Soidum item fee gorunmuyor.",us23_page.creatinineFeeText.isDisplayed());
 
     }
 

@@ -28,7 +28,7 @@ Feature: US022 Staff test sonuclarini görür ve degisiklik yapabilir
     When Kullanici Show Appointments butonuna tiklar
     And Kullanici Show Tests butonuna tiklar.
     And Kullanici View Results butonuna tiklar
-    Then Kullanici test sonuçlarini görür
+    Then Kullanici test sonuclarini gorur
 
 
   Scenario: TC03 Kullanici test sonuclarini güncelleyebilir
@@ -39,7 +39,7 @@ Feature: US022 Staff test sonuclarini görür ve degisiklik yapabilir
     When Kullanici Show Appointments butonuna tiklar
     And Kullanici Show Tests butonuna tiklar.
     And Kullanici View Results butonuna tiklar
-    Then Kullanici test sonuçlarini görür
+    Then Kullanici test sonuclarini gorur
     And Kullanici Edit butonuna tiklar
-    And Kullanici bilgileri günceller
+    And Kullanici bilgileri gunceller
     Then Kullanici Save butonuna tiklar

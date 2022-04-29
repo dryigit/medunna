@@ -1,11 +1,23 @@
 package stepdefinitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.US002Page;
+import pojos.Registrant;
+import utilities.ConfigReader;
 import utilities.Driver;
+
+import static Hooks.Hooks.spec;
+import static io.restassured.RestAssured.given;
+import static utilities.WriteToTxt.saveRegistrantApiData;
 
 
 public class US002_StepDefinitions {
@@ -13,6 +25,8 @@ public class US002_StepDefinitions {
     Faker faker = new Faker();
      String password = faker.internet().password();
     US002Page us002page=new US002Page();
+    Registrant registrant = new Registrant();
+    Response response;
 
 
    @Then("kullanici {string} girer")
@@ -38,9 +52,11 @@ public class US002_StepDefinitions {
     }
 
     @Then("kullanici register butonuna tıklar")
-    public void kullaniciRegisterButonunaTıklar() {
+    public void kullaniciRegisterButonunaTiklar() {
         actions.click(us002page.registerButton2).perform();
     }
+
+
 
 
 

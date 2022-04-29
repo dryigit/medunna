@@ -19,8 +19,10 @@ public class US008_StepDefinitions {
 
     }
 
+
     @And("adminOkan giris yapmak icin ikon altindaki signIn'e tiklar")
     public void adminOkangirisYapmakIcinIkonAltindakiSignInETiklar() {
+
 
         us008Page.ikon.click();
         us008Page.ikonSignIn.click();

@@ -268,4 +268,5 @@ countryMap.put("id",createdStateID);
 Assert.assertTrue(queryResult.toString().contains("legality"));
 
     }
+
 }
