@@ -1,6 +1,6 @@
 @US017
 @medunnaAllProject
-Feature: US017-Test items(öğe) Oluştur / Güncelle / Sil
+Feature: US017-Test items(oge) Olustur / Guncelle / Sil
 
   Background: Kullanici Admin olarak giris yapar
     Given Kullanici medunna anasayfasina gider

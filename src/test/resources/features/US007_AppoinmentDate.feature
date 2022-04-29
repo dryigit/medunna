@@ -1,5 +1,6 @@
 @Tc
 @medunnaAllProject
+@smoke
 Feature: US_007_Randevu olusturma
 
 
