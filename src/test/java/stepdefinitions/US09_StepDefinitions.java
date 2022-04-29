@@ -32,43 +32,7 @@ us9Page.usernameButton.sendKeys("UserAG");
 us9Page.passwordButton.sendKeys("1203bakii1203");
 us9Page.singInButton2.click();
     }
-    @Then("kullanici My pages butonuna tiklar açılan sekmeden In Patient secer")
-    public void kullaniciMyPagesButonunaTiklarAçılanSekmedenInPatientSecer() {
-us9Page.MyPagesButtonStaff.click();
-us9Page.InpatientButton.click();
 
-    }
-
-    @Then("acilan sayfa da görüntülenen hastalardan ilk sırada olan hasta secilir")
-    public void acilan_sayfa_da_görüntülenen_hastalardan_ilk_sırada_olan_hasta_secilir() {
-us9Page.InpatientInformation.click();
-
-    }
-    @And("hasta bilgilerinin acildigi sayfa Patient yazısının görüldügü ile test edilir")
-    public void hastaBilgilerininAcildigiSayfaPatientYazısınınGörüldügüIleTestEdilir() {
-Assert.assertTrue(us9Page.InPatientsText.isDisplayed());
-
-    }
-
-    //tc2
-
-    @Then("kullanici edit butonuna tıklar")
-    public void kullanici_edit_butonuna_tıklar() {
-
-              JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
-
-               javascriptExecutor.executeScript("window.scrollBy(0,400)");
-        ReusableMethods.waitForVisibility(us9Page.patientEdit,5);
-        us9Page.patientEdit.click();
-
-    }
-    @Then("kullanici acilan sayfa da firstname,lastname,email.phone bilgilerini düzenler")
-    public void kullanici_acilan_sayfa_da_firstname_lastname_email_phone_bilgilerini_düzenler() {
-us9Page.firstNameButton.sendKeys("AAA");
-us9Page.lastNameButton.sendKeys("BBB");
-us9Page.emailNameButton.sendKeys("CCC");
-
-    }
     @Then("kullanici save butonuna basarak bilgilerin kaydedildigini test eder")
     public void kullanici_save_butonuna_basarak_bilgilerin_kaydedildigini_test_eder() throws InterruptedException {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
@@ -84,21 +48,12 @@ ReusableMethods.waitForClickablility(us9Page.saveButton,5);
 
 
     //tc3
-    @Then("Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer")
-    public void kullanici_my_pages_butonuna_tiklar_açılan_sekmeden_search_patient_secer() throws InterruptedException {
 
-        us9Page.MyPagesButtonStaff.click();
-        us9Page.searchPatientButton.click();
-        Thread.sleep(3000);
-    }
-    @Then("Kullanici SSN kutusuna gecerli bir SSN numarası girer")
-    public void kullanici_ssn_kutusuna_gecerli_bir_ssn_numarası_girer() {
-us9Page.searchSSNbutton.sendKeys("111-11-1111");
 
-    }
     @Then("kullanici gelen bilgilerden ilk sirada olan hastayi secer")
     public void kullanici_gelen_bilgilerden_ilk_sirada_olan_hastayi_secer() {
-us9Page.viewButton.click();
+
+        us9Page.viewButton.click();
     }
     @Then("acilan sayfada edit butonuna tiklanir")
     public void acilan_sayfada_edit_butonuna_tiklanir() throws InterruptedException {
@@ -129,44 +84,9 @@ Assert.assertTrue(us9Page.firstNameButton2.isDisplayed());
     }
 
 
-
-    //US10 TC01
-
-    @And("kullanici My Appointments sekmesine tıklar")
-    public void kullaniciMyAppointmentsSekmesineTıklar() {
-us9Page.doctorMyPages.click();
-us9Page.myAppointments.click();
-    }
-
-    @And("kullanici randevu listesini ve zaman dilimlerini bu sekmede görür")
-    public void kullaniciRandevuListesiniVeZamanDilimleriniBuSekmedeGörür() {
-Assert.assertTrue(us9Page.appointmentsText.isDisplayed());
-    }
-
-
-
-    //US10 TC02
-
-    @And("kullanici cikan listede en üst sırada olani secer")
-    public void kullaniciCikanListedeEnÜstSıradaOlaniSecer() {
-        us9Page.firstPatient.click();
-
-    }
-
-
-    @And("kullanici edit butonuna tıklayip patient id, start date, end date, status bilgilerinin görüldügünü test eder")
-    public void kullaniciEditButonunaTıklayipPatientIdStartDateEndDateStatusBilgilerininGörüldügünüTestEder() {
-
-Assert.assertTrue(us9Page.doctorSSN.isDisplayed());
-Assert.assertTrue(us9Page.doctorFirstName.isDisplayed());
-Assert.assertTrue(us9Page.doctorLastName.isDisplayed());
-
-    }
-
-
     //us9 tc-5
-    @And("kullanici staff olarak hastaları silemedigini test eder")
-    public void kullaniciStaffOlarakHastalarıSilemediginiTestEder() {
+    @And("kullanici staff olarak hastalari silemedigini test eder")
+    public void kullaniciStaffOlarakHastalariSilemediginiTestEder() {
         Assert.assertFalse(us9Page.adminDelete.isDisplayed());
     }
 
@@ -180,13 +100,79 @@ Assert.assertTrue(us9Page.doctorLastName.isDisplayed());
         us9Page.singInButton2.click();
     }
 
-    @And("kullanici hastalari SSN kimlik numaralarina göre arama yapamadigini test eder")
-    public void kullaniciHastalariSSNKimlikNumaralarinaGöreAramaYapamadiginiTestEder() {
+    @And("kullanici hastalari SSN kimlik numaralarina gore arama yapamadigini test eder")
+    public void kullaniciHastalariSSNKimlikNumaralarinaGoreAramaYapamadiginiTestEder() {
 Assert.assertTrue(!us9Page.ssnStaff.isDisplayed());
 
     }
 
 
+    @Then("kullanici My pages butonuna tiklar acilan sekmeden In Patient secer")
+    public void kullaniciMyPagesButonunaTiklarAcilanSekmedenInPatientSecer() {
+        us9Page.MyPagesButtonStaff.click();
+        us9Page.InpatientButton.click();
+    }
+
+    @And("acilan sayfa da goruntulenen hastalardan ilk sirada olan hasta secilir")
+    public void acilanSayfaDaGoruntulenenHastalardanIlkSiradaOlanHastaSecilir() {
+        us9Page.InpatientInformation.click();
+    }
+
+    @And("hasta bilgilerinin acildigi sayfa Patient yazisinin goruldugu ile test edilir")
+    public void hastaBilgilerininAcildigiSayfaPatientYazisininGorulduguIleTestEdilir() {
+        Assert.assertTrue(us9Page.InPatientsText.isDisplayed());
+    }
+
+    @Then("kullanici edit butonuna tiklar")
+    public void kullaniciEditButonunaTiklar() {
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) Driver.getDriver();
+
+        javascriptExecutor.executeScript("window.scrollBy(0,400)");
+        ReusableMethods.waitForVisibility(us9Page.patientEdit,5);
+        us9Page.patientEdit.click();
+    }
+
+    @And("kullanici acilan sayfa da firstname_lastname_email_phone bilgilerini duzenler")
+    public void kullaniciAcilanSayfaDaFirstname_lastname_email_phoneBilgileriniDuzenler() {
+        us9Page.firstNameButton.sendKeys("AAA");
+        us9Page.lastNameButton.sendKeys("BBB");
+        us9Page.emailNameButton.sendKeys("CCC");
+    }
 
 
+
+    @And("kullanici randevu listesini ve zaman dilimlerini bu sekmede gorur")
+    public void kullaniciRandevuListesiniVeZamanDilimleriniBuSekmedeGorur() {
+        Assert.assertTrue(us9Page.appointmentsText.isDisplayed());
+    }
+
+    @Then("Kullanici My pages butonuna tiklar acilan sekmeden Search Patient secer")
+    public void kullaniciMyPagesButonunaTiklarAcilanSekmedenSearchPatientSecer() throws InterruptedException {
+        us9Page.MyPagesButtonStaff.click();
+        us9Page.searchPatientButton.click();
+        Thread.sleep(3000);
+    }
+
+    @And("kullanici My Appointments sekmesine tiklar")
+    public void kullaniciMyAppointmentsSekmesineTiklar() {
+        us9Page.doctorMyPages.click();
+        us9Page.myAppointments.click();
+    }
+
+    @And("kullanici SSN kutusuna gecerli bir SSN numarasi girer")
+    public void kullaniciSSNKutusunaGecerliBirSSNNumarasiGirer() {
+        us9Page.searchSSNbutton.sendKeys("111-11-1111");
+    }
+
+    @And("kullanici cikan listede en ust sirada olani secer")
+    public void kullaniciCikanListedeEnUstSiradaOlaniSecer() {
+        us9Page.firstPatient.click();
+    }
+
+    @And("kullanici edit butonuna tiklayip patient id, start date, end date, status bilgilerinin goruldugunu test eder")
+    public void kullaniciEditButonunaTiklayipPatientIdStartDateEndDateStatusBilgilerininGoruldugunuTestEder() {
+        Assert.assertTrue(us9Page.doctorSSN.isDisplayed());
+        Assert.assertTrue(us9Page.doctorFirstName.isDisplayed());
+        Assert.assertTrue(us9Page.doctorLastName.isDisplayed());
+    }
 }

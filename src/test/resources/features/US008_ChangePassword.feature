@@ -3,19 +3,19 @@
 Feature: US_008_Password change
 
 
-  Scenario Outline: US008_TC01_kullanıcı sign in yaptıgında passwordunu duzenleyebilmeli
+  Scenario Outline: US008_TC01_kullanici sign in yaptiginda passwordunu duzenleyebilmeli
 
-    Given adminOkan medunna anasayfasına gider
-    And giris yapmak icin ikon altındaki signIn'e tıklar
-    Then kullanıcı adını "<username>" girer
-    And sifresini "<password>" girer
-    And signIn sayfasındaki signIn butonuna tıklar
-    And ikon altındaki password sekmesine tıklar
-    And gecerli sifresini "<currentPassword>" girer
-    And yeni sifresini "<newPassword>" girer
-    And yeni sifresini "<newPassword>" confirme eder
-    And yeni sifreyi kaydetmek icin save butonuna tıklar
-    Then yeni sifresinin basarili olarak degistigini kontrol eder
+    Given adminOkan medunna anasayfasina gider
+    And adminOkan giris yapmak icin ikon altindaki signIn'e tiklar
+    Then adminOkan kullanici adini "<username>" girer
+    And adminOkan sifresini "<password>" girer
+    And adminOkan signIn sayfasindaki signIn butonuna tiklar
+   # And adminOkan ikon altindaki password sekmesine tiklar
+   # And adminOkan gecerli sifresini "<currentPassword>" girer
+   # And adminOkan yeni sifresini "<newPassword>" girer
+   # And adminOkan yeni sifresini "<newPassword>" confirme eder
+   # And adminOkan yeni sifreyi kaydetmek icin save butonuna tiklar
+   # Then adminOkan yeni sifresinin basarili olarak degistigini kontrol eder
 
     Examples: Test data
 
@@ -23,14 +23,14 @@ Feature: US_008_Password change
     | Okanok   | Ozi654.  |   Ozi654.       |   Ozi555.   |
 
 
-  Scenario Outline: US008_TC02_kullanıcı eski passwordu ile sign in yapamamalı
+  Scenario Outline: US008_TC02_kullanici eski passwordu ile sign in yapamamali
 
-    Given staffHakan medunna anasayfasına gider
-    And giris yapmak icin ikon altındaki signIn'e tıklar
-    Then kullanıcı adını "<username>" girer
-    And sifresini "<eskiPassword>" girer
-    And signIn sayfasındaki signIn butonuna tıklar
-    Then giris yapılamadıgını kontrol eder
+    Given staffHakan medunna anasayfasina gider
+    And adminOkan giris yapmak icin ikon altindaki signIn'e tiklar
+    Then adminOkan kullanici adini "<username>" girer
+    And adminOkan sifresini "<eskiPassword>" girer
+    And adminOkan signIn sayfasindaki signIn butonuna tiklar
+    Then staffHakan giris yapilamadigini kontrol eder
 
     Examples: Test data
 
