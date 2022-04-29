@@ -17,8 +17,8 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
 
     Given kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  kullanici My pages butonuna tiklar açılan sekmeden In Patient secer
-    And   acilan sayfa da görüntülenen hastalardan ilk sırada olan hasta secilir
+    Then  kullanici My pages butonuna tiklar acilan sekmeden In Patient secer
+    And   acilan sayfa da goruntulenen hastalardan ilk sırada olan hasta secilir
     Then kullanici edit butonuna tiklar
     And kullanici acilan sayfa da firstname_lastname_email_phone bilgilerini duzenler
     Then kullanici save butonuna basarak bilgilerin kaydedildigini test eder
@@ -27,7 +27,7 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
 
     Then kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
+    Then  Kullanici My pages butonuna tiklar acılan sekmeden Search Patient secer
     And kullanici SSN kutusuna gecerli bir SSN numarasi girer
     Then kullanici gelen bilgilerden ilk sirada olan hastayi secer
     And acilan sayfada edit butonuna tiklanir
@@ -37,8 +37,8 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
 
 
     Given kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  Kullanici My pages butonuna tiklar açılan sekmeden Search Patient secer
-    And Kullanici SSN kutusuna gecerli bir SSN numarası girer
+    Then  Kullanici My pages butonuna tiklar acılan sekmeden Search Patient secer
+    And kullanici SSN kutusuna gecerli bir SSN numarasi girer
     Then kullanici gelen bilgilerden ilk sirada olan hastayi secer
     And acilan sayfada edit butonuna tiklanir
     Then kullanici firstname textini siler ve silindigini test eder
@@ -47,7 +47,7 @@ Feature:US09 Staff olarak hasta bilgileri görüntülenebilmeli,düzenlenebilmel
                  ancak staff hastaları silememeli.
 
     Given kullanici gecerli bilgileri girerek basarili giris yapar
-    Then  kullanici My pages butonuna tiklar açılan sekmeden In Patient secer
+    Then  kullanici My pages butonuna tiklar acilan sekmeden In Patient secer
     And kullanici staff olarak hastaları silemedigini test eder
 
 
