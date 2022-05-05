@@ -17,16 +17,9 @@ import utilities.Driver;
         public void setUp(){
         }
 
-        public static RequestSpecification spec;
-        @Before(value = "@ApiTestItem")
-        public void setup(){
-            spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("base_url")).build();
-        }
 
-     @Before(order = 1, value = "@UIRegistration")
-     public void navigateToRegistration(){
-        Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
-     }
+
+
 
      @After
      public void tearDown(Scenario scenario){
@@ -38,11 +31,6 @@ import utilities.Driver;
          }
          Driver.closeDriver();
       }
-        @Before(order = 1, value = "@Appointment")
-        public void navigateToLandingPage(){
 
-            Driver.getDriver().get(ConfigReader.getProperty("medunnaRegistration"));
-
-        }
 
     }
